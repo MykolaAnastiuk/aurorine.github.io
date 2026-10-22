@@ -1,0 +1,518 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta property="og:title" content="Aurorine Studio — сайти, які приймають заявки">
+<meta property="og:description" content="Сайти для банкетних залів, готелів і заміських комплексів. Заявки на дату й номер одразу в Telegram. Безкоштовний ескіз на ваших фото.">
+<meta property="og:type" content="website">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<title>Aurorine Studio</title>
+<meta name="description" content="Сайти для банкетних залів, готелів і заміських комплексів, які самі приймають заявки на дату й номер. Безкоштовний ескіз на ваших фото.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600&family=Commissioner:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* Layout: нічна смуга з тезою й живим демо заявки → світлі секції: де губляться заявки, самоперевірка, окупність, процес, пакети, хто ми, питання → нічний фінал із контактом. */
+:root{
+  --night:#0f1a2b; --night-2:#16253b; --night-line:#2b3f5c; --frost:#f3eee6; --frost-dim:#b9c4d4;
+  --bg:#f4f6f8; --surface:#ffffff; --ink:#122033; --muted:#55657a; --line:#d8dee6;
+  --aur-1:#14b88a; --aur-2:#2f86e6; --aur-3:#7b5cf0; --accent:#2f86e6;
+  --warn:#c4572b; --ok:#14996f; --on-accent:#ffffff;
+  --display:"Unbounded","Arial Black",system-ui,sans-serif;
+  --body:"Commissioner",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --r:14px;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0b1422; --surface:#121f33; --ink:#eef1f5; --muted:#9fb0c8; --line:#24354f;
+  --aur-1:#46e3b0; --aur-2:#4bb4ff; --aur-3:#a88bff; --accent:#4bb4ff; --warn:#ff8f5e; --ok:#46e3b0; --on-accent:#0b1422; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0b1422; --surface:#121f33; --ink:#eef1f5; --muted:#9fb0c8; --line:#24354f;
+  --aur-1:#46e3b0; --aur-2:#4bb4ff; --aur-3:#a88bff; --accent:#4bb4ff; --warn:#ff8f5e; --ok:#46e3b0; --on-accent:#0b1422; color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font:400 17px/1.6 var(--body)}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.14;margin:0;text-wrap:balance;letter-spacing:-.01em}
+h1{font-size:clamp(1.85rem,4.2vw,3.1rem)}
+h2{font-size:clamp(1.4rem,2.8vw,2.05rem)}
+h3{font-size:1.02rem;font-weight:600;font-family:var(--body);letter-spacing:0}
+p{margin:0;max-width:62ch}
+a{color:inherit}
+.band{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:1120px;margin-inline:auto}
+.eyebrow{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.grad{background:linear-gradient(90deg,#46e3b0,#4bb4ff 55%,#a88bff);-webkit-background-clip:text;background-clip:text;color:transparent}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font:600 1rem var(--body);padding:13px 22px;border-radius:999px;border:0;cursor:pointer;text-decoration:none;transition:transform .15s}
+.btn:hover{transform:translateY(-1px)}
+.btn-aur{background:linear-gradient(90deg,#46e3b0,#4bb4ff 55%,#a88bff);color:#0f1a2b}
+.btn-ghost{background:transparent;color:var(--frost);border:1px solid #3a4f6b}
+
+/* нічна смуга */
+.night{background:var(--night);color:var(--frost);position:relative;overflow:hidden}
+.hero-band{padding-block:24px 76px}
+.top{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:56px}
+.brand{display:flex;align-items:center;gap:12px;font-family:var(--display);font-size:1.05rem;color:var(--frost);text-decoration:none}
+.brand svg{width:40px;height:40px;flex:none}
+.brand small{font-family:var(--body);font-size:.85rem;color:var(--frost-dim);margin-left:2px}
+.top nav{display:flex;gap:22px;font-size:.94rem}
+.top nav a{color:var(--frost-dim);text-decoration:none}
+.top nav a:hover{color:var(--frost)}
+.hero{display:grid;grid-template-columns:1.08fr .92fr;gap:48px;align-items:center;position:relative;z-index:1}
+.hero > *{min-width:0}
+.hero .eyebrow{color:#7cc7ff;margin-bottom:16px}
+.hero p.lead{color:var(--frost-dim);font-size:1.12rem;margin-top:20px}
+.cta-row{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin-top:28px}
+.promise{display:flex;flex-wrap:wrap;gap:8px 20px;margin:24px 0 0;padding:0;list-style:none;font-size:.9rem;color:var(--frost-dim)}
+.promise li::before{content:"✓ ";color:#46e3b0;font-weight:600}
+.ribbon{position:absolute;left:-10%;right:-10%;bottom:-40px;height:220px;opacity:.3;pointer-events:none}
+
+/* живе демо: телефон гостя → Telegram адміністратора */
+.demo{display:grid;gap:14px}
+.phone{background:#f8f9fb;color:#122033;border-radius:24px;padding:18px;box-shadow:0 24px 70px rgba(0,0,0,.4);font-size:.9rem;max-width:330px;width:100%}
+.phone .ttl{font-family:var(--display);font-weight:600;font-size:.95rem;margin-bottom:12px}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px}
+.chips button{font:500 .82rem var(--body);padding:6px 11px;border-radius:99px;border:1px solid #c9d2dd;background:#fff;color:#122033;cursor:pointer}
+.chips button[aria-pressed=true]{background:#0f1a2b;color:#f3eee6;border-color:#0f1a2b}
+.phone label{display:flex;justify-content:space-between;align-items:center;gap:8px;background:#fff;border:1px solid #d8dee6;border-radius:9px;padding:7px 10px;margin-bottom:8px;color:#55657a;font-size:.86rem}
+.phone input{font:600 .9rem var(--body);color:#122033;border:0;background:transparent;text-align:right;width:8.5em;padding:2px 0;color-scheme:light}
+.phone .go{width:100%;background:#0f1a2b;color:#f3eee6;border:0;border-radius:9px;padding:10px;font:600 .92rem var(--body);cursor:pointer;margin-top:4px}
+.tg{background:#1d2b40;border-radius:18px;padding:14px 14px 12px;font-size:.88rem;border:1px solid var(--night-line);max-width:330px;width:100%;justify-self:end;margin-top:-28px;position:relative;box-shadow:0 18px 50px rgba(0,0,0,.35)}
+.tg.pulse{animation:pop .5s ease}
+@keyframes pop{0%{transform:translateY(10px);opacity:.3}100%{transform:none;opacity:1}}
+.tg .who{color:#7cc7ff;font-weight:600;margin-bottom:6px;display:flex;justify-content:space-between}
+.tg .who span{color:#8a9bb3;font-weight:400;font-size:.76rem}
+.tg .msg{background:#2a3d58;border-radius:12px 12px 12px 4px;padding:10px 12px;line-height:1.5;color:#eef1f5}
+.demo-note{color:#8a9bb3;font-size:.8rem}
+
+/* секції */
+section.band{padding-block:80px}
+.sec-head{display:grid;grid-template-columns:1fr 1.15fr;gap:40px;align-items:end;margin-bottom:40px}
+.sec-head > *{min-width:0}
+.sec-head .eyebrow{margin-bottom:12px}
+.sec-head p{color:var(--muted)}
+.alt{background:var(--surface);border-block:1px solid var(--line)}
+
+/* де губляться заявки */
+.leaks{display:grid;grid-template-columns:repeat(2,1fr);gap:0 48px}
+.leak{display:grid;grid-template-columns:auto 1fr;gap:4px 16px;padding:22px 0;border-top:1px solid var(--line)}
+.leak > *{min-width:0}
+.leak .x{grid-row:span 2;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;font-weight:600;color:var(--warn);border:1.5px solid var(--warn);font-size:.85rem;margin-top:2px}
+.leak p{color:var(--muted);font-size:.96rem}
+.leak p b{color:var(--ink);font-weight:600}
+.market{margin-top:36px;display:grid;grid-template-columns:auto auto 1fr;gap:28px;align-items:center;padding:22px 26px;border-radius:var(--r);background:var(--bg);border:1px solid var(--line)}
+.market .n{font-family:var(--display);font-size:1.9rem;line-height:1;font-variant-numeric:tabular-nums}
+.market .n small{display:block;font-family:var(--body);font-size:.8rem;color:var(--muted);margin-top:6px;font-weight:400}
+.market p{color:var(--muted);font-size:.95rem}
+
+/* самоперевірка */
+.check{display:grid;grid-template-columns:1.2fr .8fr;gap:32px;align-items:start}
+.check > *{min-width:0}
+.qs{display:grid;gap:10px}
+.q{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 16px;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+.q span{font-size:.98rem;min-width:0}
+.yn{display:flex;flex:none;border:1px solid var(--line);border-radius:99px;overflow:hidden}
+.yn button{font:600 .85rem var(--body);padding:7px 14px;border:0;background:transparent;color:var(--muted);cursor:pointer}
+.yn button[aria-pressed=true][data-v="1"]{background:var(--ok);color:var(--on-accent)}
+.yn button[aria-pressed=true][data-v="0"]{background:var(--warn);color:var(--on-accent)}
+.score{position:sticky;top:20px;padding:26px;border-radius:var(--r);background:var(--night);color:var(--frost)}
+.score .big{font-family:var(--display);font-size:3rem;line-height:1;font-variant-numeric:tabular-nums}
+.score .big small{font-size:1.1rem;color:var(--frost-dim)}
+.score p{color:var(--frost-dim);margin:14px 0 20px;font-size:.98rem}
+.bar{height:6px;border-radius:99px;background:#24354f;margin-top:16px;overflow:hidden}
+.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,#46e3b0,#4bb4ff 55%,#a88bff);transition:width .3s}
+
+/* окупність */
+.calc{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.calc > *{min-width:0}
+.panel{border:1px solid var(--line);border-radius:var(--r);padding:26px;background:var(--bg)}
+.row{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin:22px 0 6px}
+.row:first-child{margin-top:0}
+.row output{font-family:var(--display);font-size:1.4rem;font-variant-numeric:tabular-nums}
+input[type=range]{width:100%;accent-color:var(--accent)}
+.res{display:grid;gap:16px;align-content:start}
+.res .line{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:4px 12px;padding-bottom:14px;border-bottom:1px solid var(--line)}
+.res .line b{font-family:var(--display);font-weight:600;font-size:1.4rem;font-variant-numeric:tabular-nums;white-space:nowrap}
+.res .line.hl b{font-size:1.9rem;color:var(--ok)}
+.fine{font-size:.84rem;color:var(--muted)}
+
+/* процес */
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:24px;counter-reset:s}
+.steps li{counter-increment:s;display:flex;flex-direction:column;gap:8px}
+.steps li::before{content:counter(s);font-family:var(--display);font-size:2.2rem;line-height:1;background:linear-gradient(90deg,var(--aur-1),var(--aur-2),var(--aur-3));-webkit-background-clip:text;background-clip:text;color:transparent}
+.steps p{color:var(--muted);font-size:.95rem}
+.steps .tag{font-size:.78rem;font-weight:600;color:var(--ok);order:2}
+.steps h3{order:1}.steps p{order:3}
+
+/* пакети */
+.packs{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;align-items:start}
+.pack{border:1px solid var(--line);border-radius:var(--r);padding:26px;display:flex;flex-direction:column;gap:12px;background:var(--bg)}
+.pack.main{border:1.5px solid var(--accent);background:var(--surface)}
+.pack .for{font-size:.9rem;color:var(--muted)}
+.price{font-family:var(--display);font-size:1.75rem;font-variant-numeric:tabular-nums}
+.price small{font-family:var(--body);font-size:.9rem;color:var(--muted);font-weight:400}
+.pack .old{font-size:.86rem;color:var(--muted)}
+.pack ul{margin:0;padding:0;list-style:none;display:grid;gap:7px;font-size:.95rem}
+.pack li::before{content:"— ";color:var(--muted)}
+.badge{align-self:flex-start;font-size:.72rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:4px 10px;border-radius:99px;background:var(--accent);color:var(--on-accent)}
+.packs-note{margin-top:20px;color:var(--muted);font-size:.92rem}
+
+/* хто ми */
+.about{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.about > *{min-width:0}
+.about .eyebrow{margin-bottom:12px}
+.about p:not(.eyebrow){color:var(--muted);margin-top:14px}
+.facts div{display:grid;grid-template-columns:1fr auto;gap:12px;padding:14px 0;border-bottom:1px solid var(--line);font-size:.97rem}
+.facts div:first-child{border-top:1px solid var(--line)}
+.facts span{color:var(--muted)}
+.facts b{font-weight:600;text-align:right}
+
+/* питання */
+.faq{display:grid;gap:10px;max-width:820px}
+details{border:1px solid var(--line);border-radius:12px;background:var(--bg);padding:0 20px}
+summary{cursor:pointer;padding:16px 0;font-weight:600;list-style:none;display:flex;justify-content:space-between;gap:16px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-family:var(--display);color:var(--muted)}
+details[open] summary::after{content:"–"}
+details p{color:var(--muted);padding-bottom:18px}
+
+/* фінал */
+.final{padding-block:84px}
+.final-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center;position:relative;z-index:1}
+.final-grid > *{min-width:0}
+.final p{color:var(--frost-dim);margin-top:16px}
+.mailbox{background:var(--night-2);border:1px solid var(--night-line);border-radius:var(--r);padding:24px}
+.mailbox .lbl{font-size:.82rem;color:var(--frost-dim)}
+.mailbox .addr{font-family:var(--display);font-size:clamp(1rem,2.4vw,1.3rem);margin:6px 0 16px;overflow-wrap:anywhere;user-select:all}
+.mailbox ol{margin:18px 0 0;padding-left:20px;color:var(--frost-dim);font-size:.92rem;display:grid;gap:4px}
+.mailbox .ask{font-size:.86rem;color:var(--frost-dim);margin-top:18px}
+.copied{font-size:.85rem;color:#46e3b0}
+footer{background:#0a1220;color:#7e8ea6;font-size:.85rem;padding-block:24px}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
+
+@media (max-width:900px){
+  .top{margin-bottom:40px}
+  .top nav{display:none}
+  .hero,.sec-head,.check,.calc,.about,.final-grid{grid-template-columns:1fr}
+  .hero{gap:40px}
+  .leaks{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr 1fr}
+  .packs{grid-template-columns:1fr}
+  .market{grid-template-columns:auto auto;justify-content:start;gap:20px 36px}
+  .market p{grid-column:1/-1}
+  .score{position:static}
+  section.band{padding-block:60px}
+  .sec-head{gap:12px;margin-bottom:28px}
+}
+@media (max-width:520px){
+  .steps{grid-template-columns:1fr}
+  .tg{margin-top:-18px}
+  .q{flex-direction:column;align-items:flex-start;gap:10px}
+}
+</style>
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}[hidden]{display:none!important}</style>
+</head>
+<body>
+
+
+<div class="night band hero-band" id="top">
+  <div class="wrap">
+    <div class="top">
+      <a class="brand" href="#top" aria-label="Aurorine Studio">
+        <svg viewBox="0 0 512 512" aria-hidden="true"><defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#46E3B0"/><stop offset=".55" stop-color="#4BB4FF"/><stop offset="1" stop-color="#A88BFF"/></linearGradient></defs><path d="M256 118 L150 392 M256 118 L362 392" stroke="#F3EEE6" stroke-width="40" stroke-linecap="round" fill="none"/><path d="M104 304 C 168 250, 222 334, 290 284 S 392 246, 414 268" stroke="url(#g)" stroke-width="30" stroke-linecap="round" fill="none"/></svg>
+        <span>Aurorine <small>studio</small></span>
+      </a>
+      <nav aria-label="Розділи">
+        <a href="#check">Перевірити сайт</a>
+        <a href="#payback">Окупність</a>
+        <a href="#packs">Ціни</a>
+        <a href="#contact">Контакт</a>
+      </nav>
+    </div>
+
+    <div class="hero">
+      <div>
+        <p class="eyebrow">Сайти для банкетних залів, готелів і заміських комплексів</p>
+        <h1>Гість обирає дату о 23:40. <span class="grad">Вранці заявка вже в Telegram</span> адміністратора.</h1>
+        <p class="lead">Свято часто планують увечері з телефону, коли менеджер уже не відповідає. Ми робимо сайт, який у цей момент показує ціни, меню й вільні дати та приймає заявку замість вас.</p>
+        <div class="cta-row">
+          <a class="btn btn-aur" href="#contact">Отримати безкоштовний ескіз</a>
+          <a class="btn btn-ghost" href="#check">Перевірити свій сайт</a>
+        </div>
+        <ul class="promise">
+          <li>ескіз на ваших фото до будь-якої оплати</li>
+          <li>фіксована ціна й строк</li>
+          <li>домен і код — ваші</li>
+        </ul>
+      </div>
+
+      <div class="demo" aria-label="Демо: як заявка з сайту потрапляє адміністратору">
+        <div class="phone">
+          <div class="ttl">Яка у вас подія?</div>
+          <div class="chips" role="group" aria-label="Тип події">
+            <button type="button" aria-pressed="true" data-ev="Весілля">Весілля</button>
+            <button type="button" aria-pressed="false" data-ev="Ювілей">Ювілей</button>
+            <button type="button" aria-pressed="false" data-ev="Корпоратив">Корпоратив</button>
+            <button type="button" aria-pressed="false" data-ev="Номер на ніч">Номер</button>
+          </div>
+          <label for="d-date">Дата <input id="d-date" type="text" value="14 червня"></label>
+          <label for="d-guests">Гостей <input id="d-guests" type="number" min="1" max="500" value="120"></label>
+          <button class="go" id="d-send" type="button">Перевірити дату →</button>
+        </div>
+        <div class="tg" id="d-tg" aria-live="polite">
+          <div class="who">Заявки з сайту <span id="d-time">23:40</span></div>
+          <div class="msg" id="d-msg">🔔 Нова заявка: <b>Весілля</b><br>14 червня · 120 гостей<br>Телефон: +380 …</div>
+        </div>
+        <p class="demo-note">Демо. Змініть подію чи кількість гостей і натисніть кнопку. Дані вигадані.</p>
+      </div>
+    </div>
+  </div>
+  <svg class="ribbon" viewBox="0 0 1200 220" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="r" x1="0" x2="1"><stop offset="0" stop-color="#46E3B0"/><stop offset=".55" stop-color="#4BB4FF"/><stop offset="1" stop-color="#A88BFF"/></linearGradient></defs><path d="M0 150 C 220 60, 420 210, 640 120 S 1000 60, 1200 110" stroke="url(#r)" stroke-width="22" fill="none" stroke-linecap="round"/></svg>
+</div>
+
+<main>
+<section class="band alt" id="leaks">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><p class="eyebrow">Що ми бачимо найчастіше</p><h2>Де сайти закладів гублять заявки</h2></div>
+      <p>Ми розібрали сайти 66 банкетних залів, готелів і заміських комплексів у Львові, Києві та Дніпрі. Ці проблеми повторюються знову й знову, і кожна з них відправляє гостя до конкурента.</p>
+    </div>
+    <div class="leaks">
+      <div class="leak"><span class="x" aria-hidden="true">✕</span><h3>Немає запиту на дату</h3><p>Є лише форма «Напишіть нам». Гість хоче знати, <b>чи вільна субота</b>, а не писати лист у порожнечу.</p></div>
+      <div class="leak"><span class="x" aria-hidden="true">✕</span><h3>Меню й ціни картинкою</h3><p>З телефону їх важко прочитати, а Google не бачить страв. Гість іде туди, де <b>ціну видно одразу</b>.</p></div>
+      <div class="leak"><span class="x" aria-hidden="true">✕</span><h3>Номер не натискається</h3><p>Щоб подзвонити, номер треба переписати вручну. Це <b>зайвий крок саме тоді</b>, коли гість уже готовий бронювати.</p></div>
+      <div class="leak"><span class="x" aria-hidden="true">✕</span><h3>Сайт закритий від Google</h3><p>Ми знаходили сайти із забороною індексації. Заклад <b>платить за сайт, якого пошук не показує</b>.</p></div>
+      <div class="leak"><span class="x" aria-hidden="true">✕</span><h3>Залишки шаблону</h3><p>«© 2035», тестові новини, кнопки, що ведуть у нікуди. Дрібниця, але гість бачить, що <b>сайтом ніхто не займається</b>.</p></div>
+      <div class="leak"><span class="x" aria-hidden="true">✕</span><h3>На телефоні все розʼїжджається</h3><p>Меню займає весь перший екран, кнопок немає. А <b>шукають заклад найчастіше з телефону</b>.</p></div>
+    </div>
+    <div class="market">
+      <div class="n">−14%<small>відвідувань</small></div>
+      <div class="n">+17%<small>середній чек</small></div>
+      <p>Так змінився ресторанний ринок за січень–липень 2026 року за даними Poster (11 555 закладів). Гостей менше, кожен приносить більше, тож кожна загублена заявка коштує дорожче.</p>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="check">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><p class="eyebrow">30 секунд</p><h2>Перевірте свій сайт</h2></div>
+      <p>Відкрийте свій сайт на телефоні й дайте чесні відповіді. Нічого нікуди не надсилається.</p>
+    </div>
+    <div class="check">
+      <div class="qs">
+        <div class="q"><span>Гість може залишити запит на конкретну дату й кількість гостей</span><div class="yn" role="group" aria-label="Відповідь"><button type="button" data-v="1" aria-pressed="false">Так</button><button type="button" data-v="0" aria-pressed="false">Ні</button></div></div>
+        <div class="q"><span>Меню й ціни банкету написані текстом, а не картинкою</span><div class="yn" role="group" aria-label="Відповідь"><button type="button" data-v="1" aria-pressed="false">Так</button><button type="button" data-v="0" aria-pressed="false">Ні</button></div></div>
+        <div class="q"><span>Номер телефону натискається й одразу дзвонить</span><div class="yn" role="group" aria-label="Відповідь"><button type="button" data-v="1" aria-pressed="false">Так</button><button type="button" data-v="0" aria-pressed="false">Ні</button></div></div>
+        <div class="q"><span>Заявки з сайту приходять у месенджер, а не губляться в пошті</span><div class="yn" role="group" aria-label="Відповідь"><button type="button" data-v="1" aria-pressed="false">Так</button><button type="button" data-v="0" aria-pressed="false">Ні</button></div></div>
+        <div class="q"><span>На першому екрані телефона видно, що у вас є і скільки це коштує</span><div class="yn" role="group" aria-label="Відповідь"><button type="button" data-v="1" aria-pressed="false">Так</button><button type="button" data-v="0" aria-pressed="false">Ні</button></div></div>
+      </div>
+      <div class="score" aria-live="polite">
+        <div class="big"><span id="sc">0</span><small> / 5</small></div>
+        <div class="bar"><i id="scbar"></i></div>
+        <p id="sctext">Дайте відповідь на пʼять питань.</p>
+        <a class="btn btn-aur" href="#contact">Хочу ескіз для свого закладу</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band alt" id="payback">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><p class="eyebrow">Порахуйте самі</p><h2>Скільки коштує одна загублена заявка</h2></div>
+      <p>Підставте свої цифри. Калькулятор рахує лише виручку з кухні за ціною, яку ви вкажете.</p>
+    </div>
+    <div class="calc">
+      <div class="panel">
+        <div class="row"><label for="c-g">Гостей на банкеті</label><output id="c-go" for="c-g">100</output></div>
+        <input type="range" id="c-g" min="20" max="300" step="10" value="100">
+        <div class="row"><label for="c-p">Ціна за гостя, грн</label><output id="c-po" for="c-p">1 500</output></div>
+        <input type="range" id="c-p" min="500" max="4000" step="100" value="1500">
+        <div class="row"><label for="c-n">Загублених заявок на місяць</label><output id="c-no" for="c-n">1</output></div>
+        <input type="range" id="c-n" min="1" max="10" step="1" value="1">
+      </div>
+      <div class="panel res">
+        <div class="line"><span>Один банкет</span><b id="c-one">150 000 грн</b></div>
+        <div class="line"><span>Загублено за рік</span><b id="c-year">1 800 000 грн</b></div>
+        <div class="line hl"><span>Сайт «Комплекс» окупається</span><b id="c-pay">з 1 банкету</b></div>
+        <p class="fine">Для порівняння взято стартову ціну пакета «Комплекс», 39 000 грн. Розрахунок не враховує напої, номери й повторних гостей.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="how">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><p class="eyebrow">Без ризику для вас</p><h2>Спочатку ви бачите свій сайт, потім вирішуєте</h2></div>
+      <p>Від першого листа до запуску зазвичай минає від двох до чотирьох тижнів.</p>
+    </div>
+    <ol class="steps">
+      <li><h3>Ескіз на ваших фото</h3><span class="tag">безкоштовно</span><p>Дивимося ваш сайт або Instagram і робимо ескіз головної сторінки з вашими фото, цінами й послугами.</p></li>
+      <li><h3>Фіксована ціна</h3><span class="tag">до старту</span><p>Погоджуємо сторінки, ціну й строк письмово. Оплата 50% на початку, 50% після запуску.</p></li>
+      <li><h3>Розробка</h3><span class="tag">дві хвилі правок</span><p>Показуємо проміжний результат. Меню з картинок переносимо в текст самі.</p></li>
+      <li><h3>Запуск і передача</h3><span class="tag">місяць правок безкоштовно</span><p>Домен і хостинг оформлені на вас. Код і всі доступи передаємо, ви ні від кого не залежите.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="band alt" id="packs">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><p class="eyebrow">Ціни в гривнях</p><h2>Пакети</h2></div>
+      <p>Точну суму називаємо після ескізу, коли зрозумілий обсяг. Після старту ціна не змінюється.</p>
+    </div>
+    <div class="packs">
+      <div class="pack">
+        <h3>Старт</h3>
+        <div class="price">14 000 <small>грн</small></div>
+        <p class="for">Для закладів, у яких є лише Instagram або QR-меню.</p>
+        <ul><li>одна сторінка</li><li>меню, години роботи, контакти</li><li>кнопки «Подзвонити» й «Маршрут»</li><li>запит на бронювання в Telegram</li></ul>
+      </div>
+      <div class="pack">
+        <h3>Компакт</h3>
+        <div class="price">24 000 <small>грн</small></div>
+        <p class="for">Для ресторану з банкетами чи бізнес-ланчами.</p>
+        <ul><li>3–4 сторінки</li><li>меню, яке ви редагуєте самі в таблиці</li><li>сторінка банкетів і запит на дату</li><li>заявки в Telegram</li></ul>
+      </div>
+      <div class="pack main">
+        <span class="badge">Для перших клієнтів</span>
+        <h3>Комплекс</h3>
+        <div class="price">39 000 <small>грн</small></div>
+        <p class="old"><s>45 000 грн</s>. Стартова ціна в обмін на згоду показати сайт у портфоліо.</p>
+        <p class="for">Для готелю з рестораном і банкетним залом.</p>
+        <ul><li>5–6 сторінок</li><li>запит на дату події й на номер</li><li>калькулятор бюджету банкету</li><li>перенесення з чинного сайту зі збереженням посилань</li><li>аналітика</li></ul>
+      </div>
+    </div>
+    <p class="packs-note">Англійська версія +8 000 грн. Підтримка після запуску від 1 500 грн на місяць: оновлення, резервні копії, дрібні правки.</p>
+  </div>
+</section>
+
+<section class="band" id="about">
+  <div class="wrap about">
+    <div>
+      <p class="eyebrow">Хто ми</p>
+      <h2>Молода студія, яка рахує ваші заявки, а не свої години</h2>
+      <p>Aurorine Studio робить сайти для готелів, ресторанів і банкетних залів. Ми працюємо із сучасними AI-інструментами, тому робимо швидше й дешевше за класичні агенції, а заощаджений час витрачаємо на перевірку: кожну сторінку дивимося на телефоні й компʼютері перед запуском.</p>
+      <p>Зараз ми набираємо перших клієнтів, тому даємо стартову ціну й особисту увагу. Ваш проєкт від ескізу до запуску веде керівник проєктів Микола Анастюк, і саме з ним ви спілкуєтеся.</p>
+    </div>
+    <div class="facts">
+      <div><span>Хто веде проєкт</span><b>Микола Анастюк</b></div>
+      <div><span>Строк</span><b>2–4 тижні</b></div>
+      <div><span>Оплата</span><b>50% / 50%</b></div>
+      <div><span>Чиї домен і код</span><b>ваші</b></div>
+      <div><span>Правки після запуску</span><b>місяць безкоштовно</b></div>
+      <div><span>Ескіз до оплати</span><b>безкоштовно</b></div>
+    </div>
+  </div>
+</section>
+
+<section class="band alt" id="faq">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><p class="eyebrow">Перш ніж написати</p><h2>Часті питання</h2></div>
+      <p>Якщо вашого питання тут немає, просто напишіть нам.</p>
+    </div>
+    <div class="faq">
+      <details><summary>У нас уже є сайт. Навіщо новий?</summary><p>Можливо, й не потрібен. Ескіз безкоштовний: подивіться, як могла б виглядати ваша головна сторінка із запитом на дату, і порівняйте з тим, що є зараз. Якщо різниці не побачите, ви нічого не втрачаєте.</p></details>
+      <details><summary>Чому дешевше, ніж у класичних агенціях?</summary><p>Рутинну частину роботи (верстку, перенесення меню, перевірки) ми робимо з AI-інструментами. Дизайн, тексти й рішення лишаються за людьми. Плюс стартова ціна для перших клієнтів.</p></details>
+      <details><summary>А якщо ескіз не сподобається?</summary><p>Тоді ви нічого не винні. Ескіз ми робимо за власний рахунок, і він ні до чого вас не зобовʼязує.</p></details>
+      <details><summary>Покажіть ваші роботи</summary><p>Ми нещодавно почали, тому готового портфоліо поки немає, і ми його не вигадуємо. Найкраще про нас скаже ескіз, зроблений саме для вашого закладу. Саме тому перші клієнти отримують стартову ціну.</p></details>
+      <details><summary>Хто наповнюватиме сайт?</summary><p>Тексти, фото й меню з чинного сайту чи Instagram ми переносимо самі. Від вас потрібні актуальні ціни й відповіді на кілька питань.</p></details>
+      <details><summary>Персоналу доведеться вчити нову програму?</summary><p>Ні. Заявки приходять у Telegram, яким адміністратор і так користується. Меню змінюється в простій таблиці.</p></details>
+    </div>
+  </div>
+</section>
+</main>
+
+<div class="night band final" id="contact">
+  <div class="wrap final-grid">
+    <div>
+      <h2>Надішліть посилання на свій сайт або Instagram. <span class="grad">Ескіз зробимо безкоштовно.</span></h2>
+      <p>Ви побачите свою головну сторінку з вашими фото й запитом на дату ще до того, як ми заговоримо про гроші.</p>
+    </div>
+    <div class="mailbox">
+      <div class="lbl">Пишіть на пошту</div>
+      <div class="addr" id="mail">aurorine.studio@gmail.com</div>
+      <div class="cta-row" style="margin-top:0">
+        <a class="btn btn-aur" href="mailto:aurorine.studio@gmail.com">Написати листа</a>
+        <button class="btn btn-ghost" type="button" id="copy">Скопіювати адресу</button>
+        <span class="copied" id="copied" hidden>Скопійовано</span>
+      </div>
+      <p class="ask">У листі достатньо трьох речей:</p>
+      <ol>
+        <li>назва закладу й місто;</li>
+        <li>посилання на сайт або Instagram;</li>
+        <li>що для вас головне: банкети, номери чи ресторан.</li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+<footer class="band">
+  <div class="wrap"><span>© 2026 Aurorine Studio · Україна</span><span>aurorine.studio@gmail.com</span></div>
+</footer>
+
+<script>
+const $=id=>document.getElementById(id);
+const fmt=n=>Math.round(n).toLocaleString('uk-UA').replace(/[  ,]/g,' ');
+
+/* демо заявки */
+let ev='Весілля';
+document.querySelectorAll('.chips button').forEach(b=>b.addEventListener('click',()=>{
+  document.querySelectorAll('.chips button').forEach(x=>x.setAttribute('aria-pressed',x===b));
+  ev=b.dataset.ev;
+}));
+$('d-send').addEventListener('click',()=>{
+  const g=Math.max(1,Math.min(500,+$('d-guests').value||1));
+  const date=($('d-date').value||'дата не вказана').replace(/[<>&]/g,'');
+  $('d-msg').innerHTML='🔔 Нова заявка: <b>'+ev+'</b><br>'+date+' · '+g+(ev==='Номер на ніч'?' гост.':' гостей')+'<br>Телефон: +380 …';
+  const d=new Date();$('d-time').textContent=String(d.getHours()).padStart(2,'0')+':'+String(d.getMinutes()).padStart(2,'0');
+  const t=$('d-tg');t.classList.remove('pulse');void t.offsetWidth;t.classList.add('pulse');
+});
+
+/* самоперевірка */
+const verdict=[
+  'Сайт зараз майже не допомагає продавати. Ескіз покаже, як це виправити.',
+  'Сайт зараз майже не допомагає продавати. Ескіз покаже, як це виправити.',
+  'Сайт зараз майже не допомагає продавати. Ескіз покаже, як це виправити.',
+  'Основа є, але частина гостей губиться по дорозі. Ескіз покаже, де саме.',
+  'Добрий рівень. Лишилося закрити одну прогалину.',
+  'Ваш сайт уже працює на заявки. Якщо захочете більше, напишіть нам.'
+];
+function score(){
+  const qs=[...document.querySelectorAll('.q')];
+  const answered=qs.filter(q=>q.querySelector('[aria-pressed=true]')).length;
+  const yes=qs.filter(q=>q.querySelector('[aria-pressed=true][data-v="1"]')).length;
+  $('sc').textContent=yes;$('scbar').style.width=(yes/5*100)+'%';
+  $('sctext').textContent=answered<5?'Відповіли на '+answered+' з 5.':verdict[yes];
+}
+document.querySelectorAll('.yn').forEach(g=>g.querySelectorAll('button').forEach(b=>b.addEventListener('click',()=>{
+  g.querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',x===b));score();
+})));
+
+/* окупність */
+const PRICE=39000;
+function calc(){
+  const g=+$('c-g').value,p=+$('c-p').value,n=+$('c-n').value;
+  $('c-go').textContent=g;$('c-po').textContent=fmt(p);$('c-no').textContent=n;
+  const one=g*p;$('c-one').textContent=fmt(one)+' грн';
+  $('c-year').textContent=fmt(one*n*12)+' грн';
+  const k=Math.ceil(PRICE/one);
+  $('c-pay').textContent=k<=1?'з 1 банкету':'з '+k+' банкетів';
+}
+['c-g','c-p','c-n'].forEach(id=>$(id).addEventListener('input',calc));calc();
+
+/* копіювання адреси */
+$('copy').addEventListener('click',()=>{
+  const done=()=>{$('copied').hidden=false;setTimeout(()=>{$('copied').hidden=true},2000)};
+  const sel=()=>{const r=document.createRange();r.selectNodeContents($('mail'));const s=getSelection();s.removeAllRanges();s.addRange(r)};
+  try{navigator.clipboard.writeText('aurorine.studio@gmail.com').then(done,sel)}catch(e){sel()}
+});
+</script>
+
+</body>
+</html>
