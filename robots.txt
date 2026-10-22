@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://mykolaanastiuk.github.io/aurorine.github.io/sitemap.xml
