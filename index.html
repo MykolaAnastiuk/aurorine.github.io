@@ -3,12 +3,37 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0f1a2b">
+<link rel="canonical" href="https://mykolaanastiuk.github.io/aurorine.github.io/">
 <meta property="og:title" content="Aurorine Studio — сайти, які приймають заявки">
 <meta property="og:description" content="Сайти для банкетних залів, готелів і заміських комплексів. Заявки на дату й номер одразу в Telegram. Безкоштовний ескіз на ваших фото.">
 <meta property="og:type" content="website">
+<meta property="og:locale" content="uk_UA">
+<meta property="og:site_name" content="Aurorine Studio">
+<meta property="og:url" content="https://mykolaanastiuk.github.io/aurorine.github.io/">
+<meta property="og:image" content="https://mykolaanastiuk.github.io/aurorine.github.io/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Aurorine Studio: сайти для банкетних залів і готелів, які самі приймають заявки">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<title>Aurorine Studio</title>
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<title>Aurorine Studio — сайти для банкетних залів і готелів</title>
 <meta name="description" content="Сайти для банкетних залів, готелів і заміських комплексів, які самі приймають заявки на дату й номер. Безкоштовний ескіз на ваших фото.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Aurorine Studio",
+  "url": "https://mykolaanastiuk.github.io/aurorine.github.io/",
+  "image": "https://mykolaanastiuk.github.io/aurorine.github.io/og.png",
+  "logo": "https://mykolaanastiuk.github.io/aurorine.github.io/apple-touch-icon.png",
+  "email": "aurorine.studio@gmail.com",
+  "description": "Сайти для банкетних залів, готелів і заміських комплексів, які самі приймають заявки на дату й номер.",
+  "areaServed": {"@type": "Country", "name": "Україна"},
+  "priceRange": "14 000–45 000 грн"
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600&family=Commissioner:wght@400;500;600&display=swap" rel="stylesheet">
@@ -17,8 +42,8 @@
 :root{
   --night:#0f1a2b; --night-2:#16253b; --night-line:#2b3f5c; --frost:#f3eee6; --frost-dim:#b9c4d4;
   --bg:#f4f6f8; --surface:#ffffff; --ink:#122033; --muted:#55657a; --line:#d8dee6;
-  --aur-1:#14b88a; --aur-2:#2f86e6; --aur-3:#7b5cf0; --accent:#2f86e6;
-  --warn:#c4572b; --ok:#14996f; --on-accent:#ffffff;
+  --aur-1:#14b88a; --aur-2:#2f86e6; --aur-3:#7b5cf0; --accent:#1f6fd1;
+  --warn:#b34d24; --ok:#0f7a59; --on-accent:#ffffff;
   --display:"Unbounded","Arial Black",system-ui,sans-serif;
   --body:"Commissioner",system-ui,-apple-system,"Segoe UI",sans-serif;
   --r:14px;
@@ -67,7 +92,7 @@ a{color:inherit}
 .cta-row{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin-top:28px}
 .promise{display:flex;flex-wrap:wrap;gap:8px 20px;margin:24px 0 0;padding:0;list-style:none;font-size:.9rem;color:var(--frost-dim)}
 .promise li::before{content:"✓ ";color:#46e3b0;font-weight:600}
-.ribbon{position:absolute;left:-10%;right:-10%;bottom:-40px;height:220px;opacity:.3;pointer-events:none}
+.ribbon{position:absolute;left:-10%;width:120%;bottom:-40px;height:220px;opacity:.3;pointer-events:none}
 
 /* живе демо: телефон гостя → Telegram адміністратора */
 .demo{display:grid;gap:14px}
@@ -131,7 +156,7 @@ section.band{padding-block:80px}
 .row{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin:22px 0 6px}
 .row:first-child{margin-top:0}
 .row output{font-family:var(--display);font-size:1.4rem;font-variant-numeric:tabular-nums}
-input[type=range]{width:100%;accent-color:var(--accent)}
+input[type=range]{width:100%;height:28px;margin:0;accent-color:var(--accent)}
 .res{display:grid;gap:16px;align-content:start}
 .res .line{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:4px 12px;padding-bottom:14px;border-bottom:1px solid var(--line)}
 .res .line b{font-family:var(--display);font-weight:600;font-size:1.4rem;font-variant-numeric:tabular-nums;white-space:nowrap}
@@ -217,7 +242,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
 <body>
 
 
-<div class="night band hero-band" id="top">
+<header class="night band hero-band" id="top">
   <div class="wrap">
     <div class="top">
       <a class="brand" href="#top" aria-label="Aurorine Studio">
@@ -236,7 +261,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
       <div>
         <p class="eyebrow">Сайти для банкетних залів, готелів і заміських комплексів</p>
         <h1>Гість обирає дату о 23:40. <span class="grad">Вранці заявка вже в Telegram</span> адміністратора.</h1>
-        <p class="lead">Свято часто планують увечері з телефону, коли менеджер уже не відповідає. Ми робимо сайт, який у цей момент показує ціни, меню й вільні дати та приймає заявку замість вас.</p>
+        <p class="lead">Свято часто планують увечері з телефону, коли менеджер уже не відповідає. Ми робимо сайт, який у цей момент показує ціни й меню та приймає запит на дату замість вас.</p>
         <div class="cta-row">
           <a class="btn btn-aur" href="#contact">Отримати безкоштовний ескіз</a>
           <a class="btn btn-ghost" href="#check">Перевірити свій сайт</a>
@@ -252,14 +277,14 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
         <div class="phone">
           <div class="ttl">Яка у вас подія?</div>
           <div class="chips" role="group" aria-label="Тип події">
-            <button type="button" aria-pressed="true" data-ev="Весілля">Весілля</button>
-            <button type="button" aria-pressed="false" data-ev="Ювілей">Ювілей</button>
-            <button type="button" aria-pressed="false" data-ev="Корпоратив">Корпоратив</button>
-            <button type="button" aria-pressed="false" data-ev="Номер на ніч">Номер</button>
+            <button type="button" aria-pressed="true" data-ev="Весілля" data-g="120">Весілля</button>
+            <button type="button" aria-pressed="false" data-ev="Ювілей" data-g="40">Ювілей</button>
+            <button type="button" aria-pressed="false" data-ev="Корпоратив" data-g="60">Корпоратив</button>
+            <button type="button" aria-pressed="false" data-ev="Номер на ніч" data-g="2">Номер</button>
           </div>
           <label for="d-date">Дата <input id="d-date" type="text" value="14 червня"></label>
           <label for="d-guests">Гостей <input id="d-guests" type="number" min="1" max="500" value="120"></label>
-          <button class="go" id="d-send" type="button">Перевірити дату →</button>
+          <button class="go" id="d-send" type="button">Надіслати запит →</button>
         </div>
         <div class="tg" id="d-tg" aria-live="polite">
           <div class="who">Заявки з сайту <span id="d-time">23:40</span></div>
@@ -270,27 +295,27 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
     </div>
   </div>
   <svg class="ribbon" viewBox="0 0 1200 220" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="r" x1="0" x2="1"><stop offset="0" stop-color="#46E3B0"/><stop offset=".55" stop-color="#4BB4FF"/><stop offset="1" stop-color="#A88BFF"/></linearGradient></defs><path d="M0 150 C 220 60, 420 210, 640 120 S 1000 60, 1200 110" stroke="url(#r)" stroke-width="22" fill="none" stroke-linecap="round"/></svg>
-</div>
+</header>
 
 <main>
 <section class="band alt" id="leaks">
   <div class="wrap">
     <div class="sec-head">
       <div><p class="eyebrow">Що ми бачимо найчастіше</p><h2>Де сайти закладів гублять заявки</h2></div>
-      <p>Ми розібрали сайти 66 банкетних залів, готелів і заміських комплексів у Львові, Києві та Дніпрі. Ці проблеми повторюються знову й знову, і кожна з них відправляє гостя до конкурента.</p>
+      <p>Ми детально переглянули на компʼютері й телефоні сайти десяти банкетних залів, готелів і заміських комплексів у Львові, Києві та Дніпрі. Ці проблеми повторюються знову й знову, і кожна з них може відправити гостя до конкурента.</p>
     </div>
     <div class="leaks">
       <div class="leak"><span class="x" aria-hidden="true">✕</span><h3>Немає запиту на дату</h3><p>Є лише форма «Напишіть нам». Гість хоче знати, <b>чи вільна субота</b>, а не писати лист у порожнечу.</p></div>
       <div class="leak"><span class="x" aria-hidden="true">✕</span><h3>Меню й ціни картинкою</h3><p>З телефону їх важко прочитати, а Google не бачить страв. Гість іде туди, де <b>ціну видно одразу</b>.</p></div>
       <div class="leak"><span class="x" aria-hidden="true">✕</span><h3>Номер не натискається</h3><p>Щоб подзвонити, номер треба переписати вручну. Це <b>зайвий крок саме тоді</b>, коли гість уже готовий бронювати.</p></div>
-      <div class="leak"><span class="x" aria-hidden="true">✕</span><h3>Сайт закритий від Google</h3><p>Ми знаходили сайти із забороною індексації. Заклад <b>платить за сайт, якого пошук не показує</b>.</p></div>
-      <div class="leak"><span class="x" aria-hidden="true">✕</span><h3>Залишки шаблону</h3><p>«© 2035», тестові новини, кнопки, що ведуть у нікуди. Дрібниця, але гість бачить, що <b>сайтом ніхто не займається</b>.</p></div>
+      <div class="leak"><span class="x" aria-hidden="true">✕</span><h3>Сайт закритий від Google</h3><p>Ми бачили сайт готелю, закритий від індексації. Заклад <b>платить за сайт, якого пошук не показує</b>.</p></div>
+      <div class="leak"><span class="x" aria-hidden="true">✕</span><h3>Залишки шаблону</h3><p>Рік із майбутнього внизу сторінки, тестові новини, кнопки, що ведуть у нікуди. Дрібниця, але гість бачить, що <b>сайтом ніхто не займається</b>.</p></div>
       <div class="leak"><span class="x" aria-hidden="true">✕</span><h3>На телефоні все розʼїжджається</h3><p>Меню займає весь перший екран, кнопок немає. А <b>шукають заклад найчастіше з телефону</b>.</p></div>
     </div>
     <div class="market">
       <div class="n">−14%<small>відвідувань</small></div>
       <div class="n">+17%<small>середній чек</small></div>
-      <p>Так змінився ресторанний ринок за січень–липень 2026 року за даними Poster (11 555 закладів). Гостей менше, кожен приносить більше, тож кожна загублена заявка коштує дорожче.</p>
+      <p>Так змінився ресторанний ринок за січень–липень 2026 року за <a href="https://forbes.ua/news/vitorg-zakladiv-kharchuvannya-zris-na-3-a-vidviduvanist-vpala-na-14-poster-12082026-41152" rel="noopener">даними Poster</a> (11 555 закладів). Гостей менше, кожен приносить більше, тож кожна загублена заявка коштує дорожче.</p>
     </div>
   </div>
 </section>
@@ -303,11 +328,11 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
     </div>
     <div class="check">
       <div class="qs">
-        <div class="q"><span>Гість може залишити запит на конкретну дату й кількість гостей</span><div class="yn" role="group" aria-label="Відповідь"><button type="button" data-v="1" aria-pressed="false">Так</button><button type="button" data-v="0" aria-pressed="false">Ні</button></div></div>
-        <div class="q"><span>Меню й ціни банкету написані текстом, а не картинкою</span><div class="yn" role="group" aria-label="Відповідь"><button type="button" data-v="1" aria-pressed="false">Так</button><button type="button" data-v="0" aria-pressed="false">Ні</button></div></div>
-        <div class="q"><span>Номер телефону натискається й одразу дзвонить</span><div class="yn" role="group" aria-label="Відповідь"><button type="button" data-v="1" aria-pressed="false">Так</button><button type="button" data-v="0" aria-pressed="false">Ні</button></div></div>
-        <div class="q"><span>Заявки з сайту приходять у месенджер, а не губляться в пошті</span><div class="yn" role="group" aria-label="Відповідь"><button type="button" data-v="1" aria-pressed="false">Так</button><button type="button" data-v="0" aria-pressed="false">Ні</button></div></div>
-        <div class="q"><span>На першому екрані телефона видно, що у вас є і скільки це коштує</span><div class="yn" role="group" aria-label="Відповідь"><button type="button" data-v="1" aria-pressed="false">Так</button><button type="button" data-v="0" aria-pressed="false">Ні</button></div></div>
+        <div class="q"><span id="q1">Гість може залишити запит на конкретну дату й кількість гостей</span><div class="yn" role="group" aria-labelledby="q1"><button type="button" data-v="1" aria-pressed="false">Так</button><button type="button" data-v="0" aria-pressed="false">Ні</button></div></div>
+        <div class="q"><span id="q2">Меню й ціни банкету написані текстом, а не картинкою</span><div class="yn" role="group" aria-labelledby="q2"><button type="button" data-v="1" aria-pressed="false">Так</button><button type="button" data-v="0" aria-pressed="false">Ні</button></div></div>
+        <div class="q"><span id="q3">Номер телефону натискається й одразу дзвонить</span><div class="yn" role="group" aria-labelledby="q3"><button type="button" data-v="1" aria-pressed="false">Так</button><button type="button" data-v="0" aria-pressed="false">Ні</button></div></div>
+        <div class="q"><span id="q4">Заявки з сайту приходять у месенджер, а не губляться в пошті</span><div class="yn" role="group" aria-labelledby="q4"><button type="button" data-v="1" aria-pressed="false">Так</button><button type="button" data-v="0" aria-pressed="false">Ні</button></div></div>
+        <div class="q"><span id="q5">На першому екрані телефону видно, що у вас є і скільки це коштує</span><div class="yn" role="group" aria-labelledby="q5"><button type="button" data-v="1" aria-pressed="false">Так</button><button type="button" data-v="0" aria-pressed="false">Ні</button></div></div>
       </div>
       <div class="score" aria-live="polite">
         <div class="big"><span id="sc">0</span><small> / 5</small></div>
@@ -331,14 +356,14 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
         <input type="range" id="c-g" min="20" max="300" step="10" value="100">
         <div class="row"><label for="c-p">Ціна за гостя, грн</label><output id="c-po" for="c-p">1 500</output></div>
         <input type="range" id="c-p" min="500" max="4000" step="100" value="1500">
-        <div class="row"><label for="c-n">Загублених заявок на місяць</label><output id="c-no" for="c-n">1</output></div>
-        <input type="range" id="c-n" min="1" max="10" step="1" value="1">
+        <div class="row"><label for="c-n">Загублених банкетів на місяць</label><output id="c-no" for="c-n">1</output></div>
+        <input type="range" id="c-n" min="1" max="5" step="1" value="1">
       </div>
       <div class="panel res">
         <div class="line"><span>Один банкет</span><b id="c-one">150 000 грн</b></div>
-        <div class="line"><span>Загублено за рік</span><b id="c-year">1 800 000 грн</b></div>
-        <div class="line hl"><span>Сайт «Комплекс» окупається</span><b id="c-pay">з 1 банкету</b></div>
-        <p class="fine">Для порівняння взято стартову ціну пакета «Комплекс», 39 000 грн. Розрахунок не враховує напої, номери й повторних гостей.</p>
+        <div class="line"><span>Загублено виручки за рік</span><b id="c-year">1 800 000 грн</b></div>
+        <div class="line hl"><span>Вартість сайту «Комплекс» покриває виручка</span><b id="c-pay">з 1 банкету</b></div>
+        <p class="fine">Для порівняння взято стартову ціну пакета «Комплекс», 39 000 грн. Це виручка, а не прибуток; розрахунок не враховує напої, номери й повторних гостей.</p>
       </div>
     </div>
   </div>
@@ -348,12 +373,12 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
   <div class="wrap">
     <div class="sec-head">
       <div><p class="eyebrow">Без ризику для вас</p><h2>Спочатку ви бачите свій сайт, потім вирішуєте</h2></div>
-      <p>Від першого листа до запуску зазвичай минає від двох до чотирьох тижнів.</p>
+      <p>Від погодження ціни до запуску — від двох до чотирьох тижнів.</p>
     </div>
     <ol class="steps">
       <li><h3>Ескіз на ваших фото</h3><span class="tag">безкоштовно</span><p>Дивимося ваш сайт або Instagram і робимо ескіз головної сторінки з вашими фото, цінами й послугами.</p></li>
       <li><h3>Фіксована ціна</h3><span class="tag">до старту</span><p>Погоджуємо сторінки, ціну й строк письмово. Оплата 50% на початку, 50% після запуску.</p></li>
-      <li><h3>Розробка</h3><span class="tag">дві хвилі правок</span><p>Показуємо проміжний результат. Меню з картинок переносимо в текст самі.</p></li>
+      <li><h3>Розробка</h3><span class="tag">два кола правок</span><p>Показуємо проміжний результат. Меню з картинок переносимо в текст самі.</p></li>
       <li><h3>Запуск і передача</h3><span class="tag">місяць правок безкоштовно</span><p>Домен і хостинг оформлені на вас. Код і всі доступи передаємо, ви ні від кого не залежите.</p></li>
     </ol>
   </div>
@@ -370,24 +395,24 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
         <h3>Старт</h3>
         <div class="price">14 000 <small>грн</small></div>
         <p class="for">Для закладів, у яких є лише Instagram або QR-меню.</p>
-        <ul><li>одна сторінка</li><li>меню, години роботи, контакти</li><li>кнопки «Подзвонити» й «Маршрут»</li><li>запит на бронювання в Telegram</li></ul>
+        <ul><li>одна сторінка</li><li>меню, години роботи, контакти</li><li>кнопки «Подзвонити» й «Маршрут»</li><li>запит на бронювання в Telegram</li><li>базове SEO й Search Console</li></ul>
       </div>
       <div class="pack">
         <h3>Компакт</h3>
         <div class="price">24 000 <small>грн</small></div>
         <p class="for">Для ресторану з банкетами чи бізнес-ланчами.</p>
-        <ul><li>3–4 сторінки</li><li>меню, яке ви редагуєте самі в таблиці</li><li>сторінка банкетів і запит на дату</li><li>заявки в Telegram</li></ul>
+        <ul><li>3–4 сторінки</li><li>меню, яке ви редагуєте самі в таблиці</li><li>сторінка банкетів і запит на дату</li><li>заявки в Telegram</li><li>базове SEO й Search Console</li></ul>
       </div>
       <div class="pack main">
-        <span class="badge">Для перших клієнтів</span>
+        <span class="badge">Для трьох перших клієнтів</span>
         <h3>Комплекс</h3>
         <div class="price">39 000 <small>грн</small></div>
         <p class="old"><s>45 000 грн</s>. Стартова ціна в обмін на згоду показати сайт у портфоліо.</p>
         <p class="for">Для готелю з рестораном і банкетним залом.</p>
-        <ul><li>5–6 сторінок</li><li>запит на дату події й на номер</li><li>калькулятор бюджету банкету</li><li>перенесення з чинного сайту зі збереженням посилань</li><li>аналітика</li></ul>
+        <ul><li>5–6 сторінок</li><li>запит на дату події й на номер</li><li>калькулятор бюджету банкету</li><li>перенесення з чинного сайту зі збереженням посилань</li><li>базове SEO, аналітика й Search Console</li><li>налаштування Google Maps у подарунок</li></ul>
       </div>
     </div>
-    <p class="packs-note">Англійська версія +8 000 грн. Підтримка після запуску від 1 500 грн на місяць: оновлення, резервні копії, дрібні правки.</p>
+    <p class="packs-note">Базове SEO входить у кожен пакет: заголовки й описи сторінок, розмітка для Google, sitemap, Search Console, перевірка швидкості. Локальне SEO-старт (Google Maps, каталоги, звіт через 30 днів) 5 000 грн. Англійська версія +8 000 грн. Підтримка після запуску: 1 500 грн на місяць для «Старт» і «Компакт», 2 500 грн для «Комплекс» зі щомісячним звітом із Search Console.</p>
   </div>
 </section>
 
@@ -418,15 +443,15 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
     </div>
     <div class="faq">
       <details><summary>У нас уже є сайт. Навіщо новий?</summary><p>Можливо, й не потрібен. Ескіз безкоштовний: подивіться, як могла б виглядати ваша головна сторінка із запитом на дату, і порівняйте з тим, що є зараз. Якщо різниці не побачите, ви нічого не втрачаєте.</p></details>
-      <details><summary>Чому дешевше, ніж у класичних агенціях?</summary><p>Рутинну частину роботи (верстку, перенесення меню, перевірки) ми робимо з AI-інструментами. Дизайн, тексти й рішення лишаються за людьми. Плюс стартова ціна для перших клієнтів.</p></details>
+      <details><summary>Чому дешевше, ніж у класичних агенціях?</summary><p>Рутинну частину роботи (верстку, перенесення меню, перевірки) ми робимо з AI-інструментами. Кожен текст і макет перевіряє людина, а остаточні рішення ухвалюєте ви разом із керівником проєкту. Плюс стартова ціна для перших клієнтів.</p></details>
       <details><summary>А якщо ескіз не сподобається?</summary><p>Тоді ви нічого не винні. Ескіз ми робимо за власний рахунок, і він ні до чого вас не зобовʼязує.</p></details>
       <details><summary>Покажіть ваші роботи</summary><p>Ми нещодавно почали, тому готового портфоліо поки немає, і ми його не вигадуємо. Найкраще про нас скаже ескіз, зроблений саме для вашого закладу. Саме тому перші клієнти отримують стартову ціну.</p></details>
+      <details><summary>А сайт знайдуть у Google?</summary><p>Базове SEO входить у кожен пакет: заголовки й описи сторінок, розмітка для Google, sitemap, Google Search Console і перевірка швидкості. Гарантувати місце в пошуку не може ніхто. Ми гарантуємо, що технічно сайт зроблено правильно, і через місяць показуємо звіт із Search Console.</p></details>
       <details><summary>Хто наповнюватиме сайт?</summary><p>Тексти, фото й меню з чинного сайту чи Instagram ми переносимо самі. Від вас потрібні актуальні ціни й відповіді на кілька питань.</p></details>
       <details><summary>Персоналу доведеться вчити нову програму?</summary><p>Ні. Заявки приходять у Telegram, яким адміністратор і так користується. Меню змінюється в простій таблиці.</p></details>
     </div>
   </div>
 </section>
-</main>
 
 <div class="night band final" id="contact">
   <div class="wrap final-grid">
@@ -438,7 +463,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
       <div class="lbl">Пишіть на пошту</div>
       <div class="addr" id="mail">aurorine.studio@gmail.com</div>
       <div class="cta-row" style="margin-top:0">
-        <a class="btn btn-aur" href="mailto:aurorine.studio@gmail.com">Написати листа</a>
+        <a class="btn btn-aur" href="mailto:aurorine.studio@gmail.com?subject=%D0%95%D1%81%D0%BA%D1%96%D0%B7%20%D0%B4%D0%BB%D1%8F%20%D0%B7%D0%B0%D0%BA%D0%BB%D0%B0%D0%B4%D1%83">Написати листа</a>
         <button class="btn btn-ghost" type="button" id="copy">Скопіювати адресу</button>
         <span class="copied" id="copied" hidden>Скопійовано</span>
       </div>
@@ -451,6 +476,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
     </div>
   </div>
 </div>
+</main>
 
 <footer class="band">
   <div class="wrap"><span>© 2026 Aurorine Studio · Україна</span><span>aurorine.studio@gmail.com</span></div>
@@ -462,14 +488,15 @@ const fmt=n=>Math.round(n).toLocaleString('uk-UA').replace(/[  ,]/g,' ');
 
 /* демо заявки */
 let ev='Весілля';
+const guests=n=>{const a=n%10,b=n%100;return n+' '+(a===1&&b!==11?'гість':a>=2&&a<=4&&(b<12||b>14)?'гості':'гостей')};
 document.querySelectorAll('.chips button').forEach(b=>b.addEventListener('click',()=>{
   document.querySelectorAll('.chips button').forEach(x=>x.setAttribute('aria-pressed',x===b));
-  ev=b.dataset.ev;
+  ev=b.dataset.ev;$('d-guests').value=b.dataset.g;
 }));
 $('d-send').addEventListener('click',()=>{
   const g=Math.max(1,Math.min(500,+$('d-guests').value||1));
   const date=($('d-date').value||'дата не вказана').replace(/[<>&]/g,'');
-  $('d-msg').innerHTML='🔔 Нова заявка: <b>'+ev+'</b><br>'+date+' · '+g+(ev==='Номер на ніч'?' гост.':' гостей')+'<br>Телефон: +380 …';
+  $('d-msg').innerHTML='🔔 Нова заявка: <b>'+ev+'</b><br>'+date+' · '+guests(g)+'<br>Телефон: +380 …';
   const d=new Date();$('d-time').textContent=String(d.getHours()).padStart(2,'0')+':'+String(d.getMinutes()).padStart(2,'0');
   const t=$('d-tg');t.classList.remove('pulse');void t.offsetWidth;t.classList.add('pulse');
 });
