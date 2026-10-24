@@ -1,0 +1,573 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BalQaragai под Астаной: свадьбы и тои до 350 гостей, номера, срубы</title>
+<meta name="description" content="Загородный клуб BalQaragai в 20 минутах от Астаны: банкетный зал до 350 гостей, ресторан «Аура» на 250 мест, номера и срубы, конный центр, аквапарк. Заявка на дату онлайн.">
+<!-- Концепт: не индексировать. На рабочем сайте строку убрать и добавить canonical. -->
+<meta name="robots" content="noindex, nofollow">
+<!-- <link rel="canonical" href="https://balqaragai.kz/"> -->
+<meta name="theme-color" content="#0f2a24">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ru_KZ">
+<meta property="og:site_name" content="BalQaragai">
+<meta property="og:title" content="BalQaragai: свадьбы, тои и отдых на природе под Астаной">
+<meta property="og:description" content="Банкетный зал до 350 гостей, ресторан «Аура», номера и срубы. Заявка на дату онлайн.">
+<meta name="twitter:card" content="summary_large_image">
+<!-- Структурированные данные: только факты с balqaragai.kz (страницы /, /restoran/, /nomera/, /kontakty/, 23.10.2026). Координаты и часы зоны отдыха добавить после подтверждения клиентом. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["Resort", "EventVenue"],
+      "@id": "https://balqaragai.kz/#resort",
+      "name": "Зона отдыха BalQaragai",
+      "legalName": "ТОО «BalQaragai Country Club»",
+      "url": "https://balqaragai.kz/",
+      "telephone": "+77750070030",
+      "email": "balqaragai@gmail.com",
+      "maximumAttendeeCapacity": 350,
+      "address": {"@type": "PostalAddress", "streetAddress": "Малотимофеевка-2", "addressLocality": "Астана", "addressCountry": "KZ"},
+      "sameAs": ["https://www.instagram.com/balqaragai.kz/", "https://www.facebook.com/balqaragai"]
+    },
+    {
+      "@type": "Restaurant",
+      "name": "Ресторан «Аура»",
+      "servesCuisine": ["Европейская", "Азиатская", "Национальная"],
+      "openingHours": "Mo-Su 09:00-23:00",
+      "telephone": "+77750070030",
+      "containedInPlace": {"@id": "https://balqaragai.kz/#resort"}
+    }
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --pine:#0f2a24;        /* сосна в сумерках */
+  --pine-2:#173a32;
+  --pine-3:#24524a;
+  --honey:#d8a24a;       /* «бал» — мёд */
+  --honey-soft:#f1d6a3;
+  --birch:#f6f2ea;
+  --sand:#ebe3d4;
+  --ink:#16201d;
+  --muted:#5d6a65;
+  --line:#d9cfbd;
+  --white:#fff;
+  --r:14px;
+  --r-s:8px;
+  --shadow:0 18px 50px -24px rgba(10,30,25,.45);
+  --serif:"Cormorant Garamond", Georgia, serif;
+  --sans:"Manrope", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--birch);color:var(--ink);font:16px/1.6 var(--sans);-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:1200px;margin:0 auto;padding:0 20px}
+.eyebrow{font:600 12px/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--honey)}
+h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.08;margin:0}
+h2{font-size:clamp(34px,4.6vw,56px);letter-spacing:-.01em}
+h3{font-size:26px}
+.lead{font-size:18px;color:var(--muted);max-width:640px}
+.btn{display:inline-flex;align-items:center;gap:10px;border:0;border-radius:999px;padding:15px 26px;font:600 15px/1 var(--sans);cursor:pointer;text-decoration:none;transition:transform .15s, background .2s}
+.btn:hover{transform:translateY(-1px)}
+.btn-honey{background:var(--honey);color:var(--pine)}
+.btn-honey:hover{background:#e6b45e}
+.btn-ghost{background:transparent;color:var(--white);box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.55)}
+.btn-dark{background:var(--pine);color:var(--white)}
+
+/* Плашка концепта */
+.concept{background:var(--ink);color:#cfd8d4;font-size:13px;text-align:center;padding:8px 16px}
+.concept b{color:var(--honey-soft);font-weight:600}
+
+/* Шапка */
+header{position:sticky;top:0;z-index:20;background:rgba(15,42,36,.94);backdrop-filter:blur(10px);color:var(--white)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px;gap:20px}
+.logo{font:700 26px/1 var(--serif);letter-spacing:.02em;text-decoration:none}
+.logo span{color:var(--honey)}
+.menu{display:flex;gap:28px;font-size:14px;font-weight:500}
+.menu a{text-decoration:none;opacity:.85}
+.menu a:hover{opacity:1;color:var(--honey-soft)}
+.nav-cta{display:flex;align-items:center;gap:16px}
+.nav-phone{font-weight:600;font-size:14px;text-decoration:none;white-space:nowrap}
+.nav .btn{padding:11px 18px;font-size:14px}
+
+/* Первый экран */
+.hero{position:relative;min-height:min(88vh,820px);display:flex;align-items:flex-end;color:var(--white);background:var(--pine)}
+.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.55}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,42,36,.15) 0%,rgba(15,42,36,.55) 45%,rgba(11,30,26,.96) 100%)}
+.hero .wrap{position:relative;z-index:1;padding-bottom:56px;padding-top:120px;width:100%}
+.hero h1{font-size:clamp(42px,6.8vw,88px);max-width:900px;letter-spacing:-.015em}
+.hero h1 em{font-style:italic;color:var(--honey-soft)}
+.hero p{font-size:19px;max-width:620px;color:#dfe7e3;margin:22px 0 32px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:14px}
+.facts{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.14);border-radius:var(--r);overflow:hidden;margin-top:56px}
+.fact{background:rgba(11,30,26,.72);padding:20px 22px}
+.fact b{display:block;font:600 34px/1 var(--serif);color:var(--honey-soft)}
+.fact span{font-size:13px;color:#c5d1cc}
+
+section{padding:96px 0}
+.sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:32px;margin-bottom:44px;flex-wrap:wrap}
+.sec-head .eyebrow{margin-bottom:14px;display:block}
+
+/* Торжества */
+.formats{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 36px}
+.chip{border:1px solid var(--line);border-radius:999px;padding:8px 16px;font-size:14px;background:var(--white)}
+.halls{display:grid;grid-template-columns:1.35fr 1fr 1fr;gap:20px}
+.hall{background:var(--white);border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column}
+.hall img{aspect-ratio:4/3;object-fit:cover;width:100%;background:var(--sand)}
+.hall-body{padding:22px 24px 26px;display:flex;flex-direction:column;gap:10px;flex:1}
+.cap{display:inline-block;font:700 13px/1 var(--sans);background:var(--pine);color:var(--honey-soft);padding:7px 12px;border-radius:999px;align-self:flex-start}
+.hall p{margin:0;color:var(--muted);font-size:15px}
+.hall ul{margin:4px 0 0;padding-left:18px;font-size:15px;color:var(--ink)}
+.note{margin-top:28px;font-size:14px;color:var(--muted);display:flex;gap:10px;align-items:flex-start;background:var(--sand);padding:16px 20px;border-radius:var(--r-s)}
+
+/* Заявка */
+.request{background:var(--pine);color:var(--white)}
+.request-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:56px;align-items:start}
+.request .lead{color:#c5d1cc}
+.steps{list-style:none;padding:0;margin:32px 0 0;display:grid;gap:18px}
+.steps li{display:flex;gap:16px;align-items:flex-start}
+.steps i{flex:none;width:34px;height:34px;border-radius:50%;background:var(--pine-3);color:var(--honey-soft);font:700 15px/34px var(--sans);text-align:center;font-style:normal}
+form{background:var(--birch);color:var(--ink);border-radius:var(--r);padding:30px;box-shadow:var(--shadow)}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+label{display:block;font-size:13px;font-weight:600;color:var(--muted);margin:0 0 14px}
+input,select,textarea{display:block;width:100%;margin-top:6px;font:500 16px/1.3 var(--sans);color:var(--ink);background:var(--white);border:1px solid var(--line);border-radius:var(--r-s);padding:12px 14px}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--honey);border-color:transparent}
+textarea{min-height:76px;resize:vertical}
+form .btn{width:100%;justify-content:center;margin-top:6px}
+.fine{font-size:12px;color:var(--muted);margin:12px 0 0;text-align:center}
+.tg{display:none;margin-top:18px;background:#1f2c33;color:#e9eef1;border-radius:16px;padding:18px 20px;font:14px/1.55 var(--sans)}
+.tg.show{display:block}
+.tg-head{display:flex;align-items:center;gap:10px;margin-bottom:10px;font-weight:700}
+.tg-head span{width:30px;height:30px;border-radius:50%;background:#2aabee;display:grid;place-items:center;color:#fff;font-size:14px}
+.tg pre{white-space:pre-wrap;margin:0;font:inherit;background:#2b3a44;border-radius:12px;padding:12px 14px}
+.tg small{display:block;color:#9fb1bb;margin-top:10px}
+
+/* Ресторан */
+.rest{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.rest-photos{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.rest-photos img{border-radius:var(--r);aspect-ratio:3/4;object-fit:cover;width:100%;background:var(--sand)}
+.rest-photos img:first-child{margin-top:40px}
+.ticks{list-style:none;padding:0;margin:24px 0;display:grid;gap:10px}
+.ticks li{padding-left:28px;position:relative}
+.ticks li::before{content:"";position:absolute;left:0;top:9px;width:14px;height:8px;border-left:2px solid var(--honey);border-bottom:2px solid var(--honey);transform:rotate(-45deg)}
+.menu-card{background:var(--white);border-radius:var(--r);padding:26px 28px;box-shadow:var(--shadow);margin-top:28px}
+.menu-card h3{font-size:24px;margin-bottom:10px}
+.dish{display:flex;align-items:baseline;gap:10px;padding:7px 0;border-bottom:1px dashed var(--line);font-size:15px}
+.dish:last-of-type{border-bottom:0}
+.dish .dots{flex:1}
+.dish b{font-weight:600;white-space:nowrap}
+.menu-card small{display:block;color:var(--muted);font-size:12px;margin-top:10px}
+
+/* Проживание */
+.stay{background:var(--sand)}
+.rooms{display:grid;grid-template-columns:1.3fr 1fr;gap:28px;align-items:start}
+table{width:100%;border-collapse:collapse;background:var(--white);border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow);font-size:15px}
+th,td{text-align:left;padding:14px 18px;border-bottom:1px solid var(--sand)}
+th{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600;background:#faf7f1}
+td.p{white-space:nowrap;font-weight:600}
+tr:last-child td{border-bottom:0}
+.calc{background:var(--pine);color:var(--white);border-radius:var(--r);padding:28px;box-shadow:var(--shadow)}
+.calc h3{color:var(--honey-soft);margin-bottom:6px}
+.calc p{color:#c5d1cc;font-size:14px;margin:0 0 18px}
+.calc label{color:#c5d1cc}
+.calc input,.calc select{background:var(--pine-2);border-color:var(--pine-3);color:var(--white)}
+.total{margin-top:10px;padding-top:18px;border-top:1px solid var(--pine-3);display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+.total b{font:600 38px/1 var(--serif);color:var(--honey-soft)}
+.cabins{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:44px}
+.cabin{background:var(--white);border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow)}
+.cabin img{aspect-ratio:16/10;object-fit:cover;width:100%;background:var(--birch)}
+.cabin div{padding:20px 22px}
+.cabin p{margin:6px 0 0;color:var(--muted);font-size:14px}
+.cabin .pr{margin-top:12px;font-weight:700;color:var(--pine)}
+
+/* Отдых */
+.seasons{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.season{border-radius:var(--r);padding:32px;color:var(--white);position:relative;overflow:hidden;min-height:300px}
+.season.w{background:linear-gradient(160deg,#28485a,#142833)}
+.season.s{background:linear-gradient(160deg,#3c6a3e,#173a32)}
+.season h3{font-size:34px;margin-bottom:6px}
+.season .count{color:var(--honey-soft);font-weight:600;font-size:14px;margin-bottom:18px}
+.season ul{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:8px}
+.season li{background:rgba(255,255,255,.12);padding:7px 14px;border-radius:999px;font-size:14px}
+.extras{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:20px}
+.extra{background:var(--white);border-radius:var(--r);padding:22px;box-shadow:var(--shadow)}
+.extra h3{font-size:22px;margin-bottom:6px}
+.extra p{margin:0;font-size:14px;color:var(--muted)}
+
+/* Доверие */
+.trust{background:var(--pine);color:var(--white);padding:72px 0}
+.trust-grid{display:grid;grid-template-columns:auto 1fr auto;gap:40px;align-items:center}
+.score{font:600 96px/1 var(--serif);color:var(--honey-soft)}
+.trust p{margin:0;color:#c5d1cc;max-width:560px}
+.trust p b{color:var(--white)}
+
+/* Контакты */
+.contacts{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.c-list{display:grid;gap:14px;margin-top:26px}
+.c-item{display:flex;justify-content:space-between;gap:16px;padding:16px 20px;background:var(--white);border-radius:var(--r-s);text-decoration:none;box-shadow:0 1px 0 var(--line)}
+.c-item span{color:var(--muted);font-size:14px}
+.c-item b{font-weight:600}
+.contacts>*,.rest>*,.rooms>*,.request-grid>*{min-width:0}
+.c-item b{overflow-wrap:anywhere;text-align:right}
+.route{background:var(--pine-2);color:var(--white);border-radius:var(--r);padding:32px;display:flex;flex-direction:column;justify-content:space-between;gap:24px;min-height:320px;background-image:radial-gradient(circle at 80% 20%,rgba(216,162,74,.25),transparent 55%)}
+.route h3{font-size:34px}
+.route p{color:#c5d1cc;margin:10px 0 0}
+
+footer{background:var(--ink);color:#9fb1aa;font-size:13px;padding:36px 0 96px}
+footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
+footer a{color:var(--honey-soft)}
+
+/* Мобильная панель */
+.mbar{display:none;position:fixed;left:0;right:0;bottom:0;z-index:30;background:var(--pine);padding:10px 12px calc(10px + env(safe-area-inset-bottom));gap:10px;box-shadow:0 -8px 24px rgba(0,0,0,.2)}
+.mbar a{flex:1;justify-content:center;padding:14px 10px;font-size:14px}
+
+@media (max-width:980px){
+  .menu{display:none}
+  .facts{grid-template-columns:repeat(2,1fr)}
+  .halls,.request-grid,.rest,.rooms,.contacts,.seasons{grid-template-columns:1fr}
+  .cabins{grid-template-columns:1fr 1fr}
+  .extras{grid-template-columns:1fr 1fr}
+  .trust-grid{grid-template-columns:1fr;gap:16px}
+}
+@media (max-width:620px){
+  section{padding:68px 0}
+  .nav-phone{display:none}
+  .nav .btn{display:none}
+  .hero .wrap{padding-top:90px;padding-bottom:36px}
+  .hero p{font-size:17px}
+  .fact{padding:16px}
+  .fact b{font-size:28px}
+  .row{grid-template-columns:1fr}
+  .cabins,.extras{grid-template-columns:1fr}
+  form{padding:22px}
+  th,td{padding:12px 12px}
+  .hide-s{display:none}
+  .score{font-size:72px}
+  .mbar{display:flex}
+}
+</style>
+</head>
+<body>
+
+<div class="concept">
+  <b>Независимый концепт Aurorine Studio.</b> Не официальный сайт и не заказ BalQaragai. Факты и фото взяты с balqaragai.kz и 2GIS 23.10.2026.
+</div>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#top">Bal<span>Qaragai</span></a>
+    <nav class="menu" aria-label="Разделы">
+      <a href="#events">Свадьбы и тои</a>
+      <a href="#restaurant">Ресторан</a>
+      <a href="#stay">Проживание</a>
+      <a href="#leisure">Отдых</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="nav-phone" href="tel:+77750070030">+7 775 007 00 30</a>
+      <a class="btn btn-honey" href="#request">Заявка на дату</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero" style="padding:0">
+    <img class="hero-img" src="https://balqaragai.kz/wp-admin/admin-ajax.php?action=kernel&amp;p=image&amp;src=WyJ3cC1jb250ZW50L3VwbG9hZHMvMjAyMi8xMC9yZWN0YW5nbGUtMTkzLmpwZyIsW1siZG9SZXNpemUiLFsxOTIwLDgwMCwxOTIwLDgwMF1dXV0%3D&amp;file=f0%2Frectangle-193-f06e611f.jpeg&amp;hash=e3134700" alt="Ресторан «Аура» в зоне отдыха BalQaragai" fetchpriority="high" width="1920" height="800">
+    <div class="wrap">
+      <span class="eyebrow">Загородный клуб · 20 минут от Астаны</span>
+      <h1>Свадьбы, тои и&nbsp;семейный отдых <em>на&nbsp;природе</em></h1>
+      <p>Банкетный зал до 350 гостей, трёхэтажный ресторан «Аура», номера и срубы для родных, которые приедут издалека. Выберите дату, а менеджер перезвонит с расчётом.</p>
+      <div class="hero-actions">
+        <a class="btn btn-honey" href="#request">Узнать, свободна ли дата</a>
+        <a class="btn btn-ghost" href="#stay">Номера и цены</a>
+      </div>
+      <div class="facts">
+        <div class="fact"><b>350</b><span>гостей в банкетном зале</span></div>
+        <div class="fact"><b>250</b><span>мест в ресторане «Аура»</span></div>
+        <div class="fact"><b>28 га</b><span>территории, 20 000 растений</span></div>
+        <div class="fact"><b>4,7</b><span>в 2GIS, 9 667 оценок</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="events">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <span class="eyebrow">Торжества</span>
+          <h2>Три зала под любой масштаб</h2>
+        </div>
+        <p class="lead">От камерного юбилея на 30 человек до большого тоя. Всё в одном месте: банкет, ночлег для гостей и занятия для детей.</p>
+      </div>
+      <div class="formats">
+        <span class="chip">Свадьба</span><span class="chip">Той</span><span class="chip">Қыз ұзату</span><span class="chip">Юбилей</span><span class="chip">Корпоратив</span><span class="chip">Выпускной</span><span class="chip">Деловая встреча</span>
+      </div>
+      <div class="halls">
+        <article class="hall">
+          <img loading="lazy" src="https://balqaragai.kz/wp-admin/admin-ajax.php?action=kernel&amp;p=image&amp;src=WyJ3cC1jb250ZW50L3VwbG9hZHMvMjAyMi8xMC9yZWN0YW5nbGUtMjA5LmpwZyIsW1siZG9SZXNpemUiLFs5MDAsNTM0LDkwMCw1MzRdXSxbImRvQ3JvcCIsWzkwMCw0ODUsMCwyNF1dXV0%3D&amp;file=c3%2Frectangle-209-c3e8e49d.jpeg&amp;hash=961742f4" alt="Банкетный зал BalQaragai" width="900" height="485">
+          <div class="hall-body">
+            <span class="cap">до 350 гостей</span>
+            <h3>Банкетный зал</h3>
+            <p>Для свадеб, тоев и больших корпоративов.</p>
+            <ul><li>Современное звуковое и световое оборудование</li><li>Бесплатная парковка</li><li>3D-тур по залу</li></ul>
+          </div>
+        </article>
+        <article class="hall">
+          <img loading="lazy" src="https://balqaragai.kz/wp-admin/admin-ajax.php?action=kernel&amp;p=image&amp;src=WyJ3cC1jb250ZW50L3VwbG9hZHMvMjAyMy8wNy9kc2NfMDAwNTQuanBnIixbWyJkb1Jlc2l6ZSIsWzkwMCw1OTksOTAwLDU5OV1dLFsiZG9Dcm9wIixbOTAwLDQ4NSwwLDU3XV1dXQ%3D%3D&amp;file=da%2Fdsc_00054-da42b324.jpeg&amp;hash=5b487ad4" alt="VIP-зал ресторана «Аура»" width="900" height="485">
+          <div class="hall-body">
+            <span class="cap">до 60 гостей</span>
+            <h3>VIP-зал</h3>
+            <p>Юбилей, помолвка, семейный ужин.</p>
+            <ul><li>Свои уборные</li><li>Зона для переговоров с диванами</li></ul>
+          </div>
+        </article>
+        <article class="hall">
+          <img loading="lazy" src="https://balqaragai.kz/wp-admin/admin-ajax.php?action=kernel&amp;p=image&amp;src=WyJ3cC1jb250ZW50L3VwbG9hZHMvMjAyMy8wNy9kc2NfMDAwNTguanBnIixbWyJkb1Jlc2l6ZSIsWzkwMCw1OTksOTAwLDU5OV1dLFsiZG9Dcm9wIixbOTAwLDQ4NSwwLDU3XV1dXQ%3D%3D&amp;file=04%2Fdsc_00058-044b6322.jpeg&amp;hash=aa5c56c8" alt="VIP-зал с караоке" width="900" height="485">
+          <div class="hall-body">
+            <span class="cap">до 30 гостей</span>
+            <h3>VIP-зал с караоке</h3>
+            <p>Для дня рождения и вечера с друзьями.</p>
+            <ul><li>Караоке</li><li>Свои уборные</li></ul>
+          </div>
+        </article>
+      </div>
+      <!-- Вместимость 350: страница /restoran/ (на главной — 300). Цены за гостя на сайте нет: добавить пакеты «от … ₸» после ответа клиента. -->
+      <div class="note"><span aria-hidden="true">●</span><span>Безалкогольная зона: спокойный праздник, на который не страшно приехать с детьми и старшими. Стоимость банкета на гостя рассчитает отдел продаж под вашу дату и меню.</span></div>
+    </div>
+  </section>
+
+  <section class="request" id="request">
+    <div class="wrap request-grid">
+      <div>
+        <span class="eyebrow">Заявка за минуту</span>
+        <h2 style="margin-top:14px">Проверьте дату, не дожидаясь звонка</h2>
+        <p class="lead" style="margin-top:18px">Оставьте дату и число гостей: заявка сразу придёт менеджеру в Telegram, а он перезвонит с расчётом.</p>
+        <ol class="steps">
+          <li><i>1</i><div><b>Дата, формат, гости</b><br><span style="color:#c5d1cc">Без регистрации и звонков, с телефона.</span></div></li>
+          <li><i>2</i><div><b>Менеджер получает заявку</b><br><span style="color:#c5d1cc">Сразу в Telegram или WhatsApp отдела продаж.</span></div></li>
+          <li><i>3</i><div><b>Перезванивает с расчётом</b><br><span style="color:#c5d1cc">Зал, меню, номера для гостей.</span></div></li>
+        </ol>
+      </div>
+      <form id="eventForm" novalidate>
+        <div class="row">
+          <label>Дата<input type="date" name="date" required></label>
+          <label>Гостей<input type="number" name="guests" min="5" max="350" value="150" inputmode="numeric" required></label>
+        </div>
+        <div class="row">
+          <label>Повод<select name="type"><option>Свадьба</option><option>Той</option><option>Қыз ұзату</option><option>Юбилей</option><option>Корпоратив</option><option>Выпускной</option><option>Другое</option></select></label>
+          <label>Зал<select name="hall"><option>Банкетный зал (до 350)</option><option>VIP-зал (до 60)</option><option>VIP-зал с караоке (до 30)</option><option>Пока не знаю</option></select></label>
+        </div>
+        <label><input type="checkbox" name="rooms" style="display:inline;width:auto;margin:0 8px 0 0;vertical-align:-2px">Нужны номера для гостей</label>
+        <div class="row">
+          <label>Имя<input name="name" autocomplete="name" placeholder="Айгерим" required></label>
+          <label>Телефон<input name="phone" type="tel" autocomplete="tel" placeholder="+7 7__ ___ __ __" required></label>
+        </div>
+        <label>Пожелания<textarea name="note" placeholder="Например: выездная регистрация, детская программа"></textarea></label>
+        <button class="btn btn-honey" type="submit">Отправить заявку</button>
+        <p class="fine">В концепте заявка никуда не отправляется: ниже показано, как её увидит менеджер.</p>
+        <div class="tg" id="tg" aria-live="polite">
+          <div class="tg-head"><span>✈</span>BalQaragai · Заявки</div>
+          <pre id="tgText"></pre>
+          <small>Так сообщение придёт в Telegram отдела продаж. Ничего не потеряется в почте, и видно, кто из менеджеров взял заявку.</small>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <section id="restaurant">
+    <div class="wrap rest">
+      <div class="rest-photos">
+        <img loading="lazy" src="https://balqaragai.kz/wp-admin/admin-ajax.php?action=kernel&amp;p=image&amp;src=WyJ3cC1jb250ZW50L3VwbG9hZHMvMjAyMi8xMC9vLTMuanBnIixbWyJkb1Jlc2l6ZSIsWzc4Nyw0NjcsNzg3LDQ2N11dXV0%3D&amp;file=93%2Fo-3-934fcc43.jpeg&amp;hash=0adf00eb" alt="Интерьер ресторана «Аура»" width="787" height="467">
+        <img loading="lazy" src="https://balqaragai.kz/wp-admin/admin-ajax.php?action=kernel&amp;p=image&amp;src=WyJ3cC1jb250ZW50L3VwbG9hZHMvMjAyMi8xMC9vLTQuanBnIixbWyJkb1Jlc2l6ZSIsWzc4Nyw0NjcsNzg3LDQ2N11dXV0%3D&amp;file=69%2Fo-4-69723f14.jpeg&amp;hash=49561779" alt="Блюда ресторана «Аура»" width="787" height="467">
+      </div>
+      <div>
+        <span class="eyebrow">Ресторан «Аура»</span>
+        <h2 style="margin-top:14px">Три этажа, 250 мест и&nbsp;кухня на любой вкус</h2>
+        <ul class="ticks">
+          <li>Европейская, азиатская и национальная кухня</li>
+          <li>Открыт с 09:00 до 23:00, завтраки с 09:00 до 11:00</li>
+          <li>Детская комната, интернет по всей территории</li>
+          <li>Бесплатная парковка</li>
+        </ul>
+        <div class="menu-card">
+          <h3>Меню текстом, а не PDF</h3>
+          <div class="dish"><span>Бауырсаки</span><span class="dots"></span><b>1 700 ₸</b></div>
+          <div class="dish"><span>Мастава</span><span class="dots"></span><b>2 500 ₸</b></div>
+          <div class="dish"><span>Манты с мясом</span><span class="dots"></span><b>3 080 ₸</b></div>
+          <div class="dish"><span>Плов</span><span class="dots"></span><b>3 300 ₸</b></div>
+          <div class="dish"><span>Казан-кабоб</span><span class="dots"></span><b>5 280 ₸</b></div>
+          <div class="dish"><span>Каре ягнёнка</span><span class="dots"></span><b>5 300 ₸</b></div>
+          <small>Позиции и цены из меню 2023 года на balqaragai.kz. В рабочей версии меню правится в Google-таблице, а сайт обновляется сам.</small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="stay" id="stay">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <span class="eyebrow">Проживание</span>
+          <h2>Гости тоя остаются на ночь</h2>
+        </div>
+        <p class="lead">Номера в корпусе и срубы целиком для большой семьи. Цены за сутки, будни: пн–чт, выходные: пт–вс.</p>
+      </div>
+      <div class="rooms">
+        <table>
+          <thead><tr><th>Категория</th><th class="hide-s">Мест</th><th>Будни</th><th>Выходные</th></tr></thead>
+          <tbody>
+            <tr><td>Стандарт</td><td class="hide-s">2</td><td class="p">45 000 ₸</td><td class="p">55 000 ₸</td></tr>
+            <tr><td>Улучшенный стандарт</td><td class="hide-s">2</td><td class="p">50 000 ₸</td><td class="p">60 000 ₸</td></tr>
+            <tr><td>Полулюкс, 53,8 м²</td><td class="hide-s">2</td><td class="p">55 000 ₸</td><td class="p">65 000 ₸</td></tr>
+            <tr><td>Люкс</td><td class="hide-s">2</td><td class="p">60 000 ₸</td><td class="p">75 000 ₸</td></tr>
+            <tr><td>Семейный стандарт, 2 комнаты</td><td class="hide-s">4</td><td class="p">70 000 ₸</td><td class="p">90 000 ₸</td></tr>
+            <tr><td>Семейный люкс, 2 комнаты</td><td class="hide-s">4</td><td class="p">80 000 ₸</td><td class="p">100 000 ₸</td></tr>
+          </tbody>
+        </table>
+        <div class="calc">
+          <h3>Сколько стоит ночлег</h3>
+          <p>Посчитайте номера для гостей, которые приедут на торжество.</p>
+          <label>Категория<select id="cCat">
+            <option value="45000|55000">Стандарт</option>
+            <option value="50000|60000">Улучшенный стандарт</option>
+            <option value="55000|65000">Полулюкс</option>
+            <option value="60000|75000">Люкс</option>
+            <option value="70000|90000">Семейный стандарт</option>
+            <option value="80000|100000">Семейный люкс</option>
+          </select></label>
+          <div class="row">
+            <label>Номеров<input id="cRooms" type="number" min="1" max="14" value="3" inputmode="numeric"></label>
+            <label>Ночь<select id="cDay"><option value="1">Пт–вс</option><option value="0">Пн–чт</option></select></label>
+          </div>
+          <div class="total"><span>Итого за ночь</span><b id="cTotal">165 000 ₸</b></div>
+        </div>
+      </div>
+      <!-- Цены номеров: /nomera/, 23.10.2026. Срубы: /kottedzhi/. Заезд/выезд и завтрак: PDF-прайс весна 2024 — уточнить у клиента. -->
+      <div class="cabins">
+        <article class="cabin">
+          <img loading="lazy" src="https://balqaragai.kz/wp-content/themes/yootheme/cache/29/frame2-29bb0ec6.jpeg" alt="Большой сруб BalQaragai">
+          <div><h3>Большой сруб</h3><p>6 комнат, 2 этажа, 12 спальных мест. Сдаётся целиком.</p><p class="pr">275 000 ₸ будни · 330 000 ₸ выходные</p></div>
+        </article>
+        <article class="cabin">
+          <img loading="lazy" src="https://balqaragai.kz/wp-content/themes/yootheme/cache/59/frame4-59cc1820.jpeg" alt="Средний сруб BalQaragai">
+          <div><h3>Средний сруб</h3><p>4 комнаты, 1 этаж, 8 спальных мест. Целиком или по номерам.</p><p class="pr">187 000 ₸ будни · 220 000 ₸ выходные</p></div>
+        </article>
+        <article class="cabin" style="display:flex;flex-direction:column;justify-content:center;background:var(--pine);color:var(--white)">
+          <div><h3 style="color:var(--honey-soft)">Онлайн-бронирование</h3><p style="color:#c5d1cc">Кнопка «Забронировать» у каждого номера ведёт в модуль бронирования, который уже есть у вас. Мы сохраняем его и делаем путь к нему короче.</p><p class="pr" style="color:var(--white)">Заезд с 15:00, выезд до 12:00</p></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="leisure">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <span class="eyebrow">Отдых</span>
+          <h2>Чем занять гостей в любой сезон</h2>
+        </div>
+        <p class="lead">Одновременно принимаем до 1200 гостей. Пока взрослые за столом, детям есть куда пойти.</p>
+      </div>
+      <div class="seasons">
+        <div class="season w">
+          <h3>Зима</h3>
+          <div class="count">8 видов активностей</div>
+          <ul><li>Лыжи</li><li>Коньки</li><li>Сноуборд</li><li>Катание на хаски</li><li>Тюбинги и банан</li><li>Снегоход</li></ul>
+        </div>
+        <div class="season s">
+          <h3>Лето</h3>
+          <div class="count">6 видов активностей</div>
+          <ul><li>Аквапарк и бассейн</li><li>Футбол</li><li>Пейнтбол</li><li>Велосипеды</li><li>Квадроциклы</li></ul>
+        </div>
+      </div>
+      <div class="extras">
+        <div class="extra"><h3>Конный центр</h3><p>Прогулки, пони для детей, крытый зимний манеж.</p></div>
+        <div class="extra"><h3>Этно-аул</h3><p>Юрты для праздника в национальном стиле.</p></div>
+        <div class="extra"><h3>Сауны</h3><p>Три сауны, в одной есть хамам и бассейн.</p></div>
+        <div class="extra"><h3>Гриль-беседки</h3><p>Беседки с мангалом на весь день.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="trust">
+    <div class="wrap trust-grid">
+      <div class="score">4,7</div>
+      <p><b>9 667 оценок в 2GIS.</b> Последний отзыв оставлен 22 октября 2026 года. В рабочей версии здесь будут живые отзывы из 2GIS и Google с вашего разрешения.</p>
+      <a class="btn btn-honey" href="https://go.2gis.com/qx5m0" target="_blank" rel="noopener">Открыть в 2GIS</a>
+    </div>
+  </section>
+
+  <section id="contacts">
+    <div class="wrap contacts">
+      <div>
+        <span class="eyebrow">Контакты</span>
+        <h2 style="margin-top:14px">Контакты и маршрут</h2>
+        <div class="c-list">
+          <a class="c-item" href="tel:+77750070030"><span>Отдел продаж</span><b>+7 775 007 00 30</b></a>
+          <a class="c-item" href="tel:+77750070037"><span>Ресепшн</span><b>+7 775 007 00 37</b></a>
+          <a class="c-item" href="https://wa.me/77750070030" target="_blank" rel="noopener"><span>WhatsApp</span><b>Написать</b></a>
+          <a class="c-item" href="mailto:balqaragai@gmail.com"><span>Почта</span><b>balqaragai@gmail.com</b></a>
+          <a class="c-item" href="https://www.instagram.com/balqaragai.kz/" target="_blank" rel="noopener"><span>Instagram</span><b>@balqaragai.kz</b></a>
+        </div>
+      </div>
+      <div class="route">
+        <div>
+          <span class="eyebrow">Как добраться</span>
+          <h3 style="margin-top:14px">Малотимофеевка-2, около 20 минут от Астаны</h3>
+          <p>Маршрут откроется в 2GIS на телефоне. Парковка для гостей бесплатная.</p>
+        </div>
+        <div style="display:flex;gap:12px;flex-wrap:wrap">
+          <a class="btn btn-honey" href="https://go.2gis.com/qx5m0" target="_blank" rel="noopener">Маршрут в 2GIS</a>
+          <a class="btn btn-ghost" href="http://3d.balqaragai.kz/" target="_blank" rel="noopener">3D-тур</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>ТОО «BalQaragai Country Club» · Астана, Малотимофеевка-2</span>
+    <span>Концепт подготовлен <a href="https://mykolaanastiuk.github.io/aurorine.github.io/">Aurorine Studio</a> по открытым данным. Не официальный сайт.</span>
+  </div>
+</footer>
+
+<div class="mbar">
+  <a class="btn btn-ghost" href="tel:+77750070030">Позвонить</a>
+  <a class="btn btn-honey" href="#request">Заявка на дату</a>
+</div>
+
+<script>
+(function(){
+  var f=document.getElementById('eventForm'), tg=document.getElementById('tg'), out=document.getElementById('tgText');
+  var d=f.querySelector('[name=date]'); var t=new Date(); t.setDate(t.getDate()+60); d.value=t.toISOString().slice(0,10);
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    var g=function(n){var el=f.querySelector('[name='+n+']');return el.type==='checkbox'?el.checked:el.value.trim();};
+    var dt=g('date')?new Date(g('date')+'T12:00:00').toLocaleDateString('ru-RU',{day:'numeric',month:'long',year:'numeric',weekday:'short'}):'не указана';
+    out.textContent='🔔 Новая заявка с сайта\n'+
+      '📅 '+dt+'\n'+
+      '🎉 '+g('type')+' · '+(g('guests')||'?')+' гостей\n'+
+      '🏛 '+g('hall')+'\n'+
+      (g('rooms')?'🛏 Нужны номера для гостей\n':'')+
+      '👤 '+(g('name')||'Имя не указано')+' · '+(g('phone')||'телефон не указан')+
+      (g('note')?'\n💬 '+g('note'):'');
+    tg.classList.add('show'); tg.scrollIntoView({behavior:'smooth',block:'nearest'});
+  });
+  var cat=document.getElementById('cCat'), rooms=document.getElementById('cRooms'), day=document.getElementById('cDay'), tot=document.getElementById('cTotal');
+  function calc(){var p=cat.value.split('|'), n=Math.max(1,Math.min(14,parseInt(rooms.value,10)||1));tot.textContent=(n*(+p[+day.value])).toLocaleString('ru-RU')+' ₸';}
+  [cat,rooms,day].forEach(function(el){el.addEventListener('input',calc);});
+  calc();
+})();
+</script>
+</body>
+</html>
