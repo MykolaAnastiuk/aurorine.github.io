@@ -161,6 +161,7 @@ form .btn{width:100%;margin-top:4px}
 
 .leisure{background:var(--oat)}
 .lgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.lgrid .tile:first-child{grid-column:span 2}
 .tile{position:relative;border-radius:var(--r);overflow:hidden;min-height:300px;color:var(--white);background:var(--earth-2)}
 .tile img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .tile::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(30,22,16,.9))}
@@ -214,11 +215,14 @@ footer a{color:var(--wheat)}
   section{padding:68px 0}
   .nav-phone,.nav .btn{display:none}
   .hero::after{background:linear-gradient(180deg,rgba(34,26,19,.25) 0%,rgba(34,26,19,.92) 72%)}
-  .hero>img{object-position:75% 60%}
-  .hero .wrap{padding-top:120px;padding-bottom:48px}
+  .hero{flex-direction:column;align-items:stretch;min-height:0}
+  .hero>img{position:static;height:300px;object-position:85% 75%}
+  .hero::after{display:none}
+  .hero .wrap{padding-top:32px;padding-bottom:48px}
   .counters{gap:24px}
   .counters b{font-size:32px}
   .events,.vgrid,.lgrid,.row{grid-template-columns:1fr}
+  .lgrid .tile:first-child{grid-column:auto}
   .stay-grid{grid-template-columns:1fr 1fr}
   form{padding:22px}
   .trust .score b{font-size:64px}
@@ -291,7 +295,7 @@ footer a{color:var(--wheat)}
       </div>
       <div class="events">
         <article class="event"><img loading="lazy" src="https://i0.wp.com/umihalyicha.kz/wp-content/uploads/2026/09/2-8.jpg?w=1200&amp;ssl=1" alt="Шатры на траве для торжества"><div><h3>Свадьбы и выездные регистрации</h3><p>Красивые фотозоны и просторные шатры.</p></div></article>
-        <article class="event"><img loading="lazy" src="https://umihalyicha.kz/wp-content/uploads/2026/10/%D0%BB%D0%BE%D1%88%D0%B0%D0%B4%D0%BA%D0%B8.jpg" alt="Конные прогулки для команды"><div><h3>Корпоративы и тимбилдинги</h3><p>Активный отдых, квесты и вечерние банкеты.</p></div></article>
+        <article class="event"><img loading="lazy" src="https://umihalyicha.kz/wp-content/uploads/2026/10/%D0%B8%D1%82%D0%B0%D0%BB%D0%B8%D1%8F.jpg" alt="Ресторан для вечернего банкета"><div><h3>Корпоративы и тимбилдинги</h3><p>Активный отдых, квесты и вечерние банкеты.</p></div></article>
         <article class="event"><img loading="lazy" src="https://i0.wp.com/umihalyicha.kz/wp-content/uploads/2024/11/photo_2024-11-30_19-40-34.jpg?w=1200&amp;ssl=1" alt="Юбилей на фазенде"><div><h3>Дни рождения и юбилеи</h3><p>Уютные беседки и залы для тёплых встреч.</p></div></article>
         <article class="event"><img loading="lazy" src="https://umihalyicha.kz/wp-content/uploads/2026/10/%D1%81%D0%B5%D0%BC%D1%8C%D1%8F-2.jpg" alt="Семейный отдых на фазенде"><div><h3>Детские праздники</h3><p>Простор, свежий воздух и безопасность.</p></div></article>
       </div>
@@ -404,7 +408,6 @@ footer a{color:var(--wheat)}
         <article class="tile"><img loading="lazy" src="https://umihalyicha.kz/wp-content/uploads/2026/10/%D1%81%D0%B0%D0%BA%D1%81%D0%BA%D0%B0%D1%8F.jpg" alt="Сакская баня"><div><h3>Сакская баня</h3><p>И другие бани на территории.</p></div></article>
         <article class="tile"><img loading="lazy" src="https://umihalyicha.kz/wp-content/uploads/2026/10/%D1%80%D1%8B%D0%B1%D0%B0%D0%BB%D0%BA%D0%B0-2.jpg" alt="Рыбалка"><div><h3>Рыбалка</h3><p>Форелевое озеро.</p></div></article>
         <article class="tile"><img loading="lazy" src="https://umihalyicha.kz/wp-content/uploads/2026/10/%D0%B1%D0%B0%D1%81%D1%81%D0%B8%D0%BA.jpg" alt="Бассейн"><div><h3>Бассейн</h3><p>Для взрослых и детей.</p></div></article>
-        <article class="tile"><img loading="lazy" src="https://umihalyicha.kz/wp-content/uploads/2026/10/%D0%B8%D1%82%D0%B0%D0%BB%D0%B8%D1%8F.jpg" alt="Ресторан Gusto Dell’Italia"><div><h3>Ужин по-итальянски</h3><p>Gusto Dell’Italia на территории.</p></div></article>
         <article class="tile"><img loading="lazy" src="https://umihalyicha.kz/wp-content/uploads/2026/10/%D0%B0%D0%BA%D1%82%D0%B8%D0%B2%D0%BD%D0%BE%D1%81%D1%82%D0%B8-2.jpg" alt="Активности"><div><h3>Активности</h3><p>Пейнтбол, тир, стрельба из лука.</p></div></article>
       </div>
       <div class="kids">
