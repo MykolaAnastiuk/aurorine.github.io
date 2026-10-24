@@ -215,6 +215,9 @@ footer a{color:var(--oak-soft)}
   .summary{position:static}
 }
 @media (max-width:620px){
+  .hero-photo{overflow:visible;border-radius:20px;aspect-ratio:auto;box-shadow:none;background:none}
+  .hero-photo img{border-radius:20px;aspect-ratio:4/3;height:auto}
+  .hero-tag{position:static;margin-top:10px;box-shadow:none;border:1px solid var(--line)}
   section{padding:68px 0}
   .hero{padding:24px 0 56px}
   .nav-phone,.nav .btn{display:none}
@@ -225,12 +228,25 @@ footer a{color:var(--oak-soft)}
   .loan{padding:28px 22px}
   .mbar{display:flex}
 }
+
+/* Мобильная навигация и плашка (по визуальной проверке 24.10) */
+@media (max-width:1020px){
+  .nav{flex-wrap:wrap;height:auto;padding-top:12px;padding-bottom:0;row-gap:8px}
+  .menu{display:flex !important;order:3;width:100%;overflow-x:auto;gap:20px;padding:4px 0 12px;white-space:nowrap;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .menu::-webkit-scrollbar{display:none}
+  .menu a{flex:none}
+}
+@media (max-width:620px){
+  .concept{font-size:12px;padding:6px 12px}
+  .concept .long{display:none}
+  main>section:first-child{padding-bottom:72px}
+}
 </style>
 </head>
 <body>
 
 <div class="concept">
-  <b>Независимый концепт Aurorine Studio.</b> Не официальный сайт и не заказ ТОО «FURNITA». Факты и фото с furnita.kz и 2GIS, 23.10.2026.
+  <b>Независимый концепт Aurorine Studio.</b><span class="long"> Не официальный сайт и не заказ ТОО «FURNITA». Факты и фото с furnita.kz и 2GIS, 23.10.2026.</span>
 </div>
 
 <header>
@@ -392,7 +408,6 @@ footer a{color:var(--oak-soft)}
         <figure class="work" data-cat="k"><img loading="lazy" src="https://furnita.kz/wp-content/uploads/2025/07/IMG_6641.webp" alt="Кухня в ЖК Басенова 10"><figcaption>ЖК Басенова 10<small>Кухня</small></figcaption></figure>
         <figure class="work" data-cat="k"><img loading="lazy" src="https://furnita.kz/wp-content/uploads/2024/02/%D0%9A%D1%83%D1%85%D0%BD%D1%8F-%D0%BA%D0%B0%D0%BB%D0%B8%D1%84%D0%BE%D1%80%D0%BD%D0%B8%D1%8F-%D0%B4%D0%BB%D1%8F-%D1%81%D0%B0%D0%B9%D1%82%D0%B0.webp" alt="Кухня в ЖК California"><figcaption>ЖК California<small>Кухня</small></figcaption></figure>
         <figure class="work" data-cat="k"><img loading="lazy" src="https://furnita.kz/wp-content/uploads/2025/07/IMG_6640.webp" alt="Кухня в ЖК Hayat Park"><figcaption>ЖК Hayat Park<small>Кухня</small></figcaption></figure>
-        <figure class="work" data-cat="k"><img loading="lazy" src="https://furnita.kz/wp-content/uploads/2024/02/%D0%B4%D0%B6%D0%B0%D0%BF%D0%B0%D0%BD%D0%B4%D0%B8-%D0%B4%D0%BB%D1%8F-%D1%81%D0%B0%D0%B9%D1%82%D0%B0.webp" alt="Кухня джапанди в ЖК Esentai City"><figcaption>ЖК Esentai City<small>Кухня в стиле джапанди</small></figcaption></figure>
         <figure class="work" data-cat="w" hidden><img loading="lazy" src="https://furnita.kz/wp-content/uploads/2025/07/IMG_8422-e1753297591468.webp" alt="Шкаф в ЖК Primavera"><figcaption>ЖК Primavera<small>Шкаф</small></figcaption></figure>
         <figure class="work" data-cat="w" hidden><img loading="lazy" src="https://furnita.kz/wp-content/uploads/2024/02/%D1%88%D0%BA%D0%B0%D1%84-%D0%B5%D1%81%D0%B5%D0%BD%D1%82%D0%B0%D0%B9-%D0%B4%D0%BB%D1%8F-%D1%81%D0%B0%D0%B9%D1%82%D0%B0.webp" alt="Шкаф в ЖК Esentai City"><figcaption>ЖК Esentai City<small>Шкаф</small></figcaption></figure>
         <figure class="work" data-cat="w" hidden><img loading="lazy" src="https://furnita.kz/wp-content/uploads/2025/07/IMG_7575.webp" alt="Прихожая в ЖК Alasha Residence"><figcaption>ЖК Alasha Residence<small>Прихожая</small></figcaption></figure>
@@ -409,7 +424,7 @@ footer a{color:var(--oak-soft)}
         <img loading="lazy" src="https://furnita.kz/wp-content/uploads/2023/12/production-02_11zon.webp" alt="Цех FURNITA">
         <img loading="lazy" src="https://furnita.kz/wp-content/uploads/2023/12/production-03_11zon.webp" alt="Оборудование цеха">
         <img loading="lazy" src="https://furnita.kz/wp-content/uploads/2023/12/production-04_11zon.webp" alt="Производство мебели">
-        <img loading="lazy" src="https://furnita.kz/wp-content/uploads/2024/01/why-us-01.webp" alt="Мебель FURNITA">
+        <img loading="lazy" src="https://furnita.kz/wp-content/uploads/2023/12/production-01_11zon.webp" alt="Цех FURNITA">
       </div>
       <div>
         <span class="eyebrow">Производство</span>

@@ -223,6 +223,8 @@ footer a{color:var(--clay-soft)}
   .terms{grid-template-columns:1fr 1fr}
 }
 @media (max-width:620px){
+  .badge{left:auto;right:12px;bottom:12px;padding:10px 12px;font-size:12px}
+  .badge b{font-size:22px}
   section{padding:68px 0}
   .nav-phone,.nav .btn{display:none}
   .hero-photo{min-height:260px}
@@ -236,12 +238,25 @@ footer a{color:var(--clay-soft)}
   .score b{font-size:64px}
   .mbar{display:flex}
 }
+
+/* Мобильная навигация и плашка (по визуальной проверке 24.10) */
+@media (max-width:1020px){
+  .nav{flex-wrap:wrap;height:auto;padding-top:12px;padding-bottom:0;row-gap:8px}
+  .menu{display:flex !important;order:3;width:100%;overflow-x:auto;gap:20px;padding:4px 0 12px;white-space:nowrap;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .menu::-webkit-scrollbar{display:none}
+  .menu a{flex:none}
+}
+@media (max-width:620px){
+  .concept{font-size:12px;padding:6px 12px}
+  .concept .long{display:none}
+  main>section:first-child{padding-bottom:72px}
+}
 </style>
 </head>
 <body>
 
 <div class="concept">
-  <b>Независимый концепт Aurorine Studio.</b> Не официальный сайт и не заказ Country Village Resort. Факты и фото с country-village.kz и 2GIS, 23.10.2026.
+  <b>Независимый концепт Aurorine Studio.</b><span class="long"> Не официальный сайт и не заказ Country Village Resort. Факты и фото с country-village.kz и 2GIS, 23.10.2026.</span>
 </div>
 
 <header>
@@ -265,7 +280,7 @@ footer a{color:var(--clay-soft)}
   <section class="hero" style="padding:0">
     <div class="hero-text">
       <span class="eyebrow" style="color:var(--clay-soft)">Иле-Алатауский национальный парк</span>
-      <h1 style="margin-top:16px">Свадьба в горах <span>и&nbsp;отдых для гостей</span> в одном месте</h1>
+      <h1 style="margin-top:16px">Свадьба <span>в&nbsp;горах</span> и&nbsp;отдых для гостей в одном месте</h1>
       <p>Шатёр на 100 гостей, площадки для выездной регистрации, три ресторана и домики из сруба. Утром после торжества — завтрак и бассейн.</p>
       <div class="hero-actions">
         <a class="btn btn-clay" href="#request">Проверить дату</a>

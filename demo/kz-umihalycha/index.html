@@ -213,7 +213,8 @@ footer a{color:var(--wheat)}
 @media (max-width:620px){
   section{padding:68px 0}
   .nav-phone,.nav .btn{display:none}
-  .hero::after{background:linear-gradient(180deg,rgba(34,26,19,.55) 0%,rgba(34,26,19,.92) 70%)}
+  .hero::after{background:linear-gradient(180deg,rgba(34,26,19,.25) 0%,rgba(34,26,19,.92) 72%)}
+  .hero>img{object-position:62% 85%}
   .hero .wrap{padding-top:120px;padding-bottom:48px}
   .counters{gap:24px}
   .counters b{font-size:32px}
@@ -223,12 +224,25 @@ footer a{color:var(--wheat)}
   .trust .score b{font-size:64px}
   .mbar{display:flex}
 }
+
+/* Мобильная навигация и плашка (по визуальной проверке 24.10) */
+@media (max-width:1020px){
+  .nav{flex-wrap:wrap;height:auto;padding-top:12px;padding-bottom:0;row-gap:8px}
+  .menu{display:flex !important;order:3;width:100%;overflow-x:auto;gap:20px;padding:4px 0 12px;white-space:nowrap;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .menu::-webkit-scrollbar{display:none}
+  .menu a{flex:none}
+}
+@media (max-width:620px){
+  .concept{font-size:12px;padding:6px 12px}
+  .concept .long{display:none}
+  main>section:first-child{padding-bottom:72px}
+}
 </style>
 </head>
 <body>
 
 <div class="concept">
-  <b>Независимый концепт Aurorine Studio.</b> Не официальный сайт и не заказ фазенды «У Михалыча». Факты и фото с umihalyicha.kz и 2GIS, 23.10.2026.
+  <b>Независимый концепт Aurorine Studio.</b><span class="long"> Не официальный сайт и не заказ фазенды «У Михалыча». Факты и фото с umihalyicha.kz и 2GIS, 23.10.2026.</span>
 </div>
 
 <header>
@@ -253,7 +267,7 @@ footer a{color:var(--wheat)}
     <img src="https://i0.wp.com/umihalyicha.kz/wp-content/uploads/2025/11/IMG_1449.jpg?fit=1428%2C932&amp;ssl=1" alt="Фазенда «У Михалыча» в ущелье" fetchpriority="high">
     <div class="wrap">
       <span class="eyebrow" style="color:var(--wheat)">Ущелье Заилийского Алатау · 47 км от Алматы</span>
-      <h1 style="margin-top:16px">Праздник в горах, <em>на&nbsp;который гости приедут с ночёвкой</em></h1>
+      <h1 style="margin-top:16px">Праздник в горах, на&nbsp;который гости приедут <em>с&nbsp;ночёвкой</em></h1>
       <p>Свадьбы, корпоративы и юбилеи на природе: летняя площадка до 150 гостей, два ресторана, 30 домов для проживания и конные прогулки на следующий день.</p>
       <div class="hero-actions">
         <a class="btn btn-wheat" href="#request">Обсудить мероприятие</a>
@@ -275,10 +289,10 @@ footer a{color:var(--wheat)}
         <p class="lead">Поможем с меню, площадкой и программой. Выберите формат, и менеджер предложит площадку под ваше число гостей.</p>
       </div>
       <div class="events">
-        <article class="event"><img loading="lazy" src="https://i0.wp.com/umihalyicha.kz/wp-content/uploads/2026/09/6-1.jpg?w=1200&amp;ssl=1" alt="Свадьба на фазенде"><div><h3>Свадьбы и выездные регистрации</h3><p>Красивые фотозоны и просторные шатры.</p></div></article>
-        <article class="event"><img loading="lazy" src="https://i0.wp.com/umihalyicha.kz/wp-content/uploads/2026/09/2-8.jpg?w=1200&amp;ssl=1" alt="Корпоратив на фазенде"><div><h3>Корпоративы и тимбилдинги</h3><p>Активный отдых, квесты и вечерние банкеты.</p></div></article>
+        <article class="event"><img loading="lazy" src="https://i0.wp.com/umihalyicha.kz/wp-content/uploads/2026/09/2-8.jpg?w=1200&amp;ssl=1" alt="Шатры на траве для торжества"><div><h3>Свадьбы и выездные регистрации</h3><p>Красивые фотозоны и просторные шатры.</p></div></article>
+        <article class="event"><img loading="lazy" src="https://umihalyicha.kz/wp-content/uploads/2026/10/%D0%B0%D0%BA%D1%82%D0%B8%D0%B2%D0%BD%D0%BE%D1%81%D1%82%D0%B8-2.jpg" alt="Активности для команды"><div><h3>Корпоративы и тимбилдинги</h3><p>Активный отдых, квесты и вечерние банкеты.</p></div></article>
         <article class="event"><img loading="lazy" src="https://i0.wp.com/umihalyicha.kz/wp-content/uploads/2024/11/photo_2024-11-30_19-40-34.jpg?w=1200&amp;ssl=1" alt="Юбилей на фазенде"><div><h3>Дни рождения и юбилеи</h3><p>Уютные беседки и залы для тёплых встреч.</p></div></article>
-        <article class="event"><img loading="lazy" src="https://i0.wp.com/umihalyicha.kz/wp-content/uploads/2025/07/3.jpg?w=1200&amp;ssl=1" alt="Детский праздник на фазенде"><div><h3>Детские праздники</h3><p>Простор, свежий воздух и безопасность.</p></div></article>
+        <article class="event"><img loading="lazy" src="https://umihalyicha.kz/wp-content/uploads/2026/10/%D1%81%D0%B5%D0%BC%D1%8C%D1%8F-2.jpg" alt="Семейный отдых на фазенде"><div><h3>Детские праздники</h3><p>Простор, свежий воздух и безопасность.</p></div></article>
       </div>
     </div>
   </section>
