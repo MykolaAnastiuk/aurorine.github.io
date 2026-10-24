@@ -102,7 +102,7 @@ header{position:sticky;top:0;z-index:20;background:rgba(15,42,36,.94);backdrop-f
 /* Первый экран */
 .hero{position:relative;min-height:min(88vh,820px);display:flex;align-items:flex-end;color:var(--white);background:var(--pine)}
 .hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.8}
-.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,42,36,.05) 0%,rgba(15,42,36,.45) 40%,rgba(11,30,26,.95) 100%)}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,42,36,.35) 0%,rgba(15,42,36,.5) 40%,rgba(11,30,26,.95) 100%)}
 .hero .wrap{position:relative;z-index:1;padding-bottom:56px;padding-top:120px;width:100%}
 .hero h1{font-size:clamp(42px,6.8vw,88px);max-width:900px;letter-spacing:-.015em}
 .hero h1 em{font-style:italic;color:var(--honey-soft)}
@@ -261,11 +261,12 @@ footer a{color:var(--honey-soft)}
   .menu{display:flex !important;order:3;width:100%;overflow-x:auto;gap:20px;padding:4px 0 12px;white-space:nowrap;scrollbar-width:none;-webkit-overflow-scrolling:touch}
   .menu::-webkit-scrollbar{display:none}
   .menu a{flex:none}
+  .menu{-webkit-mask-image:linear-gradient(90deg,#000 85%,transparent);mask-image:linear-gradient(90deg,#000 85%,transparent);padding-right:28px}
 }
 @media (max-width:620px){
   .concept{font-size:12px;padding:6px 12px}
   .concept .long{display:none}
-  main>section:first-child{padding-bottom:72px}
+  main>section:first-child .wrap{padding-bottom:120px}
 }
 </style>
 </head>
@@ -296,7 +297,7 @@ footer a{color:var(--honey-soft)}
   <section class="hero" style="padding:0">
     <img class="hero-img" src="https://balqaragai.kz/wp-content/themes/yootheme/cache/29/frame2-29bb0ec6.jpeg" alt="Большой сруб на территории BalQaragai" fetchpriority="high">
     <div class="wrap">
-      <span class="eyebrow">Загородный клуб · 20 минут от Астаны</span>
+      <span class="eyebrow" style="text-shadow:0 1px 10px rgba(0,0,0,.65)">Загородный клуб · 20 минут от Астаны</span>
       <h1>Свадьбы, тои и&nbsp;семейный отдых <em>на&nbsp;природе</em></h1>
       <p>Банкетный зал до 350 гостей, трёхэтажный ресторан «Аура», номера и срубы для родных, которые приедут издалека. Выберите дату, а менеджер перезвонит с расчётом.</p>
       <div class="hero-actions">
