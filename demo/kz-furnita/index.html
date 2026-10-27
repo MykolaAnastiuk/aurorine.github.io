@@ -52,7 +52,7 @@
   --sans:"Onest", system-ui, -apple-system, "Segoe UI", sans-serif;
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;scroll-padding-top:104px}
 body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.6 var(--sans);-webkit-font-smoothing:antialiased}
 img{max-width:100%;display:block}
 a{color:inherit}
@@ -247,7 +247,7 @@ footer a{color:var(--oak-soft)}
 <body>
 
 <div class="concept">
-  <b>Независимый концепт Aurorine Studio.</b><span class="long"> Не официальный сайт и не заказ ТОО «FURNITA». Факты и фото с furnita.kz и 2GIS, 23.10.2026.</span>
+  <b>Независимый концепт Aurorine Studio, не официальный сайт.</b><span class="long"> Не заказ ТОО «FURNITA». Факты и фото с furnita.kz и 2GIS, 23.10.2026.</span>
 </div>
 
 <header>
@@ -298,7 +298,7 @@ footer a{color:var(--oak-soft)}
     <div class="wrap">
       <div class="sec-head">
         <div><span class="eyebrow">Расчёт кухни</span><h2 style="margin-top:14px;color:var(--white)">4 вопроса вместо звонка наугад</h2></div>
-        <p class="lead">Каждый ответ уточняет стоимость. Дизайнер получит заявку с параметрами кухни и перезвонит уже с цифрами, а не с вопросами.</p>
+        <p class="lead">Четыре ответа вместо долгого разговора. Дизайнер получит заявку с параметрами кухни и перезвонит уже с цифрами, а не с вопросами.</p>
       </div>
       <div class="quiz">
         <form class="qcard" id="quiz" novalidate>
@@ -531,7 +531,8 @@ footer a{color:var(--oak-soft)}
   form.addEventListener('input',sync);
   back.addEventListener('click',function(){if(cur>1)show(cur-1);});
   next.addEventListener('click',function(){
-    if(cur<total){show(cur+1);return;}
+    if(cur<total){show(cur+1);form.scrollIntoView({behavior:'smooth',block:'start'});return;}
+    if(window.aurorineCheck&&window.aurorineCheck(form)!==true)return;
     var name=form.querySelector('[name=name]').value.trim(), phone=form.querySelector('[name=phone]').value.trim();
     var loan=form.querySelector('[name=loan]').checked, ward=form.querySelector('[name=wardrobe]').checked;
     document.getElementById('tgText').textContent='Новая заявка на расчёт кухни\n'+
@@ -544,6 +545,7 @@ footer a{color:var(--oak-soft)}
     bars.forEach(function(b){b.classList.add('on');});
     nav.style.display='none';
     document.getElementById('done').classList.add('on');
+    form.scrollIntoView({behavior:'smooth',block:'start'});
   });
   sync(); show(1);
 
@@ -552,6 +554,38 @@ footer a{color:var(--oak-soft)}
     tabs.forEach(function(x){x.classList.toggle('on',x===t);});
     works.forEach(function(w){w.hidden=w.dataset.cat!==t.dataset.cat;});
   });});
+})();
+</script>
+<script>
+/* Проверка заявки: телефон обязателен, дата не в прошлом, число гостей в пределах поля. */
+(function(){
+  var t=new Date();t.setMinutes(t.getMinutes()-t.getTimezoneOffset());var today=t.toISOString().slice(0,10);
+  [].forEach.call(document.querySelectorAll('input[type=date]'),function(i){i.min=today});
+  [].forEach.call(document.querySelectorAll('input[type=number]'),function(i){
+    i.addEventListener('change',function(){if(i.value==='')return;var v=+i.value;
+      if(i.min!=='')v=Math.max(+i.min,v);if(i.max!=='')v=Math.min(+i.max,v);i.value=v;i.dispatchEvent(new Event('input',{bubbles:true}));});
+  });
+  function err(el,msg){
+    var p=el.closest('label')||el, m=p.querySelector('.ferr');
+    if(!m){m=document.createElement('small');m.className='ferr';m.style.cssText='display:block;color:#c0392b;font-weight:600;margin-top:4px;font-size:13px';p.appendChild(m);}
+    m.textContent=msg;el.setAttribute('aria-invalid','true');
+    el.addEventListener('input',function h(){m.textContent='';el.removeAttribute('aria-invalid');el.removeEventListener('input',h)});
+  }
+  window.aurorineCheck=function(f){
+    var tel=f.querySelector('input[type=tel]');
+    if(tel){var st=tel.closest('.step');if(st&&!st.classList.contains('on'))return 'step';}
+    var bad=null;
+    [].forEach.call(f.querySelectorAll('input[type=date]'),function(d){if(!bad&&d.value&&d.value<today){err(d,'Выберите дату не раньше сегодняшней');bad=d;}});
+    if(!bad&&tel&&tel.value.replace(/\D/g,'').length<10){err(tel,'Укажите телефон, чтобы менеджер мог перезвонить');bad=tel;}
+    if(bad){bad.focus();bad.scrollIntoView({block:'center'});return false;}
+    return true;
+  };
+  document.addEventListener('submit',function(e){
+    var r=window.aurorineCheck(e.target);
+    if(r===true)return;
+    e.preventDefault();e.stopImmediatePropagation();
+    if(r==='step'){var nx=e.target.querySelector('.step.on [data-next]');if(nx)nx.click();}
+  },true);
 })();
 </script>
 </body>

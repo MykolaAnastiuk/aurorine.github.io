@@ -47,7 +47,7 @@
   --sans:"Manrope", system-ui, -apple-system, "Segoe UI", sans-serif;
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;scroll-padding-top:104px}
 body{margin:0;background:var(--snow);color:var(--ink);font:16px/1.6 var(--sans);-webkit-font-smoothing:antialiased}
 img{max-width:100%;display:block}
 a{color:inherit}
@@ -210,7 +210,7 @@ footer a{color:var(--honey)}
 <body>
 
 <div class="concept">
-  <b>Независимый концепт Aurorine Studio.</b><span class="long"> Не официальный сайт и не заказ BeeFree. Факты и фото с beefree.kz, 27.10.2026.</span>
+  <b>Независимый концепт Aurorine Studio, не официальный сайт.</b><span class="long"> Не заказ BeeFree. Факты и фото с beefree.kz, 27.10.2026.</span>
 </div>
 
 <header>
@@ -263,7 +263,6 @@ footer a{color:var(--honey)}
         </div>
       </div>
       <div class="cgrid">
-        <!-- Вместимость: главная beefree.kz (4+2, 2+1, 2, 14+6, 4+1, 8+3); страницы коттеджей местами дают другие цифры (Липовый 4–7, Солнечный 14–22). В рабочей версии — одна цифра от клиента. -->
         <article class="cot" data-min="4" data-max="6" data-day="6">
           <span class="fit">Подходит</span>
           <img loading="lazy" src="https://beefree.kz/wp-content/uploads/kot_lipovyi.png" alt="Коттедж «Липовый»">
@@ -304,7 +303,7 @@ footer a{color:var(--honey)}
       <img loading="lazy" src="https://beefree.kz/wp-content/uploads/zal.jpg" alt="Зал в коттедже «Солнечный»">
       <div>
         <span class="eyebrow">Праздники и корпоративы</span>
-        <h2 style="margin-top:14px">Зал до 70 гостей днём, ночёвка до 22</h2>
+        <h2 style="margin-top:14px">До 70 человек на дневные мероприятия, ночёвка до 22</h2>
         <p class="lead" style="margin-top:16px">Зал на 100 м² в коттедже «Солнечный» для юбилея, дня рождения, корпоратива или ретрита. Повар и официанты по заказу, меню согласуем заранее.</p>
         <ul class="ticks">
           <li>Посуда, мангал, уличный казан, караоке и настольный теннис уже в стоимости зала</li>
@@ -322,7 +321,7 @@ footer a{color:var(--honey)}
     <div class="wrap">
       <div class="sec-head">
         <div><span class="eyebrow">Подарки BeeFree</span><h2 style="margin-top:14px">Что вы получаете бесплатно</h2></div>
-        <p class="lead">Эти бонусы сейчас спрятаны на отдельной странице. На главной они продают лучше любой скидки.</p>
+        <p class="lead">Бонусы, которые продают лучше любой скидки. В концепте они стоят рядом с каждым коттеджем, чтобы гость видел подарок, когда выбирает.</p>
       </div>
       <div class="ggrid">
         <div class="g"><b>Баня на дровах</b><p>При аренде коттеджа «Липовый» на сутки.</p></div>
@@ -340,25 +339,24 @@ footer a{color:var(--honey)}
         <h2 style="margin-top:14px">Цена видна до звонка</h2>
         <p class="lead" style="margin-top:16px">Гость, который видит цену, бронирует. Гость, которому предлагают «оставить координаты для прайс-листа», чаще уходит на соседнюю базу.</p>
         <div class="was" style="margin-top:24px">
-          <span class="eyebrow">Сейчас на beefree.kz</span>
-          <q>Текст про стоимость аренды</q>
-          <p>Так выглядит страница «Стоимость аренды» прямо сейчас: заголовок, служебная строка-заготовка и форма. Цифр нет ни на одной странице сайта.</p>
+          <span class="eyebrow">Как это работает</span>
+          <q>Поменяли цену в таблице — она на сайте</q>
+          <p>Цены хранятся в обычной Google-таблице. Администратор меняет цифру на праздники или сезон, и сайт обновляется сам, без программиста.</p>
         </div>
       </div>
       <div>
-        <!-- Цен на beefree.kz нет. В рабочей версии таблица заполняется из Google-таблицы клиента. -->
         <table>
           <thead><tr><th>Коттедж</th><th>Гостей</th><th>Будни / выходные</th></tr></thead>
           <tbody>
-            <tr><td>Цветочный</td><td>2</td><td class="p">ваша цена</td></tr>
-            <tr><td>Гречишный</td><td>2–3</td><td class="p">ваша цена</td></tr>
-            <tr><td>Горный</td><td>2–5</td><td class="p">ваша цена</td></tr>
-            <tr><td>Липовый</td><td>4–6</td><td class="p">ваша цена</td></tr>
-            <tr><td>Медовый</td><td>8–11</td><td class="p">ваша цена</td></tr>
-            <tr><td>Солнечный</td><td>до 22</td><td class="p">ваша цена</td></tr>
+            <tr><td>Цветочный</td><td>2</td><td class="p">из вашей таблицы</td></tr>
+            <tr><td>Гречишный</td><td>2–3</td><td class="p">из вашей таблицы</td></tr>
+            <tr><td>Горный</td><td>2–5</td><td class="p">из вашей таблицы</td></tr>
+            <tr><td>Липовый</td><td>4–6</td><td class="p">из вашей таблицы</td></tr>
+            <tr><td>Медовый</td><td>8–11</td><td class="p">из вашей таблицы</td></tr>
+            <tr><td>Солнечный</td><td>до 22</td><td class="p">из вашей таблицы</td></tr>
           </tbody>
         </table>
-        <p class="fine" style="text-align:left">Цены на сайте не указаны, поэтому в концепте вместо них «ваша цена». В рабочей версии вы меняете цифры в Google-таблице, и сайт обновляется сам.</p>
+        <p class="fine" style="text-align:left">В концепте цены не заполнены: цифры подставятся из вашей таблицы.</p>
       </div>
     </div>
   </section>
@@ -437,9 +435,10 @@ footer a{color:var(--honey)}
   function upd(){
     var g=+r.value, n=0, names=[];
     out.textContent=g;
+    var fg=document.querySelector('#bookForm [name=guests]');if(fg)fg.value=g;
     cots.forEach(function(c){
       var max=mode==='day'?+c.dataset.day:+c.dataset.max;
-      var ok=g<=max && g>=Math.min(+c.dataset.min,mode==='day'?1:+c.dataset.min);
+      var ok=g<=max && g>=(mode==='day'?1:+c.dataset.min-2);
       c.classList.toggle('ok',ok);c.classList.toggle('off',!ok);
       if(ok){n++;names.push(c.querySelector('h3').textContent);}
     });
@@ -467,6 +466,38 @@ footer a{color:var(--honey)}
       'Контакт: '+(f.name.value.trim()||'имя не указано')+', '+(f.phone.value.trim()||'телефон не указан');
     wa.classList.add('show');wa.scrollIntoView({behavior:'smooth',block:'nearest'});
   });
+})();
+</script>
+<script>
+/* Проверка заявки: телефон обязателен, дата не в прошлом, число гостей в пределах поля. */
+(function(){
+  var t=new Date();t.setMinutes(t.getMinutes()-t.getTimezoneOffset());var today=t.toISOString().slice(0,10);
+  [].forEach.call(document.querySelectorAll('input[type=date]'),function(i){i.min=today});
+  [].forEach.call(document.querySelectorAll('input[type=number]'),function(i){
+    i.addEventListener('change',function(){if(i.value==='')return;var v=+i.value;
+      if(i.min!=='')v=Math.max(+i.min,v);if(i.max!=='')v=Math.min(+i.max,v);i.value=v;i.dispatchEvent(new Event('input',{bubbles:true}));});
+  });
+  function err(el,msg){
+    var p=el.closest('label')||el, m=p.querySelector('.ferr');
+    if(!m){m=document.createElement('small');m.className='ferr';m.style.cssText='display:block;color:#c0392b;font-weight:600;margin-top:4px;font-size:13px';p.appendChild(m);}
+    m.textContent=msg;el.setAttribute('aria-invalid','true');
+    el.addEventListener('input',function h(){m.textContent='';el.removeAttribute('aria-invalid');el.removeEventListener('input',h)});
+  }
+  window.aurorineCheck=function(f){
+    var tel=f.querySelector('input[type=tel]');
+    if(tel){var st=tel.closest('.step');if(st&&!st.classList.contains('on'))return 'step';}
+    var bad=null;
+    [].forEach.call(f.querySelectorAll('input[type=date]'),function(d){if(!bad&&d.value&&d.value<today){err(d,'Выберите дату не раньше сегодняшней');bad=d;}});
+    if(!bad&&tel&&tel.value.replace(/\D/g,'').length<10){err(tel,'Укажите телефон, чтобы менеджер мог перезвонить');bad=tel;}
+    if(bad){bad.focus();bad.scrollIntoView({block:'center'});return false;}
+    return true;
+  };
+  document.addEventListener('submit',function(e){
+    var r=window.aurorineCheck(e.target);
+    if(r===true)return;
+    e.preventDefault();e.stopImmediatePropagation();
+    if(r==='step'){var nx=e.target.querySelector('.step.on [data-next]');if(nx)nx.click();}
+  },true);
 })();
 </script>
 </body>

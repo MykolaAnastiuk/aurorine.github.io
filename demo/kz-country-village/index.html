@@ -65,7 +65,7 @@
   --sans:"Golos Text", system-ui, -apple-system, "Segoe UI", sans-serif;
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;scroll-padding-top:104px}
 body{margin:0;background:var(--snow);color:var(--ink);font:16px/1.6 var(--sans);-webkit-font-smoothing:antialiased}
 img{max-width:100%;display:block}
 a{color:inherit}
@@ -257,7 +257,7 @@ footer a{color:var(--clay-soft)}
 <body>
 
 <div class="concept">
-  <b>Независимый концепт Aurorine Studio.</b><span class="long"> Не официальный сайт и не заказ Country Village Resort. Факты и фото с country-village.kz и 2GIS, 23.10.2026.</span>
+  <b>Независимый концепт Aurorine Studio, не официальный сайт.</b><span class="long"> Не заказ Country Village Resort. Факты и фото с country-village.kz и 2GIS, 23.10.2026.</span>
 </div>
 
 <header>
@@ -357,7 +357,7 @@ footer a{color:var(--clay-soft)}
         <ul class="why">
           <li><i>1</i><div><b>Гость не ждёт до утра</b><br><span>Оставляет заявку в 23:00, менеджер видит её первым делом.</span></div></li>
           <li><i>2</i><div><b>Все данные сразу</b><br><span>Дата, гости, площадка, нужны ли домики. Меньше уточняющих звонков.</span></div></li>
-          <li><i>3</i><div><b>Ни одна заявка не теряется</b><br><span>Видно, кто из менеджеров взял заявку.</span></div></li>
+          <li><i>3</i><div><b>Ни одна заявка не теряется</b><br><span>Заявка приходит в общий чат, её видят все менеджеры.</span></div></li>
         </ul>
       </div>
       <form id="eventForm" novalidate>
@@ -422,7 +422,6 @@ footer a{color:var(--clay-soft)}
           </div>
         </article>
       </div>
-      <!-- Условия: страницы домиков /rooms/…, 23.10.2026. Три цены без подписей на страницах домиков — уточнить у клиента и подписать (вероятно, по числу гостей). -->
       <div class="terms">
         <div class="term"><b>Заезд 14:00, выезд 12:00</b>Завтрак с 9:00 до 10:30</div>
         <div class="term"><b>Депозит на кухню и бар</b>20 000 ₸ в сутки (2-местный), 25 000 ₸ (4-местный)</div>
@@ -512,6 +511,38 @@ footer a{color:var(--clay-soft)}
       (g('note')?'\nПожелания: '+g('note'):'');
     tg.classList.add('show'); tg.scrollIntoView({behavior:'smooth',block:'nearest'});
   });
+})();
+</script>
+<script>
+/* Проверка заявки: телефон обязателен, дата не в прошлом, число гостей в пределах поля. */
+(function(){
+  var t=new Date();t.setMinutes(t.getMinutes()-t.getTimezoneOffset());var today=t.toISOString().slice(0,10);
+  [].forEach.call(document.querySelectorAll('input[type=date]'),function(i){i.min=today});
+  [].forEach.call(document.querySelectorAll('input[type=number]'),function(i){
+    i.addEventListener('change',function(){if(i.value==='')return;var v=+i.value;
+      if(i.min!=='')v=Math.max(+i.min,v);if(i.max!=='')v=Math.min(+i.max,v);i.value=v;i.dispatchEvent(new Event('input',{bubbles:true}));});
+  });
+  function err(el,msg){
+    var p=el.closest('label')||el, m=p.querySelector('.ferr');
+    if(!m){m=document.createElement('small');m.className='ferr';m.style.cssText='display:block;color:#c0392b;font-weight:600;margin-top:4px;font-size:13px';p.appendChild(m);}
+    m.textContent=msg;el.setAttribute('aria-invalid','true');
+    el.addEventListener('input',function h(){m.textContent='';el.removeAttribute('aria-invalid');el.removeEventListener('input',h)});
+  }
+  window.aurorineCheck=function(f){
+    var tel=f.querySelector('input[type=tel]');
+    if(tel){var st=tel.closest('.step');if(st&&!st.classList.contains('on'))return 'step';}
+    var bad=null;
+    [].forEach.call(f.querySelectorAll('input[type=date]'),function(d){if(!bad&&d.value&&d.value<today){err(d,'Выберите дату не раньше сегодняшней');bad=d;}});
+    if(!bad&&tel&&tel.value.replace(/\D/g,'').length<10){err(tel,'Укажите телефон, чтобы менеджер мог перезвонить');bad=tel;}
+    if(bad){bad.focus();bad.scrollIntoView({block:'center'});return false;}
+    return true;
+  };
+  document.addEventListener('submit',function(e){
+    var r=window.aurorineCheck(e.target);
+    if(r===true)return;
+    e.preventDefault();e.stopImmediatePropagation();
+    if(r==='step'){var nx=e.target.querySelector('.step.on [data-next]');if(nx)nx.click();}
+  },true);
 })();
 </script>
 </body>

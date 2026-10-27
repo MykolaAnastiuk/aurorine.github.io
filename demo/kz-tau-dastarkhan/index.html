@@ -49,7 +49,7 @@
   --sans:"Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;scroll-padding-top:104px}
 body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.6 var(--sans);-webkit-font-smoothing:antialiased}
 img{max-width:100%;display:block}
 a{color:inherit}
@@ -207,7 +207,7 @@ footer a{color:var(--gold-l)}
 <body>
 
 <div class="concept">
-  <b>Независимый концепт Aurorine Studio.</b><span class="long"> Раздел «Мероприятия» для Тау-Дастархан. Не официальный сайт и не заказ комплекса. Факты и фото с tau24.kz, 27.10.2026.</span>
+  <b>Независимый концепт Aurorine Studio, не официальный сайт.</b><span class="long"> Раздел «Мероприятия» для Тау-Дастархан, не заказ комплекса. Факты и фото с tau24.kz, 27.10.2026.</span>
 </div>
 
 <header>
@@ -267,7 +267,6 @@ footer a{color:var(--gold-l)}
           <div class="gl"><output id="gOut" for="g">80</output><input type="range" id="g" min="10" max="250" step="5" value="80"></div>
         </div>
       </div>
-      <!-- Фото залов подобраны по подписям блоков на главной; галерея без подписей — сверить на Маке, какой снимок какой зал. -->
       <div class="hgrid">
         <article class="hallc" data-max="250" data-name="«Тау Мерген»">
           <span class="badge">Лучший вариант</span>
@@ -311,10 +310,10 @@ footer a{color:var(--gold-l)}
         <h2 style="margin-top:14px">Гости не уезжают после банкета</h2>
         <p class="lead" style="margin-top:16px">Для выездного корпоратива или свадьбы с гостями из других городов: в сутки проживания уже входят завтрак в «Горном» и Tau SPA на двоих.</p>
         <div class="numbers">
-          <div><b>53</b><span>номера, от Superior до Diplomat Duplex на 8 гостей</span></div>
+          <div><b>53</b><span>номера, от Standard до Diplomat Duplex на 8 гостей</span></div>
           <div><b>8</b><span>бассейнов в Tau SPA</span></div>
           <div><b>11</b><span>бань и 7 джакузи</span></div>
-          <div><b>24/7</b><span>работает комплекс</span></div>
+          <div><b>24/7</b><span>отель и телефон</span></div>
         </div>
       </div>
       <img loading="lazy" src="https://tau24.kz/upload/iblock/798/005rs87cd6a7fs5bg9ve1c1i25ijnk6d.jpg" alt="Tau SPA">
@@ -363,7 +362,7 @@ footer a{color:var(--gold-l)}
           <label class="f">Дата<input type="date" name="date"></label>
         </div>
         <div class="row">
-          <label class="f">Гостей<input type="number" name="guests" min="10" max="300" value="80" inputmode="numeric"></label>
+          <label class="f">Гостей<input type="number" name="guests" min="10" max="250" value="80" inputmode="numeric"></label>
           <label class="f">Проживание<select name="stay"><option>Не нужно</option><option>Да, несколько номеров</option><option>Да, для всех гостей</option></select></label>
         </div>
         <div class="row">
@@ -455,6 +454,38 @@ footer a{color:var(--gold-l)}
       (f.note.value.trim()?'\nКомментарий: '+f.note.value.trim():'');
     wa.classList.add('show');wa.scrollIntoView({behavior:'smooth',block:'nearest'});
   });
+})();
+</script>
+<script>
+/* Проверка заявки: телефон обязателен, дата не в прошлом, число гостей в пределах поля. */
+(function(){
+  var t=new Date();t.setMinutes(t.getMinutes()-t.getTimezoneOffset());var today=t.toISOString().slice(0,10);
+  [].forEach.call(document.querySelectorAll('input[type=date]'),function(i){i.min=today});
+  [].forEach.call(document.querySelectorAll('input[type=number]'),function(i){
+    i.addEventListener('change',function(){if(i.value==='')return;var v=+i.value;
+      if(i.min!=='')v=Math.max(+i.min,v);if(i.max!=='')v=Math.min(+i.max,v);i.value=v;i.dispatchEvent(new Event('input',{bubbles:true}));});
+  });
+  function err(el,msg){
+    var p=el.closest('label')||el, m=p.querySelector('.ferr');
+    if(!m){m=document.createElement('small');m.className='ferr';m.style.cssText='display:block;color:#c0392b;font-weight:600;margin-top:4px;font-size:13px';p.appendChild(m);}
+    m.textContent=msg;el.setAttribute('aria-invalid','true');
+    el.addEventListener('input',function h(){m.textContent='';el.removeAttribute('aria-invalid');el.removeEventListener('input',h)});
+  }
+  window.aurorineCheck=function(f){
+    var tel=f.querySelector('input[type=tel]');
+    if(tel){var st=tel.closest('.step');if(st&&!st.classList.contains('on'))return 'step';}
+    var bad=null;
+    [].forEach.call(f.querySelectorAll('input[type=date]'),function(d){if(!bad&&d.value&&d.value<today){err(d,'Выберите дату не раньше сегодняшней');bad=d;}});
+    if(!bad&&tel&&tel.value.replace(/\D/g,'').length<10){err(tel,'Укажите телефон, чтобы менеджер мог перезвонить');bad=tel;}
+    if(bad){bad.focus();bad.scrollIntoView({block:'center'});return false;}
+    return true;
+  };
+  document.addEventListener('submit',function(e){
+    var r=window.aurorineCheck(e.target);
+    if(r===true)return;
+    e.preventDefault();e.stopImmediatePropagation();
+    if(r==='step'){var nx=e.target.querySelector('.step.on [data-next]');if(nx)nx.click();}
+  },true);
 })();
 </script>
 </body>

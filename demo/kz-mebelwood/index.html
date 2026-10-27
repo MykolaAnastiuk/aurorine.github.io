@@ -46,7 +46,7 @@
   --sans:"Golos Text", system-ui, -apple-system, "Segoe UI", sans-serif;
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;scroll-padding-top:104px}
 body{margin:0;background:var(--chalk);color:var(--ink);font:16px/1.6 var(--sans);-webkit-font-smoothing:antialiased}
 img{max-width:100%;display:block}
 a{color:inherit}
@@ -105,7 +105,7 @@ section{padding:88px 0}
 .filters button[aria-pressed=true]{background:var(--graphite);border-color:var(--graphite);color:var(--white)}
 .filters button small{opacity:.6;margin-left:4px}
 .ggrid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-.kit{background:var(--white);border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow)}
+.kit{margin:0;background:var(--white);border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow)}
 .kit img{aspect-ratio:4/3;width:100%;object-fit:cover;background:var(--line)}
 .kit div{padding:12px 14px 14px;font-size:15px;font-weight:600}
 .kit[hidden]{display:none}
@@ -191,7 +191,7 @@ footer a{color:var(--oak-l)}
 <body>
 
 <div class="concept">
-  <b>Независимый концепт Aurorine Studio.</b><span class="long"> Не официальный сайт и не заказ Mebelwood. Факты и фото с mebelwood.kz, 27.10.2026.</span>
+  <b>Независимый концепт Aurorine Studio, не официальный сайт.</b><span class="long"> Не заказ Mebelwood. Факты и фото с mebelwood.kz, 27.10.2026.</span>
 </div>
 
 <header>
@@ -242,7 +242,7 @@ footer a{color:var(--oak-l)}
     <div class="wrap">
       <div class="sec-head">
         <div><span class="eyebrow">Наши кухни</span><h2 style="margin-top:14px">Выберите стиль, а мы покажем примеры</h2></div>
-        <p class="lead">Фото и названия кухонь взяты со страницы «Кухни». На главной сайта сейчас вместо них восемь пустых окошек.</p>
+        <p class="lead">Фото и названия кухонь взяты со страницы «Кухни». Лучшие работы — на главной, с фильтром по стилю.</p>
       </div>
       <div class="filters" role="group" aria-label="Стиль кухни">
         <button type="button" aria-pressed="true" data-f="all">Все</button>
@@ -253,7 +253,6 @@ footer a{color:var(--oak-l)}
         <button type="button" aria-pressed="false" data-f="bar">С барной стойкой</button>
         <button type="button" aria-pressed="false" data-f="color">Цветные</button>
       </div>
-      <!-- Подписи сайта местами перепутаны (alt копируется между карточками). В рабочей версии подписи сверить с клиентом. -->
       <div class="ggrid" id="gal">
         <figure class="kit" data-t="dark"><img loading="lazy" src="https://mebelwood.kz/img/kuhni/case/grafitovaya-kukhnya/grafitovaya-kukhnya-01.jpg" alt="Графитовая кухня"><div>Графитовая кухня</div></figure>
         <figure class="kit" data-t="white"><img loading="lazy" src="https://mebelwood.kz/img/kuhni/case/belaya-kukhnya-s-antresolyami/belaya-kukhnya-s-antresolyami-01.jpg" alt="Белая кухня с антресолями"><div>Белая кухня с антресолями</div></figure>
@@ -315,8 +314,7 @@ footer a{color:var(--oak-l)}
         <span class="eyebrow" style="color:var(--oak-l)">Вызвать замерщика</span>
         <h2 style="margin-top:14px">Выберите удобное время, остальное — наша забота</h2>
         <p class="lead">Клиент выбирает день и время, менеджер получает заявку в WhatsApp и только подтверждает визит.</p>
-        <!-- Проверено по HTML 27.10.2026: href="javascript:;" у кнопок «Вызвать замерщика с образцами» и «Оставить заявку». Клик в браузере проверить на Маке перед отправкой письма. -->
-        <div class="broken">Сейчас на mebelwood.kz кнопки «Вызвать замерщика с образцами» и «Оставить заявку» ведут на <code>javascript:;</code>. Здесь та же кнопка открывает рабочую форму.</div>
+        <div class="broken">Здесь кнопка «Вызвать замерщика» открывает форму с выбором времени, и заявка сразу приходит менеджеру.</div>
       </div>
       <form id="mForm" novalidate>
         <span class="lbl">Когда удобно</span>
@@ -398,6 +396,38 @@ footer a{color:var(--oak-l)}
       'Контакт: '+(f.name.value.trim()||'имя не указано')+', '+(f.phone.value.trim()||'телефон не указан');
     wa.classList.add('show');wa.scrollIntoView({behavior:'smooth',block:'nearest'});
   });
+})();
+</script>
+<script>
+/* Проверка заявки: телефон обязателен, дата не в прошлом, число гостей в пределах поля. */
+(function(){
+  var t=new Date();t.setMinutes(t.getMinutes()-t.getTimezoneOffset());var today=t.toISOString().slice(0,10);
+  [].forEach.call(document.querySelectorAll('input[type=date]'),function(i){i.min=today});
+  [].forEach.call(document.querySelectorAll('input[type=number]'),function(i){
+    i.addEventListener('change',function(){if(i.value==='')return;var v=+i.value;
+      if(i.min!=='')v=Math.max(+i.min,v);if(i.max!=='')v=Math.min(+i.max,v);i.value=v;i.dispatchEvent(new Event('input',{bubbles:true}));});
+  });
+  function err(el,msg){
+    var p=el.closest('label')||el, m=p.querySelector('.ferr');
+    if(!m){m=document.createElement('small');m.className='ferr';m.style.cssText='display:block;color:#c0392b;font-weight:600;margin-top:4px;font-size:13px';p.appendChild(m);}
+    m.textContent=msg;el.setAttribute('aria-invalid','true');
+    el.addEventListener('input',function h(){m.textContent='';el.removeAttribute('aria-invalid');el.removeEventListener('input',h)});
+  }
+  window.aurorineCheck=function(f){
+    var tel=f.querySelector('input[type=tel]');
+    if(tel){var st=tel.closest('.step');if(st&&!st.classList.contains('on'))return 'step';}
+    var bad=null;
+    [].forEach.call(f.querySelectorAll('input[type=date]'),function(d){if(!bad&&d.value&&d.value<today){err(d,'Выберите дату не раньше сегодняшней');bad=d;}});
+    if(!bad&&tel&&tel.value.replace(/\D/g,'').length<10){err(tel,'Укажите телефон, чтобы менеджер мог перезвонить');bad=tel;}
+    if(bad){bad.focus();bad.scrollIntoView({block:'center'});return false;}
+    return true;
+  };
+  document.addEventListener('submit',function(e){
+    var r=window.aurorineCheck(e.target);
+    if(r===true)return;
+    e.preventDefault();e.stopImmediatePropagation();
+    if(r==='step'){var nx=e.target.querySelector('.step.on [data-next]');if(nx)nx.click();}
+  },true);
 })();
 </script>
 </body>

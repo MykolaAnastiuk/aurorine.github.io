@@ -49,7 +49,7 @@
   --sans:"IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;scroll-padding-top:104px}
 body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.6 var(--sans);-webkit-font-smoothing:antialiased}
 img{max-width:100%;display:block}
 a{color:inherit}
@@ -222,7 +222,7 @@ footer a{color:var(--amber)}
 <body>
 
 <div class="concept">
-  <b>Независимый концепт Aurorine Studio.</b><span class="long"> Не официальный сайт и не заказ ТОО «Алматинская Мебельная Фабрика». Факты и фото с amfactory.kz, 27.10.2026.</span>
+  <b>Независимый концепт Aurorine Studio, не официальный сайт.</b><span class="long"> Не заказ ТОО «Алматинская Мебельная Фабрика». Факты и фото с amfactory.kz, 27.10.2026.</span>
 </div>
 
 <header>
@@ -237,7 +237,7 @@ footer a{color:var(--amber)}
     </nav>
     <div class="nav-cta">
       <a class="nav-phone" href="tel:+77470095178">+7 747 009 51 78</a>
-      <a class="btn btn-amber" href="#order">3D-проект бесплатно</a>
+      <a class="btn btn-amber" href="#order">Заказать 3D-проект</a>
     </div>
   </div>
 </header>
@@ -248,7 +248,7 @@ footer a{color:var(--amber)}
       <div class="hero-txt">
         <span class="eyebrow" style="color:var(--amber)">Своё производство в Алматы</span>
         <h1 style="margin-top:16px">Казахстанским квартирам — <span>казахстанскую мебель</span></h1>
-        <p>Кухни, шкафы-купе, спальни и прихожие из каталога или по вашим размерам. Менеджер-дизайнер бесплатно сделает 3D-проект с расстановкой, а доставка и сборка по Алматы тоже бесплатны.</p>
+        <p>Кухни, шкафы-купе, спальни и прихожие из каталога или по вашим размерам. Менеджер-дизайнер сделает 3D-проект с расстановкой, а выезд дизайнера, замер, доставка и сборка по Алматы бесплатны.</p>
         <div class="hero-actions">
           <a class="btn btn-amber" href="#order">Заказать 3D-проект</a>
           <a class="btn btn-line" href="#prices">Цены на сегодня</a>
@@ -275,12 +275,11 @@ footer a{color:var(--amber)}
         <div><span class="eyebrow">Каталог</span><h2 style="margin-top:14px">Мебель для каждой комнаты</h2></div>
         <p class="lead">Сейчас пункт «Каталог» в меню сайта никуда не ведёт: ссылка «#». Здесь каталог открывается с первого экрана.</p>
       </div>
-      <!-- Фото категорий — с /410-individualnyj_zakaz/ (подписи из title). Иконки категорий на сайте — PNG 2019 года. -->
       <div class="cats">
-        <a class="cat" href="#prices"><img loading="lazy" src="https://www.amfactory.kz/cms/uploads/file_1625636050_392348531.jpg" alt="Кухня на заказ"><div><h3>Кухни</h3><span>Посекционно и по размерам</span><span class="pr">от … ₸</span></div></a>
-        <a class="cat" href="#prices"><img loading="lazy" src="https://www.amfactory.kz/cms/uploads/file_1623739720_868816737.jpg" alt="Мебель для спальни"><div><h3>Спальни</h3><span>Гарнитуры, кровати, шкафы, комоды</span><span class="pr">от … ₸</span></div></a>
-        <a class="cat" href="#prices"><img loading="lazy" src="https://www.amfactory.kz/cms/uploads/file_1623740025_741401803.jpg" alt="Прихожая"><div><h3>Прихожие</h3><span>«Модерн», «Натали», «Сауле»</span><span class="pr">от … ₸</span></div></a>
-        <a class="cat" href="#prices"><img loading="lazy" src="https://www.amfactory.kz/cms/uploads/file_1548413249_568256556.png" alt="Шкафы-купе"><div><h3>Шкафы-купе</h3><span>Линейка «Сакура»</span><span class="pr">от … ₸</span></div></a>
+        <a class="cat" href="#prices"><img loading="lazy" src="https://www.amfactory.kz/cms/uploads/file_1625636050_392348531.jpg" alt="Кухня на заказ"><div><h3>Кухни</h3><span>Посекционно и по размерам</span><span class="pr">цена из вашей таблицы</span></div></a>
+        <a class="cat" href="#prices"><img loading="lazy" src="https://www.amfactory.kz/cms/uploads/file_1623739720_868816737.jpg" alt="Мебель для спальни"><div><h3>Спальни</h3><span>Гарнитуры, кровати, шкафы, комоды</span><span class="pr">цена из вашей таблицы</span></div></a>
+        <a class="cat" href="#prices"><img loading="lazy" src="https://www.amfactory.kz/cms/uploads/file_1623740025_741401803.jpg" alt="Прихожая"><div><h3>Прихожие</h3><span>«Модерн», «Натали», «Сауле»</span><span class="pr">цена из вашей таблицы</span></div></a>
+        <a class="cat" href="#prices"><img loading="lazy" src="https://www.amfactory.kz/cms/uploads/file_1548413249_568256556.png" alt="Шкафы-купе"><div><h3>Шкафы-купе</h3><span>Линейка «Сакура»</span><span class="pr">цена из вашей таблицы</span></div></a>
       </div>
     </div>
   </section>
@@ -289,27 +288,22 @@ footer a{color:var(--amber)}
     <div class="wrap fr-grid">
       <div>
         <span class="eyebrow">Цены</span>
-        <h2 style="margin-top:14px">Цены, которым можно верить</h2>
-        <p class="lead" style="margin-top:16px">Покупатель мебели сравнивает цены на нескольких сайтах. Надпись «цены не актуальны» отправляет его к тому, у кого цифры есть.</p>
-        <div class="banner-old" style="margin-top:22px">
-          <strong>«ЦЕНЫ НА САЙТЕ НЕ АКТАЛЬНЫ!»</strong>
-          <p>Так сейчас написано на главной amfactory.kz, а корзина показывает «Сумма: 0 ₸». Последние новости на сайте — ноябрь 2023 года.</p>
-        </div>
-        <div class="banner-new">
-          <strong>Цены обновлены <span id="today"></span></strong>
+        <h2 style="margin-top:14px">Актуальные цены с датой обновления</h2>
+        <p class="lead" style="margin-top:16px">Покупатель мебели сравнивает цены на нескольких сайтах. Цена с датой обновления показывает, что ей можно верить, и экономит менеджеру звонок.</p>
+        <div class="banner-new" style="margin-top:22px">
+          <strong>Так будет выглядеть: «Цены обновлены <span id="today"></span>»</strong>
           <p>В рабочей версии цены подтягиваются из вашей таблицы. Поменяли цифру в Excel или Google-таблице — на сайте она обновилась сама, вместе с датой.</p>
         </div>
       </div>
       <div>
-        <!-- Цен на amfactory.kz нет. Строки — категории каталога; цифры даёт клиент. -->
         <table>
           <thead><tr><th>Позиция</th><th>Срок</th><th>Цена</th></tr></thead>
           <tbody>
-            <tr><td>Прихожая «Натали», в наличии</td><td>3 дня</td><td class="p">ваша цена</td></tr>
-            <tr><td>Шкаф-купе «Сакура»</td><td>—</td><td class="p">ваша цена</td></tr>
-            <tr><td>Кухня посекционно, за метр</td><td>—</td><td class="p">ваша цена</td></tr>
-            <tr><td>Спальный гарнитур</td><td>—</td><td class="p">ваша цена</td></tr>
-            <tr><td>Конференц-стол в наличии</td><td>—</td><td class="p">ваша цена</td></tr>
+            <tr><td>Прихожая «Натали», в наличии</td><td>3 дня</td><td class="p">из вашей таблицы</td></tr>
+            <tr><td>Шкаф-купе «Сакура»</td><td>—</td><td class="p">из вашей таблицы</td></tr>
+            <tr><td>Кухня посекционно, за метр</td><td>—</td><td class="p">из вашей таблицы</td></tr>
+            <tr><td>Спальный гарнитур</td><td>—</td><td class="p">из вашей таблицы</td></tr>
+            <tr><td>Конференц-стол в наличии</td><td>—</td><td class="p">из вашей таблицы</td></tr>
           </tbody>
         </table>
         <p class="stamp">«Натали» в наличии доставляем и собираем за 3 дня. Сроки остальных позиций уточнит менеджер.</p>
@@ -322,11 +316,11 @@ footer a{color:var(--amber)}
       <div>
         <span class="eyebrow" style="color:var(--amber)">Индивидуальный заказ</span>
         <h2 style="margin-top:14px;color:var(--white)">3D-проект вашей комнаты до покупки</h2>
-        <p class="lead">Сейчас индивидуальный заказ принимают только в центральном офисе. Здесь клиент начинает с телефона: выбирает комнату, прикладывает план, а менеджер-дизайнер получает заявку в WhatsApp.</p>
+        <p class="lead">Сейчас заявка на индивидуальный проект — общая форма без комнаты, размеров и плана. Здесь клиент за три шага выбирает комнату, прикладывает план, а менеджер-дизайнер получает готовую заявку в WhatsApp.</p>
         <ul class="inc">
           <li>3D-проект с расстановкой и эскизом мебели</li>
           <li>Цветной 3D-план всей квартиры по желанию</li>
-          <li>Бесплатный выезд дизайнера и замер</li>
+          <li>Выезд дизайнера и замер бесплатно</li>
           <li>Бесплатная доставка по Алматы и сборка</li>
         </ul>
       </div>
@@ -456,6 +450,38 @@ footer a{color:var(--amber)}
       'Контакт: '+(f.name.value.trim()||'имя не указано')+', '+(f.phone.value.trim()||'телефон не указан');
     wa.classList.add('show');wa.scrollIntoView({behavior:'smooth',block:'nearest'});
   });
+})();
+</script>
+<script>
+/* Проверка заявки: телефон обязателен, дата не в прошлом, число гостей в пределах поля. */
+(function(){
+  var t=new Date();t.setMinutes(t.getMinutes()-t.getTimezoneOffset());var today=t.toISOString().slice(0,10);
+  [].forEach.call(document.querySelectorAll('input[type=date]'),function(i){i.min=today});
+  [].forEach.call(document.querySelectorAll('input[type=number]'),function(i){
+    i.addEventListener('change',function(){if(i.value==='')return;var v=+i.value;
+      if(i.min!=='')v=Math.max(+i.min,v);if(i.max!=='')v=Math.min(+i.max,v);i.value=v;i.dispatchEvent(new Event('input',{bubbles:true}));});
+  });
+  function err(el,msg){
+    var p=el.closest('label')||el, m=p.querySelector('.ferr');
+    if(!m){m=document.createElement('small');m.className='ferr';m.style.cssText='display:block;color:#c0392b;font-weight:600;margin-top:4px;font-size:13px';p.appendChild(m);}
+    m.textContent=msg;el.setAttribute('aria-invalid','true');
+    el.addEventListener('input',function h(){m.textContent='';el.removeAttribute('aria-invalid');el.removeEventListener('input',h)});
+  }
+  window.aurorineCheck=function(f){
+    var tel=f.querySelector('input[type=tel]');
+    if(tel){var st=tel.closest('.step');if(st&&!st.classList.contains('on'))return 'step';}
+    var bad=null;
+    [].forEach.call(f.querySelectorAll('input[type=date]'),function(d){if(!bad&&d.value&&d.value<today){err(d,'Выберите дату не раньше сегодняшней');bad=d;}});
+    if(!bad&&tel&&tel.value.replace(/\D/g,'').length<10){err(tel,'Укажите телефон, чтобы менеджер мог перезвонить');bad=tel;}
+    if(bad){bad.focus();bad.scrollIntoView({block:'center'});return false;}
+    return true;
+  };
+  document.addEventListener('submit',function(e){
+    var r=window.aurorineCheck(e.target);
+    if(r===true)return;
+    e.preventDefault();e.stopImmediatePropagation();
+    if(r==='step'){var nx=e.target.querySelector('.step.on [data-next]');if(nx)nx.click();}
+  },true);
 })();
 </script>
 </body>

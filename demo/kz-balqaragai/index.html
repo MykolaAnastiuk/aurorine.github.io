@@ -66,7 +66,7 @@
   --sans:"Manrope", system-ui, -apple-system, "Segoe UI", sans-serif;
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;scroll-padding-top:104px}
 body{margin:0;background:var(--birch);color:var(--ink);font:16px/1.6 var(--sans);-webkit-font-smoothing:antialiased}
 img{max-width:100%;display:block}
 a{color:inherit}
@@ -153,7 +153,7 @@ form .btn{width:100%;justify-content:center;margin-top:6px}
 
 /* Ресторан */
 .rest{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
-.rest-photos{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.rest-photos{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
 .rest-photos img{border-radius:var(--r);aspect-ratio:3/4;object-fit:cover;width:100%;background:var(--sand)}
 .rest-photos img:first-child{margin-top:40px}
 .ticks{list-style:none;padding:0;margin:24px 0;display:grid;gap:10px}
@@ -274,7 +274,7 @@ footer a{color:var(--honey-soft)}
 <body>
 
 <div class="concept">
-  <b>Независимый концепт Aurorine Studio.</b><span class="long"> Не официальный сайт и не заказ BalQaragai. Факты и фото взяты с balqaragai.kz и 2GIS 23.10.2026.</span>
+  <b>Независимый концепт Aurorine Studio, не официальный сайт.</b><span class="long"> Не заказ BalQaragai. Факты и фото взяты с balqaragai.kz и 2GIS 23.10.2026.</span>
 </div>
 
 <header>
@@ -355,7 +355,6 @@ footer a{color:var(--honey-soft)}
           </div>
         </article>
       </div>
-      <!-- Вместимость 350: страница /restoran/ (на главной — 300). Цены за гостя на сайте нет: добавить пакеты «от … ₸» после ответа клиента. -->
       <div class="note"><span aria-hidden="true">●</span><span>Безалкогольная зона: спокойный праздник, на который не страшно приехать с детьми и старшими. Стоимость банкета на гостя рассчитает отдел продаж под вашу дату и меню.</span></div>
     </div>
   </section>
@@ -392,7 +391,7 @@ footer a{color:var(--honey-soft)}
         <div class="tg" id="tg" aria-live="polite">
           <div class="tg-head"><span>✈</span>BalQaragai · Заявки</div>
           <pre id="tgText"></pre>
-          <small>Так сообщение придёт в Telegram отдела продаж. Ничего не потеряется в почте, и видно, кто из менеджеров взял заявку.</small>
+          <small>Так сообщение придёт в Telegram отдела продаж. Ничего не потеряется в почте: заявку видят все менеджеры в общем чате.</small>
         </div>
       </form>
     </div>
@@ -408,7 +407,7 @@ footer a{color:var(--honey-soft)}
         <span class="eyebrow">Ресторан «Аура»</span>
         <h2 style="margin-top:14px">Три этажа, 250 мест и&nbsp;кухня на любой вкус</h2>
         <ul class="ticks">
-          <li>Европейская, азиатская и национальная кухня</li>
+          <li>Европейская и азиатская кухня</li>
           <li>Открыт с 09:00 до 23:00, завтраки с 09:00 до 11:00</li>
           <li>Детская комната, интернет по всей территории</li>
           <li>Бесплатная парковка</li>
@@ -466,7 +465,6 @@ footer a{color:var(--honey-soft)}
           <div class="total"><span>Итого за ночь</span><b id="cTotal">165 000 ₸</b></div>
         </div>
       </div>
-      <!-- Цены номеров: /nomera/, 23.10.2026. Срубы: /kottedzhi/. Заезд/выезд и завтрак: PDF-прайс весна 2024 — уточнить у клиента. -->
       <div class="cabins">
         <article class="cabin">
           <img loading="lazy" src="https://balqaragai.kz/wp-content/themes/yootheme/cache/29/frame2-29bb0ec6.jpeg" alt="Большой сруб BalQaragai">
@@ -537,7 +535,7 @@ footer a{color:var(--honey-soft)}
       <div class="route">
         <div>
           <span class="eyebrow">Как добраться</span>
-          <h3 style="margin-top:14px">Малотимофеевка-2, около 20 минут от Астаны</h3>
+          <h3 style="margin-top:14px;overflow-wrap:anywhere">Малотимофеевка-2, около 20 минут от Астаны</h3>
           <p>Маршрут откроется в 2GIS на телефоне. Парковка для гостей бесплатная.</p>
         </div>
         <div style="display:flex;gap:12px;flex-wrap:wrap">
@@ -579,9 +577,41 @@ footer a{color:var(--honey-soft)}
     tg.classList.add('show'); tg.scrollIntoView({behavior:'smooth',block:'nearest'});
   });
   var cat=document.getElementById('cCat'), rooms=document.getElementById('cRooms'), day=document.getElementById('cDay'), tot=document.getElementById('cTotal');
-  function calc(){var p=cat.value.split('|'), n=Math.max(1,Math.min(14,parseInt(rooms.value,10)||1));tot.textContent=(n*(+p[+day.value])).toLocaleString('ru-RU')+' ₸';}
+  function calc(){var p=cat.value.split('|'), n=Math.max(1,Math.min(14,parseInt(rooms.value,10)||1));if(rooms.value!==''&&+rooms.value!==n)rooms.value=n;tot.textContent=(n*(+p[+day.value])).toLocaleString('ru-RU')+' ₸';}
   [cat,rooms,day].forEach(function(el){el.addEventListener('input',calc);});
   calc();
+})();
+</script>
+<script>
+/* Проверка заявки: телефон обязателен, дата не в прошлом, число гостей в пределах поля. */
+(function(){
+  var t=new Date();t.setMinutes(t.getMinutes()-t.getTimezoneOffset());var today=t.toISOString().slice(0,10);
+  [].forEach.call(document.querySelectorAll('input[type=date]'),function(i){i.min=today});
+  [].forEach.call(document.querySelectorAll('input[type=number]'),function(i){
+    i.addEventListener('change',function(){if(i.value==='')return;var v=+i.value;
+      if(i.min!=='')v=Math.max(+i.min,v);if(i.max!=='')v=Math.min(+i.max,v);i.value=v;i.dispatchEvent(new Event('input',{bubbles:true}));});
+  });
+  function err(el,msg){
+    var p=el.closest('label')||el, m=p.querySelector('.ferr');
+    if(!m){m=document.createElement('small');m.className='ferr';m.style.cssText='display:block;color:#c0392b;font-weight:600;margin-top:4px;font-size:13px';p.appendChild(m);}
+    m.textContent=msg;el.setAttribute('aria-invalid','true');
+    el.addEventListener('input',function h(){m.textContent='';el.removeAttribute('aria-invalid');el.removeEventListener('input',h)});
+  }
+  window.aurorineCheck=function(f){
+    var tel=f.querySelector('input[type=tel]');
+    if(tel){var st=tel.closest('.step');if(st&&!st.classList.contains('on'))return 'step';}
+    var bad=null;
+    [].forEach.call(f.querySelectorAll('input[type=date]'),function(d){if(!bad&&d.value&&d.value<today){err(d,'Выберите дату не раньше сегодняшней');bad=d;}});
+    if(!bad&&tel&&tel.value.replace(/\D/g,'').length<10){err(tel,'Укажите телефон, чтобы менеджер мог перезвонить');bad=tel;}
+    if(bad){bad.focus();bad.scrollIntoView({block:'center'});return false;}
+    return true;
+  };
+  document.addEventListener('submit',function(e){
+    var r=window.aurorineCheck(e.target);
+    if(r===true)return;
+    e.preventDefault();e.stopImmediatePropagation();
+    if(r==='step'){var nx=e.target.querySelector('.step.on [data-next]');if(nx)nx.click();}
+  },true);
 })();
 </script>
 </body>

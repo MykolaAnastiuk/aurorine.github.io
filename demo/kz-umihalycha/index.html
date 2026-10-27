@@ -58,7 +58,7 @@
   --sans:"Nunito Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;scroll-padding-top:104px}
 body{margin:0;background:var(--cream);color:var(--ink);font:16px/1.6 var(--sans);-webkit-font-smoothing:antialiased}
 img{max-width:100%;display:block}
 a{color:inherit}
@@ -247,7 +247,7 @@ footer a{color:var(--wheat)}
 <body>
 
 <div class="concept">
-  <b>Независимый концепт Aurorine Studio.</b><span class="long"> Не официальный сайт и не заказ фазенды «У Михалыча». Факты и фото с umihalyicha.kz и 2GIS, 23.10.2026.</span>
+  <b>Независимый концепт Aurorine Studio, не официальный сайт.</b><span class="long"> Не заказ фазенды «У Михалыча». Факты и фото с umihalyicha.kz и 2GIS, 23.10.2026.</span>
 </div>
 
 <header>
@@ -389,7 +389,6 @@ footer a{color:var(--wheat)}
         <article class="home"><img loading="lazy" src="https://i0.wp.com/umihalyicha.kz/wp-content/uploads/2026/10/ilyasPH-01.jpg?w=1200&amp;ssl=1" alt="Коттедж"><div><h3>Коттеджи</h3><p>До 10 гостей, 3 спальни, гостиная с камином, терраса.</p></div></article>
         <article class="home"><img loading="lazy" src="https://i0.wp.com/umihalyicha.kz/wp-content/uploads/2026/10/ilyasPH-01-67.jpg?w=1200&amp;ssl=1" alt="Домик хоббита"><div><h3>Домики хоббитов</h3><p>Сказочный домик со своим душем и видом на горы.</p></div></article>
       </div>
-      <!-- Цены остальных домов есть только в PDF «ПРАЙС-ЛИСТ ОКТЯБРЬ 2026» (скачивается файлом). В рабочей версии — таблица из Google-таблицы. -->
       <div class="pricebar">
         <p><b>Цены текстом на сайте, а не PDF на скачивание.</b> В рабочей версии цены всех домов будут прямо на странице и обновятся, когда вы поменяете их в Google-таблице.</p>
         <a class="btn btn-dark" href="#request">Узнать цену на даты</a>
@@ -494,6 +493,38 @@ footer a{color:var(--wheat)}
       (v('note')?'\nПожелания: '+v('note'):'');
     tg.classList.add('show'); tg.scrollIntoView({behavior:'smooth',block:'nearest'});
   });
+})();
+</script>
+<script>
+/* Проверка заявки: телефон обязателен, дата не в прошлом, число гостей в пределах поля. */
+(function(){
+  var t=new Date();t.setMinutes(t.getMinutes()-t.getTimezoneOffset());var today=t.toISOString().slice(0,10);
+  [].forEach.call(document.querySelectorAll('input[type=date]'),function(i){i.min=today});
+  [].forEach.call(document.querySelectorAll('input[type=number]'),function(i){
+    i.addEventListener('change',function(){if(i.value==='')return;var v=+i.value;
+      if(i.min!=='')v=Math.max(+i.min,v);if(i.max!=='')v=Math.min(+i.max,v);i.value=v;i.dispatchEvent(new Event('input',{bubbles:true}));});
+  });
+  function err(el,msg){
+    var p=el.closest('label')||el, m=p.querySelector('.ferr');
+    if(!m){m=document.createElement('small');m.className='ferr';m.style.cssText='display:block;color:#c0392b;font-weight:600;margin-top:4px;font-size:13px';p.appendChild(m);}
+    m.textContent=msg;el.setAttribute('aria-invalid','true');
+    el.addEventListener('input',function h(){m.textContent='';el.removeAttribute('aria-invalid');el.removeEventListener('input',h)});
+  }
+  window.aurorineCheck=function(f){
+    var tel=f.querySelector('input[type=tel]');
+    if(tel){var st=tel.closest('.step');if(st&&!st.classList.contains('on'))return 'step';}
+    var bad=null;
+    [].forEach.call(f.querySelectorAll('input[type=date]'),function(d){if(!bad&&d.value&&d.value<today){err(d,'Выберите дату не раньше сегодняшней');bad=d;}});
+    if(!bad&&tel&&tel.value.replace(/\D/g,'').length<10){err(tel,'Укажите телефон, чтобы менеджер мог перезвонить');bad=tel;}
+    if(bad){bad.focus();bad.scrollIntoView({block:'center'});return false;}
+    return true;
+  };
+  document.addEventListener('submit',function(e){
+    var r=window.aurorineCheck(e.target);
+    if(r===true)return;
+    e.preventDefault();e.stopImmediatePropagation();
+    if(r==='step'){var nx=e.target.querySelector('.step.on [data-next]');if(nx)nx.click();}
+  },true);
 })();
 </script>
 </body>
