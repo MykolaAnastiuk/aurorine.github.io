@@ -1,0 +1,549 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Country Village Resort: свадьба в горах Аксайского ущелья, шатёр на 100 гостей</title>
+<meta name="description" content="Country Village Resort в Аксайском ущелье, Алматы: свадебный шатёр на 100 гостей, три ресторана, домики из сруба с завтраком и бассейном. Заявка на дату онлайн.">
+<!-- Концепт: не индексировать. На рабочем сайте строку убрать и добавить canonical. -->
+<meta name="robots" content="noindex, nofollow">
+<!-- <link rel="canonical" href="https://country-village.kz/"> -->
+<meta name="theme-color" content="#1d3340">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ru_KZ">
+<meta property="og:site_name" content="Country Village Resort">
+<meta property="og:title" content="Свадьба в горах: шатёр на 100 гостей в Аксайском ущелье">
+<meta property="og:description" content="Шатёр, три ресторана и домики для гостей в одном месте. Заявка на дату онлайн.">
+<meta name="twitter:card" content="summary_large_image">
+<!-- Структурированные данные: только факты с country-village.kz (23.10.2026). -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["Resort", "EventVenue"],
+      "@id": "https://country-village.kz/#resort",
+      "name": "Country Village Resort",
+      "url": "https://country-village.kz/",
+      "telephone": "+77273123862",
+      "email": "info@country-village.kz",
+      "maximumAttendeeCapacity": 100,
+      "checkinTime": "14:00",
+      "checkoutTime": "12:00",
+      "address": {"@type": "PostalAddress", "streetAddress": "ул. Аксайское ущелье, 1", "addressLocality": "Алматы", "postalCode": "050000", "addressCountry": "KZ"},
+      "sameAs": ["https://www.instagram.com/country_village_resort/"]
+    },
+    {
+      "@type": "Restaurant",
+      "name": "Рестораны Country Village",
+      "servesCuisine": ["Европейская", "Кавказская", "Восточная"],
+      "containedInPlace": {"@id": "https://country-village.kz/#resort"}
+    }
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Prata&family=Golos+Text:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --slate:#1d3340;      /* горная река */
+  --slate-2:#27455a;
+  --slate-3:#3a6079;
+  --clay:#c86a3f;       /* сруб на закате */
+  --clay-soft:#f2c6a8;
+  --snow:#f7f5f1;
+  --stone:#e8e3da;
+  --ink:#1a2229;
+  --muted:#5f6b73;
+  --line:#d8d1c4;
+  --white:#fff;
+  --r:18px;
+  --r-s:10px;
+  --shadow:0 20px 50px -28px rgba(18,36,48,.5);
+  --serif:"Prata", Georgia, serif;
+  --sans:"Golos Text", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:104px}
+body{margin:0;background:var(--snow);color:var(--ink);font:16px/1.6 var(--sans);-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:1200px;margin:0 auto;padding:0 20px}
+.eyebrow{display:inline-block;font:600 12px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--clay)}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.12;margin:0}
+h2{font-size:clamp(32px,4.2vw,52px)}
+h3{font-size:24px}
+.lead{font-size:18px;color:var(--muted);max-width:620px;margin:0}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border:0;border-radius:var(--r-s);padding:15px 24px;font:600 15px/1 var(--sans);cursor:pointer;text-decoration:none;transition:transform .15s,background .2s}
+.btn:hover{transform:translateY(-1px)}
+.btn-clay{background:var(--clay);color:var(--white)}
+.btn-clay:hover{background:#b65b32}
+.btn-line{background:transparent;color:var(--white);box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.6)}
+.btn-slate{background:var(--slate);color:var(--white)}
+
+.concept{background:var(--ink);color:#c9d3d8;font-size:13px;text-align:center;padding:8px 16px}
+.concept b{color:var(--clay-soft);font-weight:600}
+
+header{position:sticky;top:0;z-index:20;background:rgba(247,245,241,.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:70px;gap:20px}
+.logo{text-decoration:none;line-height:1}
+.logo b{display:block;font:400 22px/1 var(--serif);color:var(--slate)}
+.logo small{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--clay)}
+.menu{display:flex;gap:26px;font-size:14px;font-weight:500}
+.menu a{text-decoration:none;color:var(--muted)}
+.menu a:hover{color:var(--slate)}
+.nav-cta{display:flex;align-items:center;gap:16px}
+.nav-phone{font-weight:600;font-size:14px;text-decoration:none;white-space:nowrap;color:var(--slate)}
+.nav .btn{padding:12px 18px;font-size:14px}
+
+.hero{display:grid;grid-template-columns:1.05fr 1fr;min-height:min(84vh,780px)}
+.hero-text{background:var(--slate);color:var(--white);padding:72px 56px 56px max(20px,calc((100vw - 1200px)/2 + 20px));display:flex;flex-direction:column;justify-content:center}
+.hero h1{font-size:clamp(38px,5vw,68px)}
+.hero h1 span{color:var(--clay-soft)}
+.hero p{font-size:18px;color:#cfdae0;max-width:520px;margin:22px 0 30px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px}
+.hero-photo{position:relative;background:var(--slate-2)}
+.hero-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.badge{position:absolute;left:24px;bottom:24px;background:var(--white);border-radius:var(--r-s);padding:14px 18px;box-shadow:var(--shadow);font-size:14px}
+.badge b{font:400 30px/1 var(--serif);color:var(--slate);margin-right:8px}
+.facts{display:flex;flex-wrap:wrap;gap:28px;margin-top:44px;padding-top:28px;border-top:1px solid rgba(255,255,255,.18)}
+.facts div{font-size:13px;color:#b9c7cf}
+.facts b{display:block;font:400 30px/1.1 var(--serif);color:var(--white)}
+
+section{padding:96px 0}
+.sec-head{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:end;margin-bottom:48px}
+.sec-head .eyebrow{margin-bottom:14px}
+
+/* Свадьба */
+.wedding{display:grid;grid-template-columns:1.1fr 1fr;gap:48px;align-items:center}
+.mosaic{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:220px 220px;gap:12px}
+.mosaic img{width:100%;height:100%;object-fit:cover;border-radius:var(--r);background:var(--stone)}
+.mosaic img:first-child{grid-row:span 2}
+.includes{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:28px 0}
+.inc{background:var(--white);border:1px solid var(--line);border-radius:var(--r-s);padding:14px 16px;font-size:15px}
+.inc b{display:block;color:var(--slate);font-size:15px}
+.quote{border-left:3px solid var(--clay);padding:4px 0 4px 18px;color:var(--muted);font-style:italic;margin:0}
+
+/* Площадки */
+.venues{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.venue{background:var(--white);border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow)}
+.venue img{aspect-ratio:4/3;width:100%;object-fit:cover;background:var(--stone)}
+.venue div{padding:18px 20px 22px}
+.venue .cap{font:400 34px/1 var(--serif);color:var(--clay)}
+.venue .cap small{font:500 13px var(--sans);color:var(--muted);margin-left:6px}
+.venue h3{font-size:21px;margin:8px 0 6px}
+.venue p{margin:0;font-size:14px;color:var(--muted)}
+
+/* Заявка */
+.request{background:var(--slate);color:var(--white)}
+.request-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:56px;align-items:start}
+.request .lead{color:#c3d0d7;margin-top:18px}
+.why{list-style:none;padding:0;margin:30px 0 0;display:grid;gap:16px}
+.why li{display:grid;grid-template-columns:40px 1fr;gap:14px;align-items:start}
+.why i{width:40px;height:40px;border-radius:12px;background:var(--slate-2);display:grid;place-items:center;font-style:normal;color:var(--clay-soft);font-weight:700}
+.why span{color:#c3d0d7;font-size:15px}
+form{background:var(--snow);color:var(--ink);border-radius:var(--r);padding:30px;box-shadow:var(--shadow)}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+label{display:block;font-size:13px;font-weight:600;color:var(--muted);margin:0 0 14px}
+input,select,textarea{display:block;width:100%;margin-top:6px;font:500 16px/1.3 var(--sans);color:var(--ink);background:var(--white);border:1px solid var(--line);border-radius:var(--r-s);padding:12px 14px}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--clay);border-color:transparent}
+textarea{min-height:72px;resize:vertical}
+.check{display:flex;align-items:center;gap:8px;font-weight:500;color:var(--ink)}
+.check input{display:inline;width:auto;margin:0}
+form .btn{width:100%;margin-top:4px}
+.fine{font-size:12px;color:var(--muted);margin:12px 0 0;text-align:center}
+.tg{display:none;margin-top:18px;background:#1f2c33;color:#e9eef1;border-radius:16px;padding:18px 20px;font-size:14px}
+.tg.show{display:block}
+.tg-head{display:flex;align-items:center;gap:10px;margin-bottom:10px;font-weight:700}
+.tg-head span{width:30px;height:30px;border-radius:50%;background:#25d366;display:grid;place-items:center;color:#fff;font-size:13px}
+.tg pre{white-space:pre-wrap;margin:0;font:inherit;background:#2b3a44;border-radius:12px;padding:12px 14px}
+.tg small{display:block;color:#9fb1bb;margin-top:10px}
+
+/* Домики */
+.stay{background:var(--stone)}
+.houses{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.house{background:var(--white);border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column}
+.house img{aspect-ratio:16/10;width:100%;object-fit:cover;background:var(--snow)}
+.house-body{padding:22px 24px 24px;display:flex;flex-direction:column;gap:10px;flex:1}
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.tags span{font-size:12px;font-weight:600;background:var(--snow);border:1px solid var(--line);border-radius:999px;padding:5px 10px;color:var(--slate)}
+.house p{margin:0;font-size:14px;color:var(--muted)}
+.price{margin-top:auto;padding-top:14px;border-top:1px solid var(--stone);display:flex;justify-content:space-between;align-items:baseline}
+.price b{font:400 26px/1 var(--serif);color:var(--slate)}
+.price a{font-size:14px;font-weight:600;color:var(--clay);text-decoration:none}
+.terms{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:28px}
+.term{background:var(--snow);border-radius:var(--r-s);padding:16px 18px;font-size:14px;color:var(--muted)}
+.term b{display:block;color:var(--ink);font-size:15px;margin-bottom:2px}
+
+/* Отдых */
+.relax{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.relax article{position:relative;border-radius:var(--r);overflow:hidden;min-height:340px;color:var(--white);background:var(--slate-2)}
+.relax img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.relax article::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 35%,rgba(16,30,40,.9))}
+.relax div{position:absolute;left:0;right:0;bottom:0;padding:20px;z-index:1}
+.relax h3{font-size:24px}
+.relax p{margin:6px 0 0;font-size:14px;color:#d7e1e6}
+.relax .pr{color:var(--clay-soft);font-weight:600}
+
+.trust{background:var(--white);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:56px 0}
+.trust .wrap{display:flex;align-items:center;justify-content:space-between;gap:28px;flex-wrap:wrap}
+.score{display:flex;align-items:baseline;gap:16px}
+.score b{font:400 80px/1 var(--serif);color:var(--slate)}
+.score span{color:var(--muted);max-width:340px}
+
+.contacts{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.contacts>*{min-width:0}
+.c-list{display:grid;gap:12px;margin-top:26px}
+.c-item{display:flex;justify-content:space-between;gap:16px;padding:16px 20px;background:var(--white);border:1px solid var(--line);border-radius:var(--r-s);text-decoration:none}
+.c-item span{color:var(--muted);font-size:14px}
+.c-item b{font-weight:600;overflow-wrap:anywhere;text-align:right}
+.transfer{background:var(--slate);color:var(--white);border-radius:var(--r);padding:32px;display:flex;flex-direction:column;justify-content:space-between;gap:24px}
+.transfer h3{font-size:30px}
+.transfer p{color:#c3d0d7;margin:10px 0 0}
+
+footer{background:var(--ink);color:#9aa8b0;font-size:13px;padding:36px 0 96px}
+footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
+footer a{color:var(--clay-soft)}
+
+.mbar{display:none;position:fixed;left:0;right:0;bottom:0;z-index:30;background:var(--white);border-top:1px solid var(--line);padding:10px 12px calc(10px + env(safe-area-inset-bottom));gap:10px}
+.mbar a{flex:1;padding:14px 10px;font-size:14px}
+.mbar .btn-line{color:var(--slate);box-shadow:inset 0 0 0 1.5px var(--slate)}
+
+.request-grid>*,.wedding>*,.sec-head>*{min-width:0}
+
+@media (max-width:1020px){
+  .menu{display:none}
+  .hero{grid-template-columns:1fr}
+  .hero-photo{min-height:320px;order:-1}
+  .hero-text{padding:48px 20px}
+  .wedding,.request-grid,.contacts,.sec-head{grid-template-columns:1fr}
+  .venues,.relax{grid-template-columns:1fr 1fr}
+  .houses{grid-template-columns:1fr 1fr}
+  .terms{grid-template-columns:1fr 1fr}
+}
+@media (max-width:620px){
+  .badge{left:auto;right:12px;bottom:12px;padding:10px 12px;font-size:12px}
+  .badge b{font-size:22px}
+  section{padding:68px 0}
+  .nav-phone,.nav .btn{display:none}
+  .hero-photo{min-height:260px}
+  .facts{gap:18px}
+  .facts b{font-size:26px}
+  .mosaic{grid-template-rows:150px 150px}
+  .includes,.row,.houses,.terms{grid-template-columns:1fr}
+  .venues,.relax{grid-template-columns:1fr}
+  .relax article{min-height:260px}
+  form{padding:22px}
+  .score b{font-size:64px}
+  .mbar{display:flex}
+}
+
+/* Мобильная навигация и плашка (по визуальной проверке 24.10) */
+@media (max-width:1020px){
+  .nav{flex-wrap:wrap;height:auto;padding-top:12px;padding-bottom:0;row-gap:8px}
+  .menu{display:flex !important;order:3;width:100%;overflow-x:auto;gap:20px;padding:4px 0 12px;white-space:nowrap;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .menu::-webkit-scrollbar{display:none}
+  .menu a{flex:none}
+  .menu{-webkit-mask-image:linear-gradient(90deg,#000 85%,transparent);mask-image:linear-gradient(90deg,#000 85%,transparent);padding-right:28px}
+}
+@media (max-width:620px){
+  .concept{font-size:12px;padding:6px 12px}
+  .concept .long{display:none}
+  main>section:first-child{padding-bottom:72px}
+}
+</style>
+</head>
+<body>
+
+<div class="concept">
+  <b>Независимый концепт Aurorine Studio, не официальный сайт.</b><span class="long"> Не заказ Country Village Resort. Факты и фото с country-village.kz и 2GIS, 23.10.2026.</span>
+</div>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#top"><b>Country Village</b><small>Resort · Аксайское ущелье</small></a>
+    <nav class="menu" aria-label="Разделы">
+      <a href="#wedding">Свадьба</a>
+      <a href="#venues">Площадки</a>
+      <a href="#stay">Домики</a>
+      <a href="#relax">Бассейн и баня</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="nav-phone" href="tel:+77273123862">+7 727 312-38-62</a>
+      <a class="btn btn-clay" href="#request">Заявка на дату</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero" style="padding:0">
+    <div class="hero-text">
+      <span class="eyebrow" style="color:var(--clay-soft)">Иле-Алатауский национальный парк</span>
+      <h1 style="margin-top:16px">Свадьба <span>в&nbsp;горах</span> и&nbsp;отдых для гостей в одном месте</h1>
+      <p>Шатёр на 100 гостей, площадки для выездной регистрации, три ресторана и домики из сруба. Утром после торжества — завтрак и бассейн.</p>
+      <div class="hero-actions">
+        <a class="btn btn-clay" href="#request">Проверить дату</a>
+        <a class="btn btn-line" href="#stay">Домики и цены</a>
+      </div>
+      <div class="facts">
+        <div><b>100</b>гостей в шатре</div>
+        <div><b>3</b>ресторана на 20, 25 и 50 мест</div>
+        <div><b>3</b>бассейна на территории</div>
+      </div>
+    </div>
+    <div class="hero-photo">
+      <img src="https://country-village.kz/upload/iblock/152/iko7sh2ksub55pzc27h0a1wbk8ua8o7e.jpg" alt="Свадебный шатёр Country Village Resort" fetchpriority="high">
+      <div class="badge"><b>4,9</b>в 2GIS · 2 457 оценок</div>
+    </div>
+  </section>
+
+  <section id="wedding">
+    <div class="wrap wedding">
+      <div class="mosaic">
+        <img loading="lazy" src="https://country-village.kz/upload/iblock/4f7/bywfwrrip6r6dlsu91nobxuji4whc7ee.jpg" alt="Шатёр для банкета">
+        <img loading="lazy" src="https://country-village.kz/upload/iblock/c85/zpt6sqso8tdgh21rsuarsn2ure7n2to4.jpg" alt="Площадка для церемонии">
+        <img loading="lazy" src="https://country-village.kz/upload/iblock/42e/2tzh6or87zk0hh1bcpat52vsnjbqwx0u.jpg" alt="Территория комплекса">
+      </div>
+      <div>
+        <span class="eyebrow">Свадьба на природе</span>
+        <h2 style="margin-top:14px">Церемония, банкет и ночлег без трансферов между площадками</h2>
+        <div class="includes">
+          <div class="inc"><b>Шатёр на 100 гостей</b>Европейская, кавказская и восточная кухня</div>
+          <div class="inc"><b>Регистрация</b>Площадки для церемонии и велком-зона</div>
+          <div class="inc"><b>Номера</b>Для молодожёнов и гостей</div>
+          <div class="inc"><b>После торжества</b>Бассейны, баня, хамам, SPA</div>
+        </div>
+        <p class="quote">«Идеальный вариант для тех, кто хочет совместить свадьбу с мини-отдыхом».</p>
+        <a class="btn btn-slate" href="#request" style="margin-top:28px">Узнать стоимость на мою дату</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="venues" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><span class="eyebrow">Площадки</span><h2 style="margin-top:14px">Под свадьбу, юбилей или ужин компанией</h2></div>
+        <p class="lead">Четыре площадки разного размера. Выберите подходящую в заявке, а менеджер подскажет, свободна ли она на вашу дату.</p>
+      </div>
+      <div class="venues">
+        <article class="venue">
+          <img loading="lazy" src="https://country-village.kz/upload/iblock/91c/r0uoigjsi7h6ueew47c9laizsxxagywv.jpg" alt="Шатёр">
+          <div><span class="cap">100<small>гостей</small></span><h3>Шатёр</h3><p>Свадьбы и большие праздники под открытым небом гор.</p></div>
+        </article>
+        <article class="venue">
+          <img loading="lazy" src="https://country-village.kz/upload/iblock/fae/je0d3w77kshucrt7dgv2mnq2q2ghrix7.jpg" alt="Большой ресторан">
+          <div><span class="cap">50<small>гостей</small></span><h3>Большой ресторан</h3><p>Особое меню и тематический интерьер.</p></div>
+        </article>
+        <article class="venue">
+          <img loading="lazy" src="https://country-village.kz/upload/iblock/42e/0j38yzqbu6g1o63pm3hnen8cdrcpcrwk.jpeg" alt="Маленький ресторан">
+          <div><span class="cap">25<small>гостей</small></span><h3>Маленький ресторан</h3><p>Для юбилея и семейного ужина.</p></div>
+        </article>
+        <article class="venue">
+          <img loading="lazy" src="https://country-village.kz/upload/iblock/3c1/fjxhd1ftj32gk7ds0u2iq8gn7uo3tfbx.jpg" alt="Трактир с караоке">
+          <div><span class="cap">20<small>гостей</small></span><h3>Трактир</h3><p>Караоке и хорошее звуковое оборудование.</p></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="request" id="request">
+    <div class="wrap request-grid">
+      <div>
+        <span class="eyebrow" style="color:var(--clay-soft)">Заявка за минуту</span>
+        <h2 style="margin-top:14px">Узнайте, свободна ли ваша дата</h2>
+        <p class="lead">Сейчас для свадьбы на сайте есть только общая форма «Свяжитесь с нами» без даты и числа гостей. Здесь заявка с датой, числом гостей и площадкой сразу приходит менеджеру в WhatsApp или Telegram.</p>
+        <ul class="why">
+          <li><i>1</i><div><b>Гость не ждёт до утра</b><br><span>Оставляет заявку в 23:00, менеджер видит её первым делом.</span></div></li>
+          <li><i>2</i><div><b>Все данные сразу</b><br><span>Дата, гости, площадка, нужны ли домики. Меньше уточняющих звонков.</span></div></li>
+          <li><i>3</i><div><b>Ни одна заявка не теряется</b><br><span>Заявка приходит в общий чат, её видят все менеджеры.</span></div></li>
+        </ul>
+      </div>
+      <form id="eventForm" novalidate>
+        <div class="row">
+          <label>Дата<input type="date" name="date" required></label>
+          <label>Гостей<input type="number" name="guests" min="2" max="100" value="80" inputmode="numeric" required></label>
+        </div>
+        <div class="row">
+          <label>Повод<select name="type"><option>Свадьба</option><option>Выездная регистрация</option><option>Юбилей</option><option>Корпоратив</option><option>Семейный ужин</option></select></label>
+          <label>Площадка<select name="hall"><option>Шатёр (до 100)</option><option>Большой ресторан (до 50)</option><option>Маленький ресторан (до 25)</option><option>Трактир (до 20)</option><option>Пока не знаю</option></select></label>
+        </div>
+        <label class="check"><input type="checkbox" name="rooms" checked>Нужны домики для гостей</label>
+        <label class="check"><input type="checkbox" name="transfer">Нужен трансфер на автобусе комплекса</label>
+        <div class="row" style="margin-top:12px">
+          <label>Имя<input name="name" autocomplete="name" placeholder="Динара" required></label>
+          <label>Телефон<input name="phone" type="tel" autocomplete="tel" placeholder="+7 7__ ___ __ __" required></label>
+        </div>
+        <label>Пожелания<textarea name="note" placeholder="Например: регистрация в 16:00, детское меню"></textarea></label>
+        <button class="btn btn-clay" type="submit">Отправить заявку</button>
+        <p class="fine">В концепте заявка никуда не отправляется: ниже показано, как её увидит менеджер.</p>
+        <div class="tg" id="tg" aria-live="polite">
+          <div class="tg-head"><span>WA</span>Country Village · Заявки</div>
+          <pre id="tgText"></pre>
+          <small>Сообщение приходит в общий чат менеджеров в WhatsApp или Telegram.</small>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <section class="stay" id="stay">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><span class="eyebrow">Проживание</span><h2 style="margin-top:14px">Домики из сруба</h2></div>
+        <p class="lead">В стоимость входят завтрак и бассейн. Бронирование онлайн работает через ваш текущий модуль, мы только делаем путь к нему короче.</p>
+      </div>
+      <div class="houses">
+        <article class="house">
+          <img loading="lazy" src="https://country-village.kz/upload/resize_cache/iblock/276/952_600_2/5kroqp3qf23kbc1w7xpio37yt4197dd5.jpg" alt="2-местный домик">
+          <div class="house-body">
+            <h3>2-местный домик</h3>
+            <div class="tags"><span>42 м²</span><span>King-size</span><span>Вид на реку</span><span>Тёплый пол</span></div>
+            <p>Рядом с речкой, на территории детская площадка. Завтрак и бассейн для двоих.</p>
+            <div class="price"><b>от 55 000 ₸</b><a href="https://country-village.kz/booking/" target="_blank" rel="noopener">Забронировать →</a></div>
+          </div>
+        </article>
+        <article class="house">
+          <img loading="lazy" src="https://country-village.kz/upload/resize_cache/iblock/117/952_600_2/tsg7u1r7jngogflpfimw6wgqap7eh9n5.jpeg" alt="4-местный домик">
+          <div class="house-body">
+            <h3>4-местный домик</h3>
+            <div class="tags"><span>75 м²</span><span>2 спальни</span><span>Терраса</span><span>Гостиная</span></div>
+            <p>Рядом бассейн, SPA, бани и детский игровой домик. Завтрак и бассейн для четверых.</p>
+            <div class="price"><b>от 70 000 ₸</b><a href="https://country-village.kz/booking/" target="_blank" rel="noopener">Забронировать →</a></div>
+          </div>
+        </article>
+        <article class="house">
+          <img loading="lazy" src="https://country-village.kz/upload/resize_cache/iblock/c42/952_600_2/d0n706u0eiynripzzwvz3ydpqbt4mnxu.JPG" alt="VIP 2-местный домик">
+          <div class="house-body">
+            <h3>VIP-домик для двоих</h3>
+            <div class="tags"><span>42 м²</span><span>Завтрак в домик</span><span>20 000 ₸ на кухню и бар</span></div>
+            <p>Персональный завтрак по меню подают прямо в домик с 9:00 до 10:30. Хороший подарок молодожёнам.</p>
+            <div class="price"><b>от 120 000 ₸</b><a href="https://country-village.kz/booking/" target="_blank" rel="noopener">Забронировать →</a></div>
+          </div>
+        </article>
+      </div>
+      <div class="terms">
+        <div class="term"><b>Заезд 14:00, выезд 12:00</b>Завтрак с 9:00 до 10:30</div>
+        <div class="term"><b>Депозит на кухню и бар</b>20 000 ₸ в сутки (2-местный), 25 000 ₸ (4-местный)</div>
+        <div class="term"><b>Дополнительное место</b>Дети 3–12 лет 8 000 ₸, от 12 лет 10 000 ₸</div>
+        <div class="term"><b>Дети до 3 лет</b>Бесплатно</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="relax">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><span class="eyebrow">Отдых</span><h2 style="margin-top:14px">Бассейны, баня и хамам</h2></div>
+        <p class="lead">Гостям домиков бассейн входит в стоимость. Гостям праздника есть чем заняться на следующий день.</p>
+      </div>
+      <div class="relax">
+        <article><img loading="lazy" src="https://country-village.kz/upload/iblock/288/qzqniqhwvlo1dsuq7ble2r2fi4r9d7n4.jpg" alt="Бассейн"><div><h3>Три бассейна</h3><p>Система подогрева, хамам у бассейна для гостей бесплатно.</p><p class="pr">Взрослым 7 000 ₸ · детям 5–12 лет 5 000 ₸</p></div></article>
+        <article><img loading="lazy" src="https://country-village.kz/upload/iblock/7b4/wy3jpcbxb3qscp75sceoxyaxxe1uvjhx.jpg" alt="Русская баня"><div><h3>Русская баня</h3><p>Парная с ароматом трав и купель с прохладной водой.</p></div></article>
+        <article><img loading="lazy" src="https://country-village.kz/upload/iblock/e70/k8liiyurj4cpftz8qpf2xeur4k2y87ri.jpeg" alt="Хамам"><div><h3>Хамам</h3><p>Контраст температур, пилинг и пенный массаж.</p></div></article>
+        <article><img loading="lazy" src="https://country-village.kz/upload/iblock/d6d/vp8vitoo0fl6b59ve1ir6q0jvdlfi91a.jpeg" alt="Детский игровой домик"><div><h3>Детский домик</h3><p>Просторная игровая комната, пока взрослые отдыхают.</p></div></article>
+      </div>
+    </div>
+  </section>
+
+  <div class="trust">
+    <div class="wrap">
+      <div class="score"><b>4,9</b><span>в 2GIS по 2 457 оценкам. Последний отзыв оставлен 18 октября 2026 года.</span></div>
+      <a class="btn btn-slate" href="https://2gis.kz/almaty/search/Country%20Village%20Resort" target="_blank" rel="noopener">Читать отзывы в 2GIS</a>
+    </div>
+  </div>
+
+  <section id="contacts">
+    <div class="wrap contacts">
+      <div>
+        <span class="eyebrow">Контакты</span>
+        <h2 style="margin-top:14px">Алматы, Аксайское ущелье, 1</h2>
+        <div class="c-list">
+          <a class="c-item" href="tel:+77273123862"><span>Телефон</span><b>+7 727 312-38-62</b></a>
+          <a class="c-item" href="tel:+77273050222"><span>Телефон</span><b>+7 727 305-02-22</b></a>
+          <a class="c-item" href="https://wa.me/77011659912" target="_blank" rel="noopener"><span>WhatsApp</span><b>Написать</b></a>
+          <a class="c-item" href="mailto:info@country-village.kz"><span>Почта</span><b>info@country-village.kz</b></a>
+          <a class="c-item" href="https://www.instagram.com/country_village_resort/" target="_blank" rel="noopener"><span>Instagram</span><b>@country_village_resort</b></a>
+        </div>
+      </div>
+      <div class="transfer">
+        <div>
+          <span class="eyebrow" style="color:var(--clay-soft)">Как добраться</span>
+          <h3 style="margin-top:14px">Трансфер на автобусе комплекса</h3>
+          <p>Напишите хостес в WhatsApp и забронируйте поездку заранее. Удобно, если гости свадьбы едут из города вместе.</p>
+        </div>
+        <div style="display:flex;gap:12px;flex-wrap:wrap">
+          <a class="btn btn-clay" href="https://wa.me/77011659912" target="_blank" rel="noopener">Заказать трансфер</a>
+          <a class="btn btn-line" href="https://2gis.kz/almaty/search/Country%20Village%20Resort" target="_blank" rel="noopener">Маршрут в 2GIS</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Country Village Resort · 050000, Алматы, ул. Аксайское ущелье, 1</span>
+    <span>Концепт подготовлен <a href="https://mykolaanastiuk.github.io/aurorine.github.io/ru/">Aurorine Studio</a> по открытым данным. Не официальный сайт.</span>
+  </div>
+</footer>
+
+<div class="mbar">
+  <a class="btn btn-line" href="tel:+77273123862">Позвонить</a>
+  <a class="btn btn-clay" href="#request">Заявка на дату</a>
+</div>
+
+<script>
+(function(){
+  var f=document.getElementById('eventForm'), tg=document.getElementById('tg'), out=document.getElementById('tgText');
+  var d=f.querySelector('[name=date]'); var t=new Date(); t.setDate(t.getDate()+90); d.value=t.toISOString().slice(0,10);
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    var g=function(n){var el=f.querySelector('[name='+n+']');return el.type==='checkbox'?el.checked:el.value.trim();};
+    var dt=g('date')?new Date(g('date')+'T12:00:00').toLocaleDateString('ru-RU',{day:'numeric',month:'long',year:'numeric',weekday:'short'}):'не указана';
+    out.textContent='Новая заявка с сайта\n'+
+      'Дата: '+dt+'\n'+
+      'Повод: '+g('type')+', '+(g('guests')||'?')+' гостей\n'+
+      'Площадка: '+g('hall')+'\n'+
+      (g('rooms')?'Нужны домики для гостей\n':'')+
+      (g('transfer')?'Нужен трансфер\n':'')+
+      'Контакт: '+(g('name')||'имя не указано')+', '+(g('phone')||'телефон не указан')+
+      (g('note')?'\nПожелания: '+g('note'):'');
+    tg.classList.add('show'); tg.scrollIntoView({behavior:'smooth',block:'nearest'});
+  });
+})();
+</script>
+<script>
+/* Проверка заявки: телефон обязателен, дата не в прошлом, число гостей в пределах поля. */
+(function(){
+  var t=new Date();t.setMinutes(t.getMinutes()-t.getTimezoneOffset());var today=t.toISOString().slice(0,10);
+  [].forEach.call(document.querySelectorAll('input[type=date]'),function(i){i.min=today});
+  [].forEach.call(document.querySelectorAll('input[type=number]'),function(i){
+    i.addEventListener('change',function(){if(i.value==='')return;var v=+i.value;
+      if(i.min!=='')v=Math.max(+i.min,v);if(i.max!=='')v=Math.min(+i.max,v);i.value=v;i.dispatchEvent(new Event('input',{bubbles:true}));});
+  });
+  function err(el,msg){
+    var p=el.closest('label')||el, m=p.querySelector('.ferr');
+    if(!m){m=document.createElement('small');m.className='ferr';m.style.cssText='display:block;color:#c0392b;font-weight:600;margin-top:4px;font-size:13px';p.appendChild(m);}
+    m.textContent=msg;el.setAttribute('aria-invalid','true');
+    el.addEventListener('input',function h(){m.textContent='';el.removeAttribute('aria-invalid');el.removeEventListener('input',h)});
+  }
+  window.aurorineCheck=function(f){
+    var tel=f.querySelector('input[type=tel]');
+    if(tel){var st=tel.closest('.step');if(st&&!st.classList.contains('on'))return 'step';}
+    var bad=null;
+    [].forEach.call(f.querySelectorAll('input[type=date]'),function(d){if(!bad&&d.value&&d.value<today){err(d,'Выберите дату не раньше сегодняшней');bad=d;}});
+    if(!bad&&tel&&tel.value.replace(/\D/g,'').length<10){err(tel,'Укажите телефон, чтобы менеджер мог перезвонить');bad=tel;}
+    if(bad){bad.focus();bad.scrollIntoView({block:'center'});return false;}
+    return true;
+  };
+  document.addEventListener('submit',function(e){
+    var r=window.aurorineCheck(e.target);
+    if(r===true)return;
+    e.preventDefault();e.stopImmediatePropagation();
+    if(r==='step'){var nx=e.target.querySelector('.step.on [data-next]');if(nx)nx.click();}
+  },true);
+})();
+</script>
+</body>
+</html>

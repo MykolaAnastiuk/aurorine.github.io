@@ -1,0 +1,531 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Фазенда «У Михалыча»: свадьбы, корпоративы и отдых в горах у Алматы</title>
+<meta name="description" content="Фазенда «У Михалыча» в 47 км от Алматы: летняя площадка до 150 гостей, рестораны «Берлога» и Gusto Dell’Italia, 30 домов для проживания, 240 лошадей. Заявка на мероприятие онлайн.">
+<!-- Концепт: не индексировать. На рабочем сайте строку убрать и добавить canonical. -->
+<meta name="robots" content="noindex, nofollow">
+<!-- <link rel="canonical" href="https://umihalyicha.kz/"> -->
+<meta name="theme-color" content="#2b2119">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ru_KZ">
+<meta property="og:site_name" content="Фазенда «У Михалыча»">
+<meta property="og:title" content="Свадьбы и корпоративы на фазенде «У Михалыча»">
+<meta property="og:description" content="Летняя площадка до 150 гостей, два ресторана, 30 домов, конные прогулки. Заявка на мероприятие онлайн.">
+<meta name="twitter:card" content="summary_large_image">
+<!-- Структурированные данные: только факты с umihalyicha.kz (23.10.2026). Точного адреса на сайте нет — добавить после подтверждения клиентом. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["Resort", "EventVenue"],
+      "@id": "https://umihalyicha.kz/#resort",
+      "name": "Фазенда «У Михалыча»",
+      "url": "https://umihalyicha.kz/",
+      "telephone": "+77054826620",
+      "email": "umihalyicha@gmail.com",
+      "maximumAttendeeCapacity": 150,
+      "sameAs": ["https://www.instagram.com/umihalyicha/"]
+    },
+    {"@type": "Restaurant", "name": "Ресторан «Берлога»", "servesCuisine": "Домашняя кухня", "containedInPlace": {"@id": "https://umihalyicha.kz/#resort"}},
+    {"@type": "Restaurant", "name": "Gusto Dell’Italia", "servesCuisine": "Итальянская", "containedInPlace": {"@id": "https://umihalyicha.kz/#resort"}}
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;0,700;1,500&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --earth:#2b2119;      /* тёмное дерево */
+  --earth-2:#3a2d22;
+  --saddle:#a0612e;     /* седло */
+  --wheat:#e9c98f;
+  --meadow:#55703a;
+  --cream:#faf6ee;
+  --oat:#efe6d6;
+  --ink:#231c16;
+  --muted:#6e6255;
+  --line:#ddd1bd;
+  --white:#fff;
+  --r:16px;
+  --r-s:10px;
+  --shadow:0 20px 48px -28px rgba(43,33,25,.55);
+  --serif:"Lora", Georgia, serif;
+  --sans:"Nunito Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:104px}
+body{margin:0;background:var(--cream);color:var(--ink);font:16px/1.6 var(--sans);-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:1200px;margin:0 auto;padding:0 20px}
+.eyebrow{display:inline-block;font:800 12px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--saddle)}
+h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.12;margin:0}
+h2{font-size:clamp(32px,4.2vw,50px)}
+h3{font-size:23px}
+.lead{font-size:18px;color:var(--muted);max-width:620px;margin:0}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border:0;border-radius:999px;padding:15px 26px;font:700 15px/1 var(--sans);cursor:pointer;text-decoration:none;transition:transform .15s,background .2s}
+.btn:hover{transform:translateY(-1px)}
+.btn-saddle{background:var(--saddle);color:var(--white)}
+.btn-saddle:hover{background:#8d5326}
+.btn-wheat{background:var(--wheat);color:var(--earth)}
+.btn-line{background:transparent;color:var(--white);box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.6)}
+.btn-dark{background:var(--earth);color:var(--white)}
+
+.concept{background:var(--ink);color:#d8cfc3;font-size:13px;text-align:center;padding:8px 16px}
+.concept b{color:var(--wheat)}
+
+header{position:sticky;top:0;z-index:20;background:rgba(43,33,25,.95);backdrop-filter:blur(10px);color:var(--white)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px;gap:20px}
+.logo{text-decoration:none;font:600 22px/1 var(--serif)}
+.logo span{color:var(--wheat);font-style:italic}
+.menu{display:flex;gap:26px;font-size:14px;font-weight:600}
+.menu a{text-decoration:none;opacity:.82}
+.menu a:hover{opacity:1;color:var(--wheat)}
+.nav-cta{display:flex;align-items:center;gap:16px}
+.nav-phone{font-weight:700;font-size:14px;text-decoration:none;white-space:nowrap}
+.nav .btn{padding:11px 18px;font-size:14px}
+
+.hero{position:relative;min-height:min(86vh,800px);display:flex;align-items:center;color:var(--white);background:var(--earth);overflow:hidden}
+.hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(34,26,19,.92) 0%,rgba(34,26,19,.7) 45%,rgba(34,26,19,.15) 100%)}
+.hero .wrap{position:relative;z-index:1;padding-top:80px;padding-bottom:80px;width:100%}
+.hero h1{font-size:clamp(40px,6vw,78px);max-width:760px}
+.hero h1 em{color:var(--wheat)}
+.hero p{font-size:19px;max-width:560px;color:#eadfce;margin:22px 0 32px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px}
+.counters{display:grid;grid-template-columns:repeat(4,auto);justify-content:start;gap:40px;margin-top:56px}
+.counters b{display:block;font:600 40px/1 var(--serif);color:var(--wheat)}
+.counters span{font-size:13px;color:#d9cdbc;text-transform:uppercase;letter-spacing:.08em;font-weight:700}
+
+section{padding:96px 0}
+.sec-head{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:end;margin-bottom:46px}
+.sec-head>*{min-width:0}
+.sec-head .eyebrow{margin-bottom:14px}
+
+.events{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.event{background:var(--white);border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column}
+.event img{aspect-ratio:4/5;width:100%;object-fit:cover;background:var(--oat)}
+.event div{padding:18px 20px 22px}
+.event p{margin:6px 0 0;color:var(--muted);font-size:14px}
+
+.venues{background:var(--oat)}
+.vgrid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:20px}
+.venue{background:var(--white);border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column}
+.venue img{aspect-ratio:3/2;width:100%;object-fit:cover;background:var(--cream)}
+.venue-body{padding:22px 24px 24px;display:flex;flex-direction:column;gap:10px;flex:1}
+.caps{display:flex;flex-wrap:wrap;gap:8px}
+.caps span{background:var(--earth);color:var(--wheat);font-weight:800;font-size:13px;padding:6px 12px;border-radius:999px}
+.venue p{margin:0;color:var(--muted);font-size:15px}
+.check{margin-top:auto;padding-top:12px;border-top:1px solid var(--oat);font-size:14px;color:var(--ink)}
+.check b{color:var(--saddle)}
+
+.request{background:var(--earth);color:var(--white);position:relative;overflow:hidden}
+.request-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:56px;align-items:start}
+.request-grid>*{min-width:0}
+.request .lead{color:#d9cdbc;margin-top:18px}
+.pain{margin-top:30px;background:var(--earth-2);border-radius:var(--r);padding:22px 24px;font-size:15px;color:#e5d9c7}
+.pain b{color:var(--wheat)}
+form{background:var(--cream);color:var(--ink);border-radius:var(--r);padding:30px;box-shadow:var(--shadow)}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+label{display:block;font-size:13px;font-weight:700;color:var(--muted);margin:0 0 14px}
+input,select,textarea{display:block;width:100%;margin-top:6px;font:600 16px/1.3 var(--sans);color:var(--ink);background:var(--white);border:1px solid var(--line);border-radius:var(--r-s);padding:12px 14px}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--saddle);border-color:transparent}
+textarea{min-height:72px;resize:vertical}
+.opts{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 16px}
+.opts label{margin:0;display:flex;align-items:center;gap:6px;background:var(--white);border:1px solid var(--line);border-radius:999px;padding:8px 14px;color:var(--ink);font-weight:600;cursor:pointer}
+.opts input{display:inline;width:auto;margin:0}
+form .btn{width:100%;margin-top:4px}
+.fine{font-size:12px;color:var(--muted);margin:12px 0 0;text-align:center}
+.tg{display:none;margin-top:18px;background:#1f2c33;color:#e9eef1;border-radius:16px;padding:18px 20px;font-size:14px}
+.tg.show{display:block}
+.tg-head{display:flex;align-items:center;gap:10px;margin-bottom:10px;font-weight:800}
+.tg-head span{width:30px;height:30px;border-radius:50%;background:#2aabee;display:grid;place-items:center;color:#fff;font-size:14px}
+.tg pre{white-space:pre-wrap;margin:0;font:inherit;background:#2b3a44;border-radius:12px;padding:12px 14px}
+.tg small{display:block;color:#9fb1bb;margin-top:10px}
+
+.stay-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+.home{border-radius:var(--r);overflow:hidden;background:var(--white);box-shadow:var(--shadow);display:flex;flex-direction:column}
+.home img{aspect-ratio:1/1;width:100%;object-fit:cover;background:var(--oat)}
+.home div{padding:16px 18px 18px;display:flex;flex-direction:column;gap:6px;flex:1}
+.home h3{font-size:20px}
+.home p{margin:0;font-size:14px;color:var(--muted)}
+.home .pr{margin-top:auto;padding-top:8px;font-weight:800;color:var(--saddle);font-size:14px}
+.pricebar{margin-top:24px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;background:var(--white);border:1px dashed var(--saddle);border-radius:var(--r);padding:20px 24px}
+.pricebar p{margin:0;color:var(--muted);max-width:720px}
+.pricebar b{color:var(--ink)}
+
+.leisure{background:var(--oat)}
+.lgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.lgrid .tile:first-child{grid-column:span 2}
+.tile{position:relative;border-radius:var(--r);overflow:hidden;min-height:300px;color:var(--white);background:var(--earth-2)}
+.tile img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.tile::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(30,22,16,.9))}
+.tile div{position:absolute;left:0;right:0;bottom:0;padding:20px;z-index:1}
+.tile p{margin:6px 0 0;font-size:14px;color:#eadfce}
+.kids{margin-top:20px;background:var(--white);border-radius:var(--r);padding:24px 28px;display:flex;gap:24px;align-items:center;flex-wrap:wrap}
+.kids h3{flex:none}
+.kids ul{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:8px}
+.kids li{background:var(--cream);border:1px solid var(--line);border-radius:999px;padding:6px 12px;font-size:14px;font-weight:600}
+
+.saumal{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.saumal>*{min-width:0}
+.saumal img{border-radius:var(--r);aspect-ratio:16/13;width:100%;object-fit:cover;background:var(--oat)}
+.incl{list-style:none;padding:0;margin:24px 0 0;display:grid;gap:10px}
+.incl li{display:flex;gap:12px;align-items:baseline}
+.incl li::before{content:"✓";color:var(--meadow);font-weight:800}
+
+.trust{background:var(--earth);color:var(--white);padding:64px 0}
+.trust .wrap{display:flex;justify-content:space-between;align-items:center;gap:28px;flex-wrap:wrap}
+.trust .score{display:flex;align-items:baseline;gap:18px}
+.trust .score b{font:600 84px/1 var(--serif);color:var(--wheat)}
+.trust .score span{color:#d9cdbc;max-width:380px}
+
+.contacts{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.contacts>*{min-width:0}
+.c-list{display:grid;gap:12px;margin-top:26px}
+.c-item{display:flex;justify-content:space-between;gap:16px;padding:16px 20px;background:var(--white);border:1px solid var(--line);border-radius:var(--r-s);text-decoration:none}
+.c-item span{color:var(--muted);font-size:14px}
+.c-item b{font-weight:700;overflow-wrap:anywhere;text-align:right}
+.taxi{background:var(--meadow);color:var(--white);border-radius:var(--r);padding:32px;display:flex;flex-direction:column;justify-content:space-between;gap:24px}
+.taxi h3{font-size:30px}
+.taxi p{color:#e6eedb;margin:10px 0 0}
+
+footer{background:var(--ink);color:#a89c8e;font-size:13px;padding:36px 0 96px}
+footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
+footer a{color:var(--wheat)}
+
+.mbar{display:none;position:fixed;left:0;right:0;bottom:0;z-index:30;background:var(--earth);padding:10px 12px calc(10px + env(safe-area-inset-bottom));gap:10px}
+.mbar a{flex:1;padding:14px 10px;font-size:14px}
+
+@media (max-width:1020px){
+  .menu{display:none}
+  .counters{grid-template-columns:repeat(2,auto)}
+  .sec-head,.request-grid,.contacts,.saumal{grid-template-columns:1fr}
+  .events{grid-template-columns:1fr 1fr}
+  .vgrid{grid-template-columns:1fr 1fr}
+  .stay-grid{grid-template-columns:repeat(3,1fr)}
+  .lgrid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:620px){
+  section{padding:68px 0}
+  .nav-phone,.nav .btn{display:none}
+  .hero::after{background:linear-gradient(180deg,rgba(34,26,19,.25) 0%,rgba(34,26,19,.92) 72%)}
+  .hero{flex-direction:column;align-items:stretch;min-height:0}
+  .hero>img{position:static;height:300px;object-position:85% 75%}
+  .hero::after{display:none}
+  .hero .wrap{padding-top:32px;padding-bottom:48px}
+  .counters{gap:24px}
+  .counters b{font-size:32px}
+  .events,.vgrid,.lgrid,.row{grid-template-columns:1fr}
+  .lgrid .tile:first-child{grid-column:auto}
+  .stay-grid{grid-template-columns:1fr 1fr}
+  form{padding:22px}
+  .trust .score b{font-size:64px}
+  .mbar{display:flex}
+}
+
+/* Мобильная навигация и плашка (по визуальной проверке 24.10) */
+@media (max-width:1020px){
+  .nav{flex-wrap:wrap;height:auto;padding-top:12px;padding-bottom:0;row-gap:8px}
+  .menu{display:flex !important;order:3;width:100%;overflow-x:auto;gap:20px;padding:4px 0 12px;white-space:nowrap;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .menu::-webkit-scrollbar{display:none}
+  .menu a{flex:none}
+  .menu{-webkit-mask-image:linear-gradient(90deg,#000 85%,transparent);mask-image:linear-gradient(90deg,#000 85%,transparent);padding-right:28px}
+}
+@media (max-width:620px){
+  .concept{font-size:12px;padding:6px 12px}
+  .concept .long{display:none}
+  main>section:first-child{padding-bottom:72px}
+}
+</style>
+</head>
+<body>
+
+<div class="concept">
+  <b>Независимый концепт Aurorine Studio, не официальный сайт.</b><span class="long"> Не заказ фазенды «У Михалыча». Факты и фото с umihalyicha.kz и 2GIS, 23.10.2026.</span>
+</div>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#top">Фазенда <span>«У Михалыча»</span></a>
+    <nav class="menu" aria-label="Разделы">
+      <a href="#events">Мероприятия</a>
+      <a href="#venues">Площадки</a>
+      <a href="#stay">Проживание</a>
+      <a href="#leisure">Отдых</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="nav-phone" href="tel:+77054826620">+7 705 482 66 20</a>
+      <a class="btn btn-wheat" href="#request">Обсудить праздник</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero" style="padding:0">
+    <img src="https://i0.wp.com/umihalyicha.kz/wp-content/uploads/2025/11/IMG_1449.jpg?fit=1428%2C932&amp;ssl=1" alt="Фазенда «У Михалыча» в ущелье" fetchpriority="high">
+    <div class="wrap">
+      <span class="eyebrow" style="color:var(--wheat)">Ущелье Заилийского Алатау · 47 км от Алматы</span>
+      <h1 style="margin-top:16px">Праздник в горах, на&nbsp;который гости приедут <em>с&nbsp;ночёвкой</em></h1>
+      <p>Свадьбы, корпоративы и юбилеи на природе: летняя площадка до 150 гостей, два ресторана, 30 домов для проживания и конные прогулки на следующий день.</p>
+      <div class="hero-actions">
+        <a class="btn btn-wheat" href="#request">Обсудить мероприятие</a>
+        <a class="btn btn-line" href="#stay">Где остановиться</a>
+      </div>
+      <div class="counters">
+        <div><b>25 га</b><span>земли</span></div>
+        <div><b>30</b><span>домов</span></div>
+        <div><b>240</b><span>лошадей</span></div>
+        <div><b>60 мин</b><span>от Алматы</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="events">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><span class="eyebrow">Мероприятия</span><h2 style="margin-top:14px">Событие любого формата на природе</h2></div>
+        <p class="lead">Поможем с меню, площадкой и программой. Выберите формат, и менеджер предложит площадку под ваше число гостей.</p>
+      </div>
+      <div class="events">
+        <article class="event"><img loading="lazy" src="https://i0.wp.com/umihalyicha.kz/wp-content/uploads/2026/09/2-8.jpg?w=1200&amp;ssl=1" alt="Шатры на траве для торжества"><div><h3>Свадьбы и выездные регистрации</h3><p>Красивые фотозоны и просторные шатры.</p></div></article>
+        <article class="event"><img loading="lazy" src="https://umihalyicha.kz/wp-content/uploads/2026/10/%D0%B8%D1%82%D0%B0%D0%BB%D0%B8%D1%8F.jpg" alt="Ресторан для вечернего банкета"><div><h3>Корпоративы и тимбилдинги</h3><p>Активный отдых, квесты и вечерние банкеты.</p></div></article>
+        <article class="event"><img loading="lazy" src="https://i0.wp.com/umihalyicha.kz/wp-content/uploads/2024/11/photo_2024-11-30_19-40-34.jpg?w=1200&amp;ssl=1" alt="Юбилей на фазенде"><div><h3>Дни рождения и юбилеи</h3><p>Уютные беседки и залы для тёплых встреч.</p></div></article>
+        <article class="event"><img loading="lazy" src="https://umihalyicha.kz/wp-content/uploads/2026/10/%D1%81%D0%B5%D0%BC%D1%8C%D1%8F-2.jpg" alt="Семейный отдых на фазенде"><div><h3>Детские праздники</h3><p>Простор, свежий воздух и безопасность.</p></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="venues" id="venues">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><span class="eyebrow">Площадки</span><h2 style="margin-top:14px">Вместимость видна сразу</h2></div>
+        <p class="lead">Гостю не нужно звонить, чтобы понять, поместится ли его компания. Цифры взяты со страниц ресторанов.</p>
+      </div>
+      <div class="vgrid">
+        <article class="venue">
+          <img loading="lazy" src="https://i0.wp.com/umihalyicha.kz/wp-content/uploads/2023/09/photo_2023-09-26_10-40-08.jpg?ssl=1" alt="Ресторан «Берлога»">
+          <div class="venue-body">
+            <div class="caps"><span>Зал 40</span><span>VIP 20</span><span>Летняя площадка до 150</span></div>
+            <h3>Ресторан «Берлога»</h3>
+            <p>Альпийское шале: камин в центре зала, охотничьи трофеи, панорамные окна на горы и озеро. Музыкальное оборудование и караоке. Домашняя еда из продуктов своего хозяйства.</p>
+            <div class="check">Средний счёт <b>от 7 000 ₸</b> на человека</div>
+          </div>
+        </article>
+        <article class="venue">
+          <img loading="lazy" src="https://i0.wp.com/umihalyicha.kz/wp-content/uploads/2026/09/3-8.jpg?w=1200&amp;ssl=1" alt="Ресторан Gusto Dell’Italia">
+          <div class="venue-body">
+            <div class="caps"><span>Зал до 71</span><span>VIP до 10</span></div>
+            <h3>Gusto Dell’Italia</h3>
+            <p>Новый итальянский ресторан: свежая паста, пицца на тонком тесте. Для семейных ужинов, деловых встреч и праздников.</p>
+            <div class="check">Средний чек <b>15 000 ₸</b></div>
+          </div>
+        </article>
+        <article class="venue">
+          <img loading="lazy" src="https://i0.wp.com/umihalyicha.kz/wp-content/uploads/2026/09/2.jpg?w=1200&amp;ssl=1" alt="Территория фазенды">
+          <div class="venue-body">
+            <div class="caps"><span>Шатры</span><span>Беседки</span></div>
+            <h3>Шатры и беседки</h3>
+            <p>Для выездной регистрации, дня рождения или шашлыка компанией на свежем воздухе.</p>
+            <div class="check">Вместимость и цену <b>уточнит менеджер</b></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="request" id="request">
+    <div class="wrap request-grid">
+      <div>
+        <span class="eyebrow" style="color:var(--wheat)">Обсудить мероприятие</span>
+        <h2 style="margin-top:14px">Пять полей вместо долгой переписки</h2>
+        <p class="lead">Гость заполняет пять полей с телефона. Менеджер сразу видит дату, формат, число гостей и нужно ли жильё, и перезванивает уже с предложением.</p>
+        <div class="pain"><b>Почему это важно.</b> Сейчас обсуждение праздника начинается с переписки в WhatsApp, и менеджер каждый раз выясняет одно и то же: дата, сколько гостей, нужно ли жильё. Форма собирает это за гостя.</div>
+      </div>
+      <form id="eventForm" novalidate>
+        <div class="opts" role="group" aria-label="Формат">
+          <label><input type="radio" name="type" value="Свадьба" checked>Свадьба</label>
+          <label><input type="radio" name="type" value="Корпоратив">Корпоратив</label>
+          <label><input type="radio" name="type" value="День рождения / юбилей">Юбилей</label>
+          <label><input type="radio" name="type" value="Детский праздник">Детский</label>
+        </div>
+        <div class="row">
+          <label>Дата<input type="date" name="date" required></label>
+          <label>Гостей<input type="number" name="guests" min="2" max="150" value="60" inputmode="numeric" required></label>
+        </div>
+        <label>Жильё для гостей<select name="stay"><option>Не нужно</option><option>Да, несколько номеров</option><option>Да, коттедж для компании</option><option>Пока не знаю</option></select></label>
+        <div class="row">
+          <label>Имя<input name="name" autocomplete="name" placeholder="Ержан" required></label>
+          <label>Телефон<input name="phone" type="tel" autocomplete="tel" placeholder="+7 7__ ___ __ __" required></label>
+        </div>
+        <label>Пожелания<textarea name="note" placeholder="Например: конная прогулка для гостей, детская анимация"></textarea></label>
+        <button class="btn btn-saddle" type="submit">Отправить заявку</button>
+        <p class="fine">В концепте заявка никуда не отправляется: ниже показано, как её увидит менеджер.</p>
+        <div class="tg" id="tg" aria-live="polite">
+          <div class="tg-head"><span>✈</span>У Михалыча · Мероприятия</div>
+          <pre id="tgText"></pre>
+          <small>Сообщение приходит в Telegram-чат менеджеров по мероприятиям.</small>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <section id="stay">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><span class="eyebrow">Проживание</span><h2 style="margin-top:14px">30 домов на выбор</h2></div>
+        <p class="lead">От круглого бунгало на двоих до двухэтажного коттеджа на 10 гостей с камином.</p>
+      </div>
+      <div class="stay-grid">
+        <article class="home"><img loading="lazy" src="https://i0.wp.com/umihalyicha.kz/wp-content/uploads/2026/10/ilyasPH-01-22.jpg?w=1200&amp;ssl=1" alt="Номер в таунхаусе"><div><h3>Таунхаусы</h3><p>Своя терраса с видом на горы и озеро, тёплый пол, мебель из массива.</p></div></article>
+        <article class="home"><img loading="lazy" src="https://i0.wp.com/umihalyicha.kz/wp-content/uploads/2026/10/ilyasPH-01-69.jpg?w=1200&amp;ssl=1" alt="Бунгало"><div><h3>Бунгало</h3><p>2 гостя, панорамные окна на ущелье, свой санузел.</p></div></article>
+        <article class="home"><img loading="lazy" src="https://i0.wp.com/umihalyicha.kz/wp-content/uploads/2026/10/ilyasPH-1-31.jpg?w=1200&amp;ssl=1" alt="Бунгало Люкс"><div><h3>Бунгало Люкс</h3><p>Эко-домик из двух комнат, есть дополнительные места.</p><span class="pr">90 000 ₸ / сутки</span></div></article>
+        <article class="home"><img loading="lazy" src="https://i0.wp.com/umihalyicha.kz/wp-content/uploads/2026/10/ilyasPH-01.jpg?w=1200&amp;ssl=1" alt="Коттедж"><div><h3>Коттеджи</h3><p>До 10 гостей, 3 спальни, гостиная с камином, терраса.</p></div></article>
+        <article class="home"><img loading="lazy" src="https://i0.wp.com/umihalyicha.kz/wp-content/uploads/2026/10/ilyasPH-01-67.jpg?w=1200&amp;ssl=1" alt="Домик хоббита"><div><h3>Домики хоббитов</h3><p>Сказочный домик со своим душем и видом на горы.</p></div></article>
+      </div>
+      <div class="pricebar">
+        <p><b>Цены текстом на сайте, а не PDF на скачивание.</b> В рабочей версии цены всех домов будут прямо на странице и обновятся, когда вы поменяете их в Google-таблице.</p>
+        <a class="btn btn-dark" href="#request">Узнать цену на даты</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="leisure" id="leisure">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><span class="eyebrow">Отдых</span><h2 style="margin-top:14px">Чем занять гостей на следующий день</h2></div>
+        <p class="lead">Всё на территории фазенды: от конной прогулки до форелевого озера.</p>
+      </div>
+      <div class="lgrid">
+        <article class="tile"><img loading="lazy" src="https://umihalyicha.kz/wp-content/uploads/2026/10/%D0%BB%D0%BE%D1%88%D0%B0%D0%B4%D0%BA%D0%B8.jpg" alt="Конные прогулки"><div><h3>Конные прогулки</h3><p>240 лошадей на фазенде.</p></div></article>
+        <article class="tile"><img loading="lazy" src="https://umihalyicha.kz/wp-content/uploads/2026/10/%D1%81%D0%B0%D0%BA%D1%81%D0%BA%D0%B0%D1%8F.jpg" alt="Сакская баня"><div><h3>Сакская баня</h3><p>И другие бани на территории.</p></div></article>
+        <article class="tile"><img loading="lazy" src="https://umihalyicha.kz/wp-content/uploads/2026/10/%D1%80%D1%8B%D0%B1%D0%B0%D0%BB%D0%BA%D0%B0-2.jpg" alt="Рыбалка"><div><h3>Рыбалка</h3><p>Форелевое озеро.</p></div></article>
+        <article class="tile"><img loading="lazy" src="https://umihalyicha.kz/wp-content/uploads/2026/10/%D0%B1%D0%B0%D1%81%D1%81%D0%B8%D0%BA.jpg" alt="Бассейн"><div><h3>Бассейн</h3><p>Для взрослых и детей.</p></div></article>
+        <article class="tile"><img loading="lazy" src="https://umihalyicha.kz/wp-content/uploads/2026/10/%D0%B0%D0%BA%D1%82%D0%B8%D0%B2%D0%BD%D0%BE%D1%81%D1%82%D0%B8-2.jpg" alt="Активности"><div><h3>Активности</h3><p>Пейнтбол, тир, стрельба из лука.</p></div></article>
+      </div>
+      <div class="kids">
+        <h3>Детям и подросткам</h3>
+        <ul><li>Верёвочный парк</li><li>Мини-зоопарк</li><li>Экскаватор</li><li>Танки</li><li>Тир</li><li>Стрельба из лука</li><li>Пейнтбол</li><li>Мастер-классы</li><li>Аниматоры</li><li>Пенные вечеринки</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap saumal">
+      <img loading="lazy" src="https://umihalyicha.kz/wp-content/uploads/2026/10/%D1%81%D0%B0%D1%83%D0%BC%D0%B0%D0%BB-2.jpg" alt="Саумал-терапия на фазенде">
+      <div>
+        <span class="eyebrow">Оздоровление</span>
+        <h2 style="margin-top:14px">Саумал-терапия</h2>
+        <p class="lead" style="margin-top:16px">Саумал — свежее кобылье молоко, которое веками ценят в степи. Курс приёмов, отдых на природе и правильное питание в одной программе.</p>
+        <ul class="incl"><li>5 приёмов саумала</li><li>Проживание в отеле</li><li>3-разовое диетическое питание</li><li>Русская баня раз в 5 дней</li><li>Доступ на всю территорию фазенды</li></ul>
+        <a class="btn btn-saddle" href="#request" style="margin-top:26px">Узнать даты курса</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="trust">
+    <div class="wrap">
+      <div class="score"><b>4,9</b><span>в 2GIS по 2 115 оценкам. Последний отзыв оставлен 24 октября 2026 года.</span></div>
+      <a class="btn btn-wheat" href="https://2gis.kz/almaty/search/%D0%A3%20%D0%9C%D0%B8%D1%85%D0%B0%D0%BB%D1%8B%D1%87%D0%B0" target="_blank" rel="noopener">Отзывы в 2GIS</a>
+    </div>
+  </div>
+
+  <section id="contacts">
+    <div class="wrap contacts">
+      <div>
+        <span class="eyebrow">Контакты</span>
+        <h2 style="margin-top:14px">Свяжитесь с ресепшн</h2>
+        <div class="c-list">
+          <a class="c-item" href="tel:+77054826620"><span>Ресепшн</span><b>+7 705 482 66 20</b></a>
+          <a class="c-item" href="tel:+77781488868"><span>Телефон</span><b>+7 778 148 88 68</b></a>
+          <a class="c-item" href="https://wa.me/77717098868" target="_blank" rel="noopener"><span>WhatsApp</span><b>+7 771 709 88 68</b></a>
+          <a class="c-item" href="mailto:umihalyicha@gmail.com"><span>Почта</span><b>umihalyicha@gmail.com</b></a>
+          <a class="c-item" href="https://www.instagram.com/umihalyicha/" target="_blank" rel="noopener"><span>Instagram</span><b>@umihalyicha</b></a>
+        </div>
+      </div>
+      <div class="taxi">
+        <div>
+          <span class="eyebrow" style="color:var(--wheat)">Как добраться</span>
+          <h3 style="margin-top:14px">47 км от Алматы, около часа в пути</h3>
+          <p>В любом приложении такси укажите: Фазенда «У Михалыча».</p>
+        </div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap">
+          <a class="btn btn-wheat" href="https://2gis.kz/almaty/search/%D0%A3%20%D0%9C%D0%B8%D1%85%D0%B0%D0%BB%D1%8B%D1%87%D0%B0" target="_blank" rel="noopener">Маршрут в 2GIS</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Фазенда «У Михалыча» · ущелье в 47 км от Алматы</span>
+    <span>Концепт подготовлен <a href="https://mykolaanastiuk.github.io/aurorine.github.io/ru/">Aurorine Studio</a> по открытым данным. Не официальный сайт.</span>
+  </div>
+</footer>
+
+<div class="mbar">
+  <a class="btn btn-line" href="tel:+77054826620">Позвонить</a>
+  <a class="btn btn-wheat" href="#request">Заявка</a>
+</div>
+
+<script>
+(function(){
+  var f=document.getElementById('eventForm'), tg=document.getElementById('tg'), out=document.getElementById('tgText');
+  var d=f.querySelector('[name=date]'); var t=new Date(); t.setDate(t.getDate()+45); d.value=t.toISOString().slice(0,10);
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    var v=function(n){var el=f.querySelector('[name='+n+']');return el?el.value.trim():'';};
+    var type=(f.querySelector('[name=type]:checked')||{}).value;
+    var dt=v('date')?new Date(v('date')+'T12:00:00').toLocaleDateString('ru-RU',{day:'numeric',month:'long',year:'numeric',weekday:'short'}):'не указана';
+    out.textContent='Новая заявка на мероприятие\n'+
+      'Формат: '+type+'\n'+
+      'Дата: '+dt+'\n'+
+      'Гостей: '+(v('guests')||'?')+'\n'+
+      'Жильё: '+v('stay')+'\n'+
+      'Контакт: '+(v('name')||'имя не указано')+', '+(v('phone')||'телефон не указан')+
+      (v('note')?'\nПожелания: '+v('note'):'');
+    tg.classList.add('show'); tg.scrollIntoView({behavior:'smooth',block:'nearest'});
+  });
+})();
+</script>
+<script>
+/* Проверка заявки: телефон обязателен, дата не в прошлом, число гостей в пределах поля. */
+(function(){
+  var t=new Date();t.setMinutes(t.getMinutes()-t.getTimezoneOffset());var today=t.toISOString().slice(0,10);
+  [].forEach.call(document.querySelectorAll('input[type=date]'),function(i){i.min=today});
+  [].forEach.call(document.querySelectorAll('input[type=number]'),function(i){
+    i.addEventListener('change',function(){if(i.value==='')return;var v=+i.value;
+      if(i.min!=='')v=Math.max(+i.min,v);if(i.max!=='')v=Math.min(+i.max,v);i.value=v;i.dispatchEvent(new Event('input',{bubbles:true}));});
+  });
+  function err(el,msg){
+    var p=el.closest('label')||el, m=p.querySelector('.ferr');
+    if(!m){m=document.createElement('small');m.className='ferr';m.style.cssText='display:block;color:#c0392b;font-weight:600;margin-top:4px;font-size:13px';p.appendChild(m);}
+    m.textContent=msg;el.setAttribute('aria-invalid','true');
+    el.addEventListener('input',function h(){m.textContent='';el.removeAttribute('aria-invalid');el.removeEventListener('input',h)});
+  }
+  window.aurorineCheck=function(f){
+    var tel=f.querySelector('input[type=tel]');
+    if(tel){var st=tel.closest('.step');if(st&&!st.classList.contains('on'))return 'step';}
+    var bad=null;
+    [].forEach.call(f.querySelectorAll('input[type=date]'),function(d){if(!bad&&d.value&&d.value<today){err(d,'Выберите дату не раньше сегодняшней');bad=d;}});
+    if(!bad&&tel&&tel.value.replace(/\D/g,'').length<10){err(tel,'Укажите телефон, чтобы менеджер мог перезвонить');bad=tel;}
+    if(bad){bad.focus();bad.scrollIntoView({block:'center'});return false;}
+    return true;
+  };
+  document.addEventListener('submit',function(e){
+    var r=window.aurorineCheck(e.target);
+    if(r===true)return;
+    e.preventDefault();e.stopImmediatePropagation();
+    if(r==='step'){var nx=e.target.querySelector('.step.on [data-next]');if(nx)nx.click();}
+  },true);
+})();
+</script>
+</body>
+</html>

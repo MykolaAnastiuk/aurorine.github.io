@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MEBELcenter — мебель на заказ для дома и бизнеса в Алматы</title>
+<meta name="description" content="MEBELcenter, Алматы: кухни, шкафы и гардеробные для дома; мебель и торговое оборудование для кофеен, аптек, бутиков и офисов. Работы: кофейни Dolly&Molly и With Love, кухня в ЖК Ламия. Заявка с телефона.">
+<!-- Концепт: не индексировать. На рабочем сайте строку убрать и добавить canonical. -->
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#1b1b1d">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ru_KZ">
+<meta property="og:site_name" content="MEBELcenter">
+<meta property="og:title" content="MEBELcenter — мебель для дома и бизнеса в Алматы">
+<meta property="og:description" content="Кухни и шкафы для дома, оборудование для кофеен, аптек и бутиков. Заявка с телефона.">
+<!-- Структурированные данные: только факты с mebelcenter.kz (27.10.2026). -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FurnitureStore",
+  "name": "MEBELcenter",
+  "url": "https://mebelcenter.kz/",
+  "telephone": "+77273449900",
+  "address": {"@type": "PostalAddress", "addressLocality": "Алматы", "streetAddress": "ул. Мынбаева 46, 1 этаж, офис 117", "addressCountry": "KZ"},
+  "openingHoursSpecification": [
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "18:00"},
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "16:00"}
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --coal:#1b1b1d;
+  --coal-2:#28282b;
+  --clay:#c4693f;       /* терракота */
+  --clay-l:#f3d9cb;
+  --bone:#f5f2ee;
+  --white:#fff;
+  --ink:#19191b;
+  --muted:#6b6863;
+  --line:#e3ded7;
+  --r:14px;
+  --shadow:0 22px 48px -30px rgba(27,27,29,.6);
+  --serif:"Playfair Display", Georgia, serif;
+  --sans:"Manrope", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:104px}
+body{margin:0;background:var(--bone);color:var(--ink);font:16px/1.6 var(--sans);-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:1200px;margin:0 auto;padding:0 20px}
+.eyebrow{display:inline-block;font:800 12px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--clay)}
+h1,h2,h3{margin:0;line-height:1.1}
+h1,h2{font-family:var(--serif);font-weight:600}
+h2{font-size:clamp(30px,4vw,48px)}
+h3{font:800 19px/1.25 var(--sans)}
+.lead{font-size:18px;color:var(--muted);max-width:600px;margin:0}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;border-radius:999px;padding:15px 24px;font:800 15px/1 var(--sans);cursor:pointer;text-decoration:none;transition:transform .15s,background .2s}
+.btn:hover{transform:translateY(-1px)}
+.btn-clay{background:var(--clay);color:var(--white)}
+.btn-clay:hover{background:#b35c34}
+.btn-coal{background:var(--coal);color:var(--white)}
+.btn-ghost{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--ink)}
+
+.concept{background:#111;color:#cfcac3;font-size:13px;text-align:center;padding:8px 16px}
+.concept b{color:var(--clay-l)}
+
+header{position:sticky;top:0;z-index:20;background:rgba(245,242,238,.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:66px;gap:20px}
+.logo{text-decoration:none;font:800 20px/1 var(--sans);letter-spacing:.02em}
+.logo span{color:var(--clay)}
+.switch{display:flex;background:var(--white);border:1px solid var(--line);border-radius:999px;padding:4px}
+.switch button{font:700 14px var(--sans);border:0;background:transparent;padding:8px 16px;border-radius:999px;cursor:pointer;color:var(--muted)}
+.switch button[aria-pressed=true]{background:var(--coal);color:var(--white)}
+.nav-cta{display:flex;align-items:center;gap:14px}
+.nav-phone{font-weight:800;font-size:14px;text-decoration:none;white-space:nowrap}
+.nav .btn{padding:11px 16px;font-size:14px}
+
+.hero{padding:56px 0 64px}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
+.hero-grid>*{min-width:0}
+.hero h1{font-size:clamp(38px,5.4vw,68px)}
+.hero h1 em{color:var(--clay)}
+.hero p{font-size:19px;color:var(--muted);margin:20px 0 28px;max-width:520px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px}
+.mosaic{display:grid;grid-template-columns:1.2fr 1fr;grid-template-rows:1fr 1fr;gap:12px;height:460px}
+.mosaic img{width:100%;height:100%;object-fit:cover;border-radius:var(--r);background:var(--line)}
+.mosaic img:first-child{grid-row:span 2}
+body:not(.home) [data-aud=home],body:not(.biz) [data-aud=biz]{display:none!important}
+
+section{padding:84px 0}
+.sec-head{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:end;margin-bottom:36px}
+.sec-head>*{min-width:0}
+.sec-head .eyebrow{margin-bottom:14px}
+
+/* направления */
+.dirs{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.dir{background:var(--white);border:1px solid var(--line);border-radius:var(--r);padding:22px;display:flex;flex-direction:column;gap:8px}
+.dir p{margin:0;color:var(--muted);font-size:15px}
+.dir ul{margin:4px 0 0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:6px}
+.dir li{background:var(--bone);border-radius:999px;padding:4px 10px;font-size:13px;font-weight:700}
+
+/* кейсы */
+.cases{background:var(--coal);color:var(--white)}
+.cases .lead{color:#c3bfb8}
+.cgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.case{background:var(--coal-2);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column}
+.case img{aspect-ratio:4/5;width:100%;object-fit:cover;background:#333}
+.case div{padding:16px 18px 18px}
+.case span{display:inline-block;font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--clay-l);margin-bottom:6px}
+.case p{margin:6px 0 0;color:#c3bfb8;font-size:14px}
+
+/* заявка */
+.req-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:start}
+.req-grid>*{min-width:0}
+.nowform{margin-top:24px;background:var(--white);border:1.5px dashed var(--clay);border-radius:var(--r);padding:20px 22px;font-size:15px;color:var(--muted)}
+.nowform b{color:var(--ink)}
+form{background:var(--white);border-radius:18px;padding:28px;box-shadow:var(--shadow)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 16px}
+.chips label{display:flex;align-items:center;gap:6px;border:1px solid var(--line);border-radius:999px;padding:8px 14px;font-weight:700;font-size:14px;cursor:pointer}
+.chips label{position:relative}.chips input{position:absolute;opacity:0;pointer-events:none;width:1px;height:1px;margin:0}
+.chips label:has(input:checked){background:var(--coal);border-color:var(--coal);color:var(--white)}
+.lbl{display:block;font-size:13px;font-weight:800;color:var(--muted)}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+label.f{display:block;font-size:13px;font-weight:800;color:var(--muted);margin:0 0 14px}
+input,select{display:block;width:100%;margin-top:6px;font:600 16px/1.3 var(--sans);color:var(--ink);background:var(--bone);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+input:focus,select:focus{outline:2px solid var(--clay);border-color:transparent}
+form .btn{width:100%}
+.fine{font-size:12px;color:var(--muted);margin:12px 0 0;text-align:center}
+.wa{display:none;margin-top:18px;background:#0b141a;color:#e9edef;border-radius:14px;padding:16px 18px;font-size:14px}
+.wa.show{display:block}
+.wa-head{display:flex;align-items:center;gap:10px;margin-bottom:10px;font-weight:800}
+.wa-head span{width:30px;height:30px;border-radius:50%;background:#25d366;display:grid;place-items:center;color:#0b141a}
+.wa pre{white-space:pre-wrap;margin:0;font:inherit;background:#005c4b;border-radius:12px 12px 4px 12px;padding:12px 14px}
+.wa small{display:block;color:#8696a0;margin-top:10px}
+
+.contacts{background:var(--white);border-top:1px solid var(--line)}
+.c-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.c-grid a,.c-grid div{display:flex;flex-direction:column;gap:4px;padding:18px;background:var(--bone);border-radius:var(--r);text-decoration:none}
+.c-grid span{font-size:13px;color:var(--muted);font-weight:700}
+.c-grid b{overflow-wrap:anywhere}
+
+footer{background:#111;color:#99948d;font-size:13px;padding:36px 0 96px}
+footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
+footer a{color:var(--clay-l)}
+
+.mbar{display:none;position:fixed;left:0;right:0;bottom:0;z-index:30;background:var(--coal);padding:10px 12px calc(10px + env(safe-area-inset-bottom));gap:10px}
+.mbar a{flex:1;padding:14px 10px;font-size:14px}
+.mbar .btn-ghost{color:var(--white);box-shadow:inset 0 0 0 1.5px #555}
+
+@media (max-width:1020px){
+  .nav{flex-wrap:wrap;height:auto;padding-top:12px;padding-bottom:12px;row-gap:10px}
+  .hero-grid,.sec-head,.req-grid{grid-template-columns:1fr}
+  .mosaic{height:380px}
+  .dirs{grid-template-columns:1fr 1fr}
+  .cgrid,.c-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:620px){
+  .concept{font-size:12px;padding:6px 12px}
+  .concept .long{display:none}
+  section{padding:60px 0}
+  .hero{padding:28px 0 52px}
+  .nav-phone,.nav .btn{display:none}
+  .switch{order:3;width:100%}
+  .switch button{flex:1}
+  .mosaic{height:300px}
+  .dirs,.row,.c-grid{grid-template-columns:1fr}
+  form{padding:20px}
+  .mbar{display:flex}
+}
+</style>
+</head>
+<body class="home">
+
+<div class="concept">
+  <b>Независимый концепт Aurorine Studio, не официальный сайт.</b><span class="long"> Не заказ MEBELcenter. Факты и фото с mebelcenter.kz, 27.10.2026.</span>
+</div>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#top">MEBEL<span>center</span></a>
+    <div class="switch" role="group" aria-label="Для кого">
+      <button type="button" aria-pressed="true" data-a="home">Для дома</button>
+      <button type="button" aria-pressed="false" data-a="biz">Для бизнеса</button>
+    </div>
+    <div class="nav-cta">
+      <a class="nav-phone" href="tel:+77273449900">8 (727) 344-99-00</a>
+      <a class="btn btn-clay" href="#request">Оставить заявку</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">Мебель на заказ в Алматы · больше 10 лет</span>
+        <h1 style="margin-top:16px" data-aud="home">Кухня, сделанная <em>под вашу квартиру</em>, а не под каталог</h1>
+        <h1 style="margin-top:16px" data-aud="biz">Мебель для кофейни, аптеки или бутика <em>под ваш дизайн</em></h1>
+        <p data-aud="home">Кухни, шкафы и гардеробные по вашим размерам. Дизайнер и менеджер подберут решение, а свой отдел логистики привезёт заказ быстро.</p>
+        <p data-aud="biz">Торговое оборудование, витрины, островки в ТРЦ, ресепшн и барные стойки. Делали мебель и оборудование для кофеен Dolly&amp;Molly и With Love и магазина «Восточный мёд».</p>
+        <div class="hero-actions">
+          <a class="btn btn-clay" href="#request">Рассчитать проект</a>
+          <a class="btn btn-ghost" href="#cases">Наши работы</a>
+        </div>
+      </div>
+      <div class="mosaic" data-aud="home">
+        <img src="https://mebelcenter.kz/images/our2.jpg" alt="Кухня в ЖК Ламия" fetchpriority="high">
+        <img loading="lazy" src="https://mebelcenter.kz/images/our_lam2.jpg" alt="Кухня в ЖК Ламия, деталь">
+        <img loading="lazy" src="https://mebelcenter.kz/images/fulls/kuhni/arena.jpg" alt="Кухонный гарнитур «Арена»">
+      </div>
+      <div class="mosaic" data-aud="biz">
+        <img src="https://mebelcenter.kz/images/our1.jpeg" alt="Кофейня Dolly&amp;Molly">
+        <img loading="lazy" src="https://mebelcenter.kz/images/our3.jpg" alt="Магазин «Восточный мёд»">
+        <img loading="lazy" src="https://mebelcenter.kz/images/our4.jpeg" alt="Кофейня With Love">
+      </div>
+    </div>
+  </section>
+
+  <section id="dirs" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><span class="eyebrow">Что делаем</span><h2 style="margin-top:14px" data-aud="home">Мебель для каждой комнаты</h2><h2 style="margin-top:14px" data-aud="biz">Оборудование под формат бизнеса</h2></div>
+        <p class="lead" data-aud="home">Кухни, шкафы, гардеробные и детские по вашим размерам, доставка своим отделом логистики.</p><p class="lead" data-aud="biz">Торговое оборудование, витрины, островки и стойки под ваш дизайн.</p>
+      </div>
+      <div class="dirs" data-aud="home">
+        <div class="dir"><h3>Кухни</h3><p>По вашим размерам, в том числе П-образные и с фрезеровкой.</p></div>
+        <div class="dir"><h3>Шкафы и гардеробные</h3><p>По вашим размерам.</p></div>
+        <div class="dir"><h3>Спальни и гостиные</h3><p>По вашим размерам.</p></div>
+        <div class="dir"><h3>Детские</h3><p>По размерам комнаты.</p></div>
+        <div class="dir"><h3>Прихожие</h3><p>По вашим размерам.</p></div>
+        <div class="dir"><h3>Нестандартный дизайн</h3><p>«Изготовление мебели любой сложности» из материалов на ваш выбор.</p></div>
+      </div>
+      <div class="dirs" data-aud="biz">
+        <div class="dir"><h3>Кофейни и бары</h3><p>Барные стойки и торговое оборудование по дизайну заведения.</p><ul><li>Dolly&amp;Molly</li><li>With Love</li></ul></div>
+        <div class="dir"><h3>Аптеки</h3><p>Шесть готовых линеек оборудования.</p><ul><li>Мегаполис</li><li>Грин</li><li>Массив</li><li>Глянец</li><li>Модерн</li><li>Премиум</li></ul></div>
+        <div class="dir"><h3>Бутики</h3><p>Одежда, обувь, аксессуары, парфюмерия, ювелирные изделия.</p></div>
+        <div class="dir"><h3>ТРЦ</h3><p>Островные витрины и торговые модули.</p></div>
+        <div class="dir"><h3>Офисы</h3><p>12 линеек офисной мебели и ресепшн.</p><ul><li>Агат</li><li>Аккорд</li><li>Статус</li><li>Смарт</li></ul></div>
+        <div class="dir"><h3>Стеклянные витрины</h3><p>Для магазинов и аптек.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cases" id="cases">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><span class="eyebrow" style="color:var(--clay-l)">Наши работы</span><h2 style="margin-top:14px;color:var(--white)">Проекты, которые можно посетить</h2></div>
+        <p class="lead">Реальные заведения в Алматы продают лучше любых обещаний. Поэтому в концепте они сразу после первого экрана.</p>
+      </div>
+      <div class="cgrid">
+        <article class="case"><img loading="lazy" src="https://mebelcenter.kz/images/our1.jpeg" alt="Кофейня Dolly&amp;Molly"><div><span>Кофейня</span><h3>Dolly&amp;Molly</h3><p>Изготовлено по уникальному дизайну.</p></div></article>
+        <article class="case"><img loading="lazy" src="https://mebelcenter.kz/images/our_lam1.jpg" alt="Кухня в ЖК Ламия"><div><span>Квартира</span><h3>Кухня в ЖК Ламия</h3><p>П-образная кухня в цвете заказчика, на основе фирменной кухни в американском стиле с традиционной фрезеровкой.</p></div></article>
+        <article class="case"><img loading="lazy" src="https://mebelcenter.kz/images/our3.jpg" alt="Магазин «Восточный мёд»"><div><span>Магазин</span><h3>«Восточный мёд»</h3><p>Оборудование по индивидуальному дизайну клиента.</p></div></article>
+        <article class="case"><img loading="lazy" src="https://mebelcenter.kz/images/our4.jpeg" alt="Кофейня With Love"><div><span>Кофейня</span><h3>With Love</h3><p>Индивидуально изготовленное торговое оборудование.</p></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="request">
+    <div class="wrap req-grid">
+      <div>
+        <span class="eyebrow">Заявка</span>
+        <h2 style="margin-top:14px">Расскажите о проекте за минуту</h2>
+        <p class="lead" style="margin-top:16px">Клиент выбирает, что нужно, и оставляет телефон. Менеджер получает заявку в WhatsApp и перезванивает уже с вопросами по делу.</p>
+        <div class="nowform"><b>Заявка прямо с первого экрана.</b> Клиент, который выбирает мебель вечером, часто не звонит в офис, а оставляет заявку там, где это можно сделать за минуту.</div>
+      </div>
+      <form id="rForm" novalidate>
+        <span class="lbl">Что нужно</span>
+        <div class="chips" id="needs">
+          <label data-aud="home"><input type="radio" name="need" value="Кухня" checked>Кухня</label>
+          <label data-aud="home"><input type="radio" name="need" value="Шкаф или гардеробная">Шкаф</label>
+          <label data-aud="home"><input type="radio" name="need" value="Детская">Детская</label>
+          <label data-aud="home"><input type="radio" name="need" value="Другая мебель для дома">Другое</label>
+          <label data-aud="biz"><input type="radio" name="need" value="Кофейня или бар">Кофейня</label>
+          <label data-aud="biz"><input type="radio" name="need" value="Аптека">Аптека</label>
+          <label data-aud="biz"><input type="radio" name="need" value="Бутик">Бутик</label>
+          <label data-aud="biz"><input type="radio" name="need" value="Офис или ресепшн">Офис</label>
+          <label data-aud="biz"><input type="radio" name="need" value="Остров в ТРЦ">ТРЦ</label>
+        </div>
+        <div class="row">
+          <label class="f">Площадь или длина, м<input name="size" inputmode="decimal" placeholder="Например: 3,2"></label>
+          <label class="f">Когда нужно<select name="when"><option>Как можно скорее</option><option>В течение месяца</option><option>Через 2–3 месяца</option><option>Пока прицениваюсь</option></select></label>
+        </div>
+        <div class="row">
+          <label class="f">Имя<input name="name" autocomplete="name" placeholder="Алия"></label>
+          <label class="f">Телефон<input name="phone" type="tel" autocomplete="tel" placeholder="+7 7__ ___ __ __"></label>
+        </div>
+        <label class="f">Есть дизайн-проект?<select name="design"><option>Нет, нужен ваш дизайнер</option><option>Да, пришлю в WhatsApp</option></select></label>
+        <button class="btn btn-clay" type="submit">Отправить заявку</button>
+        <p class="fine">В концепте заявка никуда не отправляется: ниже показано, как её увидит менеджер.</p>
+        <div class="wa" id="wa" aria-live="polite">
+          <div class="wa-head"><span>✆</span>MEBELcenter · Заявки</div>
+          <pre id="waText"></pre>
+          <small>Сообщение приходит в WhatsApp менеджера.</small>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <section class="contacts" id="contacts">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><span class="eyebrow">Контакты</span><h2 style="margin-top:14px">Офис на Мынбаева</h2></div>
+        <p class="lead">ул. Мынбаева 46, 1 этаж, офис 117. Пн–Пт 9:00–18:00, Сб 9:00–16:00.</p>
+      </div>
+      <div class="c-grid">
+        <a href="tel:+77273449900"><span>Телефон</span><b>8 (727) 344-99-00</b></a>
+        <a href="https://wa.me/77018773300" target="_blank" rel="noopener"><span>WhatsApp</span><b>+7 701 877 33 00</b></a>
+        <a href="https://t.me/Raihan_106" target="_blank" rel="noopener"><span>Telegram</span><b>@Raihan_106</b></a>
+        <a href="https://2gis.kz/almaty/search/%D0%9C%D1%8B%D0%BD%D0%B1%D0%B0%D0%B5%D0%B2%D0%B0%2046" target="_blank" rel="noopener"><span>Маршрут</span><b>2GIS</b></a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>MEBELcenter · мебель на заказ для дома и бизнеса, Алматы</span>
+    <span>Концепт подготовлен <a href="https://mykolaanastiuk.github.io/aurorine.github.io/ru/">Aurorine Studio</a> по открытым данным. Не официальный сайт.</span>
+  </div>
+</footer>
+
+<div class="mbar">
+  <a class="btn btn-ghost" href="tel:+77273449900">Позвонить</a>
+  <a class="btn btn-clay" href="#request">Заявка</a>
+</div>
+
+<script>
+(function(){
+  var sw=document.querySelectorAll('.switch button');
+  function aud(a){
+    document.body.className=a;
+    sw.forEach(function(x){x.setAttribute('aria-pressed',x.dataset.a===a)});
+    var first=document.querySelector('#needs label[data-aud="'+a+'"] input');if(first)first.checked=true;
+  }
+  sw.forEach(function(b){b.addEventListener('click',function(){aud(b.dataset.a)})});
+  if(location.hash==='#biz')aud('biz');
+
+  var f=document.getElementById('rForm'), wa=document.getElementById('wa'), out=document.getElementById('waText');
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    out.textContent='Новая заявка с сайта ('+(document.body.className==='biz'?'бизнес':'дом')+')\n'+
+      'Что нужно: '+(f.querySelector('[name=need]:checked')||{}).value+'\n'+
+      'Размер: '+(f.size.value.trim()||'не указан')+'\n'+
+      'Срок: '+f.when.value+'\n'+
+      'Дизайн: '+f.design.value+'\n'+
+      'Контакт: '+(f.name.value.trim()||'имя не указано')+', '+(f.phone.value.trim()||'телефон не указан');
+    wa.classList.add('show');wa.scrollIntoView({behavior:'smooth',block:'nearest'});
+  });
+})();
+</script>
+<script>
+/* Проверка заявки: телефон обязателен, дата не в прошлом, число гостей в пределах поля. */
+(function(){
+  var t=new Date();t.setMinutes(t.getMinutes()-t.getTimezoneOffset());var today=t.toISOString().slice(0,10);
+  [].forEach.call(document.querySelectorAll('input[type=date]'),function(i){i.min=today});
+  [].forEach.call(document.querySelectorAll('input[type=number]'),function(i){
+    i.addEventListener('change',function(){if(i.value==='')return;var v=+i.value;
+      if(i.min!=='')v=Math.max(+i.min,v);if(i.max!=='')v=Math.min(+i.max,v);i.value=v;i.dispatchEvent(new Event('input',{bubbles:true}));});
+  });
+  function err(el,msg){
+    var p=el.closest('label')||el, m=p.querySelector('.ferr');
+    if(!m){m=document.createElement('small');m.className='ferr';m.style.cssText='display:block;color:#c0392b;font-weight:600;margin-top:4px;font-size:13px';p.appendChild(m);}
+    m.textContent=msg;el.setAttribute('aria-invalid','true');
+    el.addEventListener('input',function h(){m.textContent='';el.removeAttribute('aria-invalid');el.removeEventListener('input',h)});
+  }
+  window.aurorineCheck=function(f){
+    var tel=f.querySelector('input[type=tel]');
+    if(tel){var st=tel.closest('.step');if(st&&!st.classList.contains('on'))return 'step';}
+    var bad=null;
+    [].forEach.call(f.querySelectorAll('input[type=date]'),function(d){if(!bad&&d.value&&d.value<today){err(d,'Выберите дату не раньше сегодняшней');bad=d;}});
+    if(!bad&&tel&&tel.value.replace(/\D/g,'').length<10){err(tel,'Укажите телефон, чтобы менеджер мог перезвонить');bad=tel;}
+    if(bad){bad.focus();bad.scrollIntoView({block:'center'});return false;}
+    return true;
+  };
+  document.addEventListener('submit',function(e){
+    var r=window.aurorineCheck(e.target);
+    if(r===true)return;
+    e.preventDefault();e.stopImmediatePropagation();
+    if(r==='step'){var nx=e.target.querySelector('.step.on [data-next]');if(nx)nx.click();}
+  },true);
+})();
+</script>
+</body>
+</html>

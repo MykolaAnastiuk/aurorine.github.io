@@ -1,0 +1,488 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Алматинская Мебельная Фабрика — мебель на заказ и из каталога с 1998 года</title>
+<meta name="description" content="ТОО «Алматинская Мебельная Фабрика»: своё производство 2 000 м² в Алматы с 1998 года. Кухни, шкафы-купе, спальни, прихожие и мебель для офисов и гостиниц. Бесплатный 3D-проект, замер, доставка и сборка по Алматы.">
+<!-- Концепт: не индексировать. На рабочем сайте строку убрать и добавить canonical. -->
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#14213d">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ru_KZ">
+<meta property="og:site_name" content="Алматинская Мебельная Фабрика">
+<meta property="og:title" content="Алматинская Мебельная Фабрика — мебель с 1998 года">
+<meta property="og:description" content="Своё производство в Алматы, бесплатный 3D-проект, доставка и сборка. Актуальные цены и заявка онлайн.">
+<!-- Структурированные данные: только факты с amfactory.kz (27.10.2026). -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["FurnitureStore","Organization"],
+  "name": "ТОО «Алматинская Мебельная Фабрика»",
+  "url": "https://www.amfactory.kz/",
+  "foundingDate": "1998",
+  "numberOfEmployees": {"@type": "QuantitativeValue", "value": 50},
+  "telephone": ["+77273014625", "+77273014622", "+77470095178"],
+  "email": "info@amfactory.kz",
+  "address": {"@type": "PostalAddress", "addressLocality": "Алматы", "streetAddress": "пр. Толе би, 271", "postalCode": "050005", "addressCountry": "KZ"},
+  "sameAs": ["https://www.instagram.com/amfactory_kz/", "https://t.me/amfactory"]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#14213d;
+  --navy-2:#1d2d52;
+  --steel:#5b6b8c;
+  --sky:#00a5c8;       /* бирюза флага */
+  --amber:#ffc23a;     /* солнце флага */
+  --paper:#f4f6f9;
+  --white:#fff;
+  --ink:#121a2c;
+  --muted:#5d6779;
+  --line:#dbe1ea;
+  --r:10px;
+  --shadow:0 20px 44px -28px rgba(20,33,61,.55);
+  --display:"Unbounded", system-ui, sans-serif;
+  --sans:"IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:104px}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.6 var(--sans);-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:1200px;margin:0 auto;padding:0 20px}
+.eyebrow{display:inline-block;font:700 12px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--sky)}
+h1,h2,h3{font-family:var(--display);font-weight:700;line-height:1.1;margin:0;letter-spacing:-.01em}
+h2{font-size:clamp(26px,3.4vw,40px)}
+h3{font-size:18px}
+.lead{font-size:18px;color:var(--muted);max-width:600px;margin:0}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;border-radius:8px;padding:15px 22px;font:700 15px/1 var(--sans);cursor:pointer;text-decoration:none;transition:transform .15s,background .2s}
+.btn:hover{transform:translateY(-1px)}
+.btn-amber{background:var(--amber);color:var(--navy)}
+.btn-amber:hover{background:#ffcd5c}
+.btn-navy{background:var(--navy);color:var(--white)}
+.btn-line{background:transparent;color:var(--white);box-shadow:inset 0 0 0 1px rgba(255,255,255,.5)}
+
+.concept{background:#0b1426;color:#c5cddb;font-size:13px;text-align:center;padding:8px 16px}
+.concept b{color:var(--amber)}
+
+header{position:sticky;top:0;z-index:20;background:var(--white);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px;gap:20px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo i{width:34px;height:34px;flex:none;border-radius:8px;background:var(--navy);display:grid;place-items:center;color:var(--amber);font:700 13px/1 var(--display);font-style:normal}
+.logo span{font:700 14px/1.15 var(--display)}
+.logo small{display:block;font:500 11px/1 var(--sans);color:var(--muted);margin-top:3px;letter-spacing:.04em}
+.menu{display:flex;gap:22px;font-size:14px;font-weight:600}
+.menu a{text-decoration:none;color:var(--muted)}
+.menu a:hover{color:var(--ink)}
+.nav-cta{display:flex;align-items:center;gap:14px}
+.nav-phone{font-weight:700;font-size:14px;text-decoration:none;white-space:nowrap}
+.nav .btn{padding:12px 16px;font-size:14px}
+
+.hero{background:var(--navy);color:var(--white);position:relative;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;min-height:560px}
+.hero-grid>*{min-width:0}
+.hero-txt{padding:64px 40px 64px 0;display:flex;flex-direction:column;justify-content:center}
+.hero h1{font-size:clamp(30px,4.2vw,52px)}
+.hero h1 span{color:var(--amber)}
+.hero p{font-size:18px;color:#c5cddb;margin:20px 0 28px;max-width:520px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px}
+.hero-img{position:relative;background:var(--navy-2)}
+.hero-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.year{position:absolute;left:-1px;bottom:28px;background:var(--amber);color:var(--navy);padding:14px 18px;border-radius:0 10px 10px 0;font:700 14px/1.2 var(--sans)}
+.year b{display:block;font:700 30px/1 var(--display)}
+.nums{background:var(--navy-2);color:var(--white)}
+.nums .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;padding-top:26px;padding-bottom:26px}
+.nums b{display:block;font:700 30px/1 var(--display);color:var(--amber)}
+.nums span{font-size:14px;color:#c5cddb}
+
+section{padding:84px 0}
+.sec-head{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:end;margin-bottom:36px}
+.sec-head>*{min-width:0}
+.sec-head .eyebrow{margin-bottom:14px}
+
+/* каталог */
+.cats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.cat{background:var(--white);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;text-decoration:none;display:flex;flex-direction:column;transition:box-shadow .2s,transform .2s}
+.cat:hover{box-shadow:var(--shadow);transform:translateY(-2px)}
+.cat img{aspect-ratio:4/3;width:100%;object-fit:cover;background:var(--paper)}
+.cat div{padding:14px 16px 16px;display:flex;flex-direction:column;gap:4px;flex:1}
+.cat span{font-size:14px;color:var(--muted)}
+.cat .pr{margin-top:auto;padding-top:8px;font-weight:700;color:var(--navy);font-size:14px}
+
+/* актуальные цены */
+.fresh{background:var(--white);border-block:1px solid var(--line)}
+.fr-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start}
+.fr-grid>*{min-width:0}
+.banner-old{background:#fff4f2;border:1px solid #f1c6bd;border-radius:var(--r);padding:20px 22px}
+.banner-old strong{display:block;color:#b23a22;font:700 15px/1.3 var(--display);letter-spacing:.01em}
+.banner-old p{margin:10px 0 0;color:var(--muted);font-size:15px}
+.banner-new{margin-top:14px;background:#effaf6;border:1px solid #bfe6d6;border-radius:var(--r);padding:20px 22px}
+.banner-new strong{display:flex;align-items:center;gap:8px;color:#137a55;font-size:16px}
+.banner-new strong::before{content:"";width:10px;height:10px;border-radius:50%;background:#1aa86f;box-shadow:0 0 0 4px #c9eedd}
+.banner-new p{margin:8px 0 0;color:var(--muted);font-size:15px}
+table{width:100%;border-collapse:collapse;font-size:15px;background:var(--white);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+th,td{padding:13px 16px;text-align:left;border-bottom:1px solid var(--line)}
+th{background:var(--paper);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+td.p{font-weight:700;white-space:nowrap;color:var(--steel)}
+.stamp{font-size:13px;color:var(--muted);margin-top:10px}
+
+/* индивидуальный заказ */
+.order{background:var(--navy);color:var(--white)}
+.or-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:start}
+.or-grid>*{min-width:0}
+.order .lead{color:#c5cddb;margin-top:16px}
+.inc{list-style:none;padding:0;margin:24px 0 0;display:grid;gap:12px}
+.inc li{display:flex;gap:12px;align-items:baseline;color:#e3e8f1}
+.inc li::before{content:"✓";color:var(--amber);font-weight:700}
+form{background:var(--white);color:var(--ink);border-radius:14px;padding:28px}
+.steps-bar{display:flex;gap:6px;margin-bottom:18px}
+.steps-bar i{flex:1;height:4px;border-radius:4px;background:var(--line)}
+.steps-bar i.on{background:var(--sky)}
+.step{display:none}
+.step.on{display:block}
+.qtitle{font:700 18px/1.3 var(--display);margin:0 0 14px}
+.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:16px}
+.tiles label{border:1px solid var(--line);border-radius:10px;padding:14px 10px;text-align:center;font-weight:600;font-size:14px;cursor:pointer;background:var(--white)}
+.tiles label{position:relative}.tiles input{position:absolute;opacity:0;pointer-events:none;width:1px;height:1px;margin:0}
+.tiles label:has(input:checked){border-color:var(--sky);box-shadow:inset 0 0 0 1px var(--sky);background:#eefaff}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+label.f{display:block;font-size:13px;font-weight:600;color:var(--muted);margin:0 0 14px}
+input,select{display:block;width:100%;margin-top:6px;font:500 16px/1.3 var(--sans);color:var(--ink);background:var(--white);border:1px solid var(--line);border-radius:8px;padding:12px 14px}
+input[type=file]{padding:10px;background:var(--paper)}
+input:focus,select:focus{outline:2px solid var(--sky);border-color:transparent}
+.nav-btns{display:flex;gap:10px}
+.nav-btns .btn{flex:1}
+.btn-back{background:var(--paper);color:var(--ink)}
+.fine{font-size:12px;color:var(--muted);margin:12px 0 0;text-align:center}
+.wa{display:none;margin-top:18px;background:#0b141a;color:#e9edef;border-radius:14px;padding:16px 18px;font-size:14px}
+.wa.show{display:block}
+.wa-head{display:flex;align-items:center;gap:10px;margin-bottom:10px;font-weight:700}
+.wa-head span{width:30px;height:30px;border-radius:50%;background:#25d366;display:grid;place-items:center;color:#0b141a}
+.wa pre{white-space:pre-wrap;margin:0;font:inherit;background:#005c4b;border-radius:12px 12px 4px 12px;padding:12px 14px}
+.wa small{display:block;color:#8696a0;margin-top:10px}
+
+/* для бизнеса */
+.b2b{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.b2b div{background:var(--white);border:1px solid var(--line);border-radius:var(--r);padding:22px;border-top:4px solid var(--sky)}
+.b2b p{margin:8px 0 0;color:var(--muted);font-size:15px}
+
+/* работы */
+.works{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.works img{aspect-ratio:1/1;width:100%;object-fit:cover;border-radius:var(--r);background:var(--line)}
+.works img:first-child{grid-column:span 2;grid-row:span 2;aspect-ratio:auto;height:100%}
+
+.contacts{display:grid;grid-template-columns:1.1fr .9fr;gap:24px}
+.contacts>*{min-width:0}
+.c-list{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.c-list a{display:flex;flex-direction:column;gap:2px;padding:16px 18px;background:var(--white);border:1px solid var(--line);border-radius:var(--r);text-decoration:none}
+.c-list span{font-size:13px;color:var(--muted)}
+.c-list b{overflow-wrap:anywhere}
+.show-room{background:var(--navy);color:var(--white);border-radius:14px;padding:28px;display:flex;flex-direction:column;justify-content:space-between;gap:18px}
+.show-room p{margin:8px 0 0;color:#c5cddb}
+
+footer{background:#0b1426;color:#8d97aa;font-size:13px;padding:36px 0 96px}
+footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
+footer a{color:var(--amber)}
+
+.mbar{display:none;position:fixed;left:0;right:0;bottom:0;z-index:30;background:var(--navy);padding:10px 12px calc(10px + env(safe-area-inset-bottom));gap:10px}
+.mbar a{flex:1;padding:14px 10px;font-size:14px}
+
+@media (max-width:1020px){
+  .nav{flex-wrap:wrap;height:auto;padding-top:12px;row-gap:8px}
+  .menu{order:3;width:100%;overflow-x:auto;gap:20px;padding:4px 28px 12px 0;white-space:nowrap;scrollbar-width:none;-webkit-mask-image:linear-gradient(90deg,#000 85%,transparent);mask-image:linear-gradient(90deg,#000 85%,transparent)}
+  .menu::-webkit-scrollbar{display:none}
+  .menu a{flex:none}
+  .hero-grid{grid-template-columns:1fr}
+  .hero-txt{padding:48px 0}
+  .hero-img{min-height:320px;margin:0 -20px}
+  .sec-head,.fr-grid,.or-grid,.contacts{grid-template-columns:1fr}
+  .cats,.b2b{grid-template-columns:1fr 1fr}
+  .nums .wrap{grid-template-columns:1fr 1fr}
+}
+@media (max-width:620px){
+  .concept{font-size:12px;padding:6px 12px}
+  .concept .long{display:none}
+  section{padding:60px 0}
+  .nav-phone,.nav .btn{display:none}
+  .logo span{font-size:12px}
+  .hero-img{min-height:260px}
+  .works{grid-template-columns:1fr 1fr}
+  .b2b,.row,.c-list{grid-template-columns:1fr}
+  .tiles{grid-template-columns:1fr 1fr}
+  th,td{padding:11px 10px}
+  form{padding:20px}
+  .mbar{display:flex}
+}
+</style>
+</head>
+<body>
+
+<div class="concept">
+  <b>Независимый концепт Aurorine Studio, не официальный сайт.</b><span class="long"> Не заказ ТОО «Алматинская Мебельная Фабрика». Факты и фото с amfactory.kz, 27.10.2026.</span>
+</div>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#top"><i>АМФ</i><span>Алматинская Мебельная Фабрика<small>с 1998 года</small></span></a>
+    <nav class="menu" aria-label="Разделы">
+      <a href="#catalog">Каталог</a>
+      <a href="#prices">Цены</a>
+      <a href="#order">Индивидуальный заказ</a>
+      <a href="#b2b">Для бизнеса</a>
+      <a href="#contacts">Шоурум</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="nav-phone" href="tel:+77470095178">+7 747 009 51 78</a>
+      <a class="btn btn-amber" href="#order">Заказать 3D-проект</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero" style="padding:0">
+    <div class="wrap hero-grid">
+      <div class="hero-txt">
+        <span class="eyebrow" style="color:var(--amber)">Своё производство в Алматы</span>
+        <h1 style="margin-top:16px">Казахстанским квартирам — <span>казахстанскую мебель</span></h1>
+        <p>Кухни, шкафы-купе, спальни и прихожие из каталога или по вашим размерам. Менеджер-дизайнер сделает 3D-проект с расстановкой, а выезд дизайнера, замер, доставка и сборка по Алматы бесплатны.</p>
+        <div class="hero-actions">
+          <a class="btn btn-amber" href="#order">Заказать 3D-проект</a>
+          <a class="btn btn-line" href="#prices">Цены на сегодня</a>
+        </div>
+      </div>
+      <div class="hero-img">
+        <img src="https://www.amfactory.kz/cms/uploads/file_1625635973_838407800.jpg" alt="Кухонный гарнитур на заказ от Алматинской Мебельной Фабрики" fetchpriority="high">
+        <div class="year"><b>1998</b>год основания</div>
+      </div>
+    </div>
+  </section>
+  <div class="nums">
+    <div class="wrap">
+      <div><b>2 000 м²</b><span>производство полного цикла</span></div>
+      <div><b>50</b><span>сотрудников</span></div>
+      <div><b>1 000</b><span>шкафов в год</span></div>
+      <div><b>DE · AT</b><span>оборудование из Германии и Австрии</span></div>
+    </div>
+  </div>
+
+  <section id="catalog">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><span class="eyebrow">Каталог</span><h2 style="margin-top:14px">Мебель для каждой комнаты</h2></div>
+        <p class="lead">Сейчас пункт «Каталог» в меню сайта никуда не ведёт: ссылка «#». Здесь каталог открывается с первого экрана.</p>
+      </div>
+      <div class="cats">
+        <a class="cat" href="#prices"><img loading="lazy" src="https://www.amfactory.kz/cms/uploads/file_1625636050_392348531.jpg" alt="Кухня на заказ"><div><h3>Кухни</h3><span>Посекционно и по размерам</span><span class="pr">цена из вашей таблицы</span></div></a>
+        <a class="cat" href="#prices"><img loading="lazy" src="https://www.amfactory.kz/cms/uploads/file_1623739720_868816737.jpg" alt="Мебель для спальни"><div><h3>Спальни</h3><span>Гарнитуры, кровати, шкафы, комоды</span><span class="pr">цена из вашей таблицы</span></div></a>
+        <a class="cat" href="#prices"><img loading="lazy" src="https://www.amfactory.kz/cms/uploads/file_1623740025_741401803.jpg" alt="Прихожая"><div><h3>Прихожие</h3><span>«Модерн», «Натали», «Сауле»</span><span class="pr">цена из вашей таблицы</span></div></a>
+        <a class="cat" href="#prices"><img loading="lazy" src="https://www.amfactory.kz/cms/uploads/file_1548413249_568256556.png" alt="Шкафы-купе"><div><h3>Шкафы-купе</h3><span>Линейка «Сакура»</span><span class="pr">цена из вашей таблицы</span></div></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="fresh" id="prices">
+    <div class="wrap fr-grid">
+      <div>
+        <span class="eyebrow">Цены</span>
+        <h2 style="margin-top:14px">Актуальные цены с датой обновления</h2>
+        <p class="lead" style="margin-top:16px">Покупатель мебели сравнивает цены на нескольких сайтах. Цена с датой обновления показывает, что ей можно верить, и экономит менеджеру звонок.</p>
+        <div class="banner-new" style="margin-top:22px">
+          <strong>Так будет выглядеть: «Цены обновлены <span id="today"></span>»</strong>
+          <p>В рабочей версии цены подтягиваются из вашей таблицы. Поменяли цифру в Excel или Google-таблице — на сайте она обновилась сама, вместе с датой.</p>
+        </div>
+      </div>
+      <div>
+        <table>
+          <thead><tr><th>Позиция</th><th>Срок</th><th>Цена</th></tr></thead>
+          <tbody>
+            <tr><td>Прихожая «Натали», в наличии</td><td>3 дня</td><td class="p">из вашей таблицы</td></tr>
+            <tr><td>Шкаф-купе «Сакура»</td><td>—</td><td class="p">из вашей таблицы</td></tr>
+            <tr><td>Кухня посекционно, за метр</td><td>—</td><td class="p">из вашей таблицы</td></tr>
+            <tr><td>Спальный гарнитур</td><td>—</td><td class="p">из вашей таблицы</td></tr>
+            <tr><td>Конференц-стол в наличии</td><td>—</td><td class="p">из вашей таблицы</td></tr>
+          </tbody>
+        </table>
+        <p class="stamp">«Натали» в наличии доставляем и собираем за 3 дня. Сроки остальных позиций уточнит менеджер.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="order" id="order">
+    <div class="wrap or-grid">
+      <div>
+        <span class="eyebrow" style="color:var(--amber)">Индивидуальный заказ</span>
+        <h2 style="margin-top:14px;color:var(--white)">3D-проект вашей комнаты до покупки</h2>
+        <p class="lead">Сейчас заявка на индивидуальный проект — общая форма без комнаты, размеров и плана. Здесь клиент за три шага выбирает комнату, прикладывает план, а менеджер-дизайнер получает готовую заявку в WhatsApp.</p>
+        <ul class="inc">
+          <li>3D-проект с расстановкой и эскизом мебели</li>
+          <li>Цветной 3D-план всей квартиры по желанию</li>
+          <li>Выезд дизайнера и замер бесплатно</li>
+          <li>Бесплатная доставка по Алматы и сборка</li>
+        </ul>
+      </div>
+      <form id="oForm" novalidate>
+        <div class="steps-bar"><i class="on"></i><i></i><i></i></div>
+        <div class="step on" data-s="1">
+          <p class="qtitle">Какая комната?</p>
+          <div class="tiles">
+            <label><input type="radio" name="room" value="Кухня" checked>Кухня</label>
+            <label><input type="radio" name="room" value="Спальня">Спальня</label>
+            <label><input type="radio" name="room" value="Гостиная">Гостиная</label>
+            <label><input type="radio" name="room" value="Прихожая">Прихожая</label>
+            <label><input type="radio" name="room" value="Детская">Детская</label>
+            <label><input type="radio" name="room" value="Офис">Офис</label>
+          </div>
+          <div class="nav-btns"><button class="btn btn-navy" type="button" data-next>Дальше</button></div>
+        </div>
+        <div class="step" data-s="2">
+          <p class="qtitle">Размеры и план</p>
+          <div class="row">
+            <label class="f">Длина стены, см<input name="len" type="number" inputmode="numeric" placeholder="320"></label>
+            <label class="f">Высота потолка, см<input name="h" type="number" inputmode="numeric" placeholder="270"></label>
+          </div>
+          <label class="f">План квартиры или фото комнаты<input name="plan" type="file" accept="image/*,.pdf"></label>
+          <div class="nav-btns"><button class="btn btn-back" type="button" data-prev>Назад</button><button class="btn btn-navy" type="button" data-next>Дальше</button></div>
+        </div>
+        <div class="step" data-s="3">
+          <p class="qtitle">Куда отправить проект?</p>
+          <label class="f">Как удобнее<select name="how"><option>Выезд дизайнера на замер</option><option>Приеду в шоурум на Толе би, 271</option><option>Сначала созвонимся</option></select></label>
+          <div class="row">
+            <label class="f">Имя<input name="name" autocomplete="name" placeholder="Ринат"></label>
+            <label class="f">Телефон<input name="phone" type="tel" autocomplete="tel" placeholder="+7 7__ ___ __ __"></label>
+          </div>
+          <div class="nav-btns"><button class="btn btn-back" type="button" data-prev>Назад</button><button class="btn btn-amber" type="submit">Получить 3D-проект</button></div>
+        </div>
+        <p class="fine">В концепте заявка никуда не отправляется: ниже показано, как её увидит менеджер.</p>
+        <div class="wa" id="wa" aria-live="polite">
+          <div class="wa-head"><span>✆</span>АМФ · Индивидуальные заказы</div>
+          <pre id="waText"></pre>
+          <small>Сообщение и файл плана приходят в WhatsApp менеджера-дизайнера.</small>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <section id="b2b">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><span class="eyebrow">Для бизнеса</span><h2 style="margin-top:14px">Мебель для офисов, гостиниц и застройщиков</h2></div>
+        <p class="lead">Доставка и монтаж по всему Казахстану для компаний, гарантия и сервис.</p>
+      </div>
+      <div class="b2b">
+        <div><h3>Офисам</h3><p>Кабинеты руководителей, мебель для сотрудников, конференц-столы в наличии и на заказ. Бесплатная компьютерная расстановка.</p></div>
+        <div><h3>Гостиницам</h3><p>Мебель для гостиниц на заказ.</p></div>
+        <div><h3>Застройщикам</h3><p>Отдельное направление для строительных компаний.</p></div>
+        <div><h3>Дизайнерам</h3><p>Отдельное направление для дизайнеров и дизайн-студий.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><span class="eyebrow">Наши работы</span><h2 style="margin-top:14px">Сделано на фабрике</h2></div>
+        <p class="lead">Фото из раздела «Индивидуальный заказ».</p>
+      </div>
+      <div class="works">
+        <img loading="lazy" src="https://www.amfactory.kz/cms/uploads/file_1625635989_963237381.jpg" alt="Кухонный гарнитур на заказ">
+        <img loading="lazy" src="https://www.amfactory.kz/cms/uploads/file_1625636070_581252675.jpg" alt="Кухонный гарнитур на заказ">
+        <img loading="lazy" src="https://www.amfactory.kz/cms/uploads/file_1623739739_448612954.jpg" alt="Мебель для спальни">
+        <img loading="lazy" src="https://www.amfactory.kz/cms/uploads/file_1625636100_492263610.jpg" alt="Кухонный гарнитур на заказ">
+        <img loading="lazy" src="https://www.amfactory.kz/cms/uploads/file_1623740216_478677604.jpg" alt="Прихожая на заказ">
+      </div>
+    </div>
+  </section>
+
+  <section id="contacts" style="padding-top:0">
+    <div class="wrap contacts">
+      <div class="c-list">
+        <a href="tel:+77470095178"><span>Мобильный, WhatsApp</span><b>+7 747 009 51 78</b></a>
+        <a href="tel:+77273014625"><span>Офис</span><b>+7 727 301 46 25</b></a>
+        <a href="tel:+77273014622"><span>Офис</span><b>+7 727 301 46 22</b></a>
+        <a href="mailto:info@amfactory.kz"><span>Почта</span><b>info@amfactory.kz</b></a>
+        <a href="https://www.instagram.com/amfactory_kz/" target="_blank" rel="noopener"><span>Instagram</span><b>@amfactory_kz</b></a>
+        <a href="https://t.me/amfactory" target="_blank" rel="noopener"><span>Telegram</span><b>t.me/amfactory</b></a>
+      </div>
+      <div class="show-room">
+        <div>
+          <span class="eyebrow" style="color:var(--amber)">Шоурум и центральный офис</span>
+          <h3 style="margin-top:12px;font-size:24px">пр. Толе би, 271, Алматы</h3>
+          <p>Шоурум открыт с 9:00 до 17:00.</p>
+        </div>
+        <a class="btn btn-amber" href="https://2gis.kz/almaty/search/%D0%A2%D0%BE%D0%BB%D0%B5%20%D0%B1%D0%B8%20271" target="_blank" rel="noopener">Маршрут в 2GIS</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>ТОО «Алматинская Мебельная Фабрика» · с 1998 года</span>
+    <span>Концепт подготовлен <a href="https://mykolaanastiuk.github.io/aurorine.github.io/ru/">Aurorine Studio</a> по открытым данным. Не официальный сайт.</span>
+  </div>
+</footer>
+
+<div class="mbar">
+  <a class="btn btn-line" href="tel:+77470095178">Позвонить</a>
+  <a class="btn btn-amber" href="#order">3D-проект</a>
+</div>
+
+<script>
+(function(){
+  document.getElementById('today').textContent=new Date().toLocaleDateString('ru-RU',{day:'numeric',month:'long',year:'numeric'});
+  var f=document.getElementById('oForm'), steps=f.querySelectorAll('.step'), bars=f.querySelectorAll('.steps-bar i'), cur=0;
+  function go(i){cur=i;steps.forEach(function(s,k){s.classList.toggle('on',k===i)});bars.forEach(function(b,k){b.classList.toggle('on',k<=i)});}
+  f.querySelectorAll('[data-next]').forEach(function(b){b.addEventListener('click',function(){go(Math.min(cur+1,2))})});
+  f.querySelectorAll('[data-prev]').forEach(function(b){b.addEventListener('click',function(){go(Math.max(cur-1,0))})});
+  var wa=document.getElementById('wa'), out=document.getElementById('waText');
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    var file=f.plan.files&&f.plan.files[0];
+    out.textContent='Заявка на 3D-проект\n'+
+      'Комната: '+(f.querySelector('[name=room]:checked')||{}).value+'\n'+
+      'Размеры: стена '+(f.len.value||'?')+' см, потолок '+(f.h.value||'?')+' см\n'+
+      'План: '+(file?file.name:'не приложен')+'\n'+
+      'Формат: '+f.how.value+'\n'+
+      'Контакт: '+(f.name.value.trim()||'имя не указано')+', '+(f.phone.value.trim()||'телефон не указан');
+    wa.classList.add('show');wa.scrollIntoView({behavior:'smooth',block:'nearest'});
+  });
+})();
+</script>
+<script>
+/* Проверка заявки: телефон обязателен, дата не в прошлом, число гостей в пределах поля. */
+(function(){
+  var t=new Date();t.setMinutes(t.getMinutes()-t.getTimezoneOffset());var today=t.toISOString().slice(0,10);
+  [].forEach.call(document.querySelectorAll('input[type=date]'),function(i){i.min=today});
+  [].forEach.call(document.querySelectorAll('input[type=number]'),function(i){
+    i.addEventListener('change',function(){if(i.value==='')return;var v=+i.value;
+      if(i.min!=='')v=Math.max(+i.min,v);if(i.max!=='')v=Math.min(+i.max,v);i.value=v;i.dispatchEvent(new Event('input',{bubbles:true}));});
+  });
+  function err(el,msg){
+    var p=el.closest('label')||el, m=p.querySelector('.ferr');
+    if(!m){m=document.createElement('small');m.className='ferr';m.style.cssText='display:block;color:#c0392b;font-weight:600;margin-top:4px;font-size:13px';p.appendChild(m);}
+    m.textContent=msg;el.setAttribute('aria-invalid','true');
+    el.addEventListener('input',function h(){m.textContent='';el.removeAttribute('aria-invalid');el.removeEventListener('input',h)});
+  }
+  window.aurorineCheck=function(f){
+    var tel=f.querySelector('input[type=tel]');
+    if(tel){var st=tel.closest('.step');if(st&&!st.classList.contains('on'))return 'step';}
+    var bad=null;
+    [].forEach.call(f.querySelectorAll('input[type=date]'),function(d){if(!bad&&d.value&&d.value<today){err(d,'Выберите дату не раньше сегодняшней');bad=d;}});
+    if(!bad&&tel&&tel.value.replace(/\D/g,'').length<10){err(tel,'Укажите телефон, чтобы менеджер мог перезвонить');bad=tel;}
+    if(bad){bad.focus();bad.scrollIntoView({block:'center'});return false;}
+    return true;
+  };
+  document.addEventListener('submit',function(e){
+    var r=window.aurorineCheck(e.target);
+    if(r===true)return;
+    e.preventDefault();e.stopImmediatePropagation();
+    if(r==='step'){var nx=e.target.querySelector('.step.on [data-next]');if(nx)nx.click();}
+  },true);
+})();
+</script>
+</body>
+</html>

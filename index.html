@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#0f1a2b">
 <link rel="canonical" href="https://mykolaanastiuk.github.io/aurorine.github.io/">
+<link rel="alternate" hreflang="uk" href="https://mykolaanastiuk.github.io/aurorine.github.io/">
+<link rel="alternate" hreflang="ru" href="https://mykolaanastiuk.github.io/aurorine.github.io/ru/">
+<link rel="alternate" hreflang="x-default" href="https://mykolaanastiuk.github.io/aurorine.github.io/">
 <meta property="og:title" content="Aurorine Studio — сайти, які приймають заявки">
 <meta property="og:description" content="Сайти для банкетних залів, готелів і заміських комплексів. Заявки на дату й номер одразу в Telegram. Безкоштовний ескіз на ваших фото.">
 <meta property="og:type" content="website">
@@ -237,7 +240,12 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
   .q{flex-direction:column;align-items:flex-start;gap:10px}
 }
 </style>
-<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}[hidden]{display:none!important}</style>
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}[hidden]{display:none!important}
+.top nav{margin-left:auto}
+.lang{display:flex;gap:2px;font-size:.82rem;font-weight:600;flex:none}
+.lang a{padding:5px 10px;border-radius:99px;color:var(--frost-dim);text-decoration:none;border:1px solid transparent}
+.lang a:hover{color:var(--frost)}
+.lang a[aria-current]{border-color:#3a4f6b;color:var(--frost)}</style>
 </head>
 <body>
 
@@ -255,6 +263,10 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
         <a href="#packs">Ціни</a>
         <a href="#contact">Контакт</a>
       </nav>
+      <div class="lang" aria-label="Мова сайту">
+        <a href="./" hreflang="uk" aria-current="page">УКР</a>
+        <a href="ru/" hreflang="ru" lang="ru">РУС</a>
+      </div>
     </div>
 
     <div class="hero">
