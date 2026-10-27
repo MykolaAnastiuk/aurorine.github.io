@@ -102,7 +102,7 @@ section{padding:92px 0}
 .house div{padding:14px 16px 16px;display:grid;gap:4px}
 .house b{font:700 19px/1.15 var(--serif)}
 .house span{font-size:14px;color:var(--muted)}
-.house em{font-style:normal;font-weight:800;color:#7a5500}
+.house em{font-style:normal;font-weight:800;color:#7a5500;white-space:nowrap}
 .calc{margin-top:26px;display:grid;grid-template-columns:1.2fr 1fr;gap:20px;align-items:stretch}
 .calc>*{min-width:0}
 .calc-ctrl{background:var(--deep-2);border-radius:var(--r);padding:22px 24px;display:grid;gap:16px}
@@ -141,6 +141,7 @@ section{padding:92px 0}
 .tabs button{font:800 14px var(--sans);padding:10px 16px;border-radius:999px;border:1.5px solid var(--line);background:var(--white);color:var(--ink);cursor:pointer}
 .tabs button[aria-selected=true]{background:var(--deep);border-color:var(--deep);color:var(--white)}
 .tab[hidden]{display:none}
+.tab{overflow-x:auto}
 table{width:100%;border-collapse:collapse;background:var(--white);border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow);font-size:15px}
 th,td{padding:14px 18px;text-align:left;border-bottom:1px solid var(--sand)}
 th{background:var(--deep);color:var(--white);font-weight:800;font-size:13px;letter-spacing:.06em;text-transform:uppercase}
@@ -212,7 +213,8 @@ footer a{color:var(--reed)}
   .hero .wrap{padding-bottom:48px}
   .hgrid{grid-template-columns:1fr 1fr}
   .rgrid,.how,.row,.nums{grid-template-columns:1fr}
-  th,td{padding:12px 12px}
+  th,td{padding:12px 10px}
+  td.p{white-space:normal}
   form{padding:20px}
   .mbar{display:flex}
 }
@@ -253,7 +255,7 @@ footer a{color:var(--reed)}
         <a class="btn btn-line" href="#prices">Все цены</a>
       </div>
       <div class="facts">
-        <span>5 домов на воде</span><span>от 80 000 ₸ в сутки</span><span>озеро 100+ га</span><span>5,7 км берега</span>
+        <span>5 домов на воде</span><span>от 55 000 ₸ в сутки</span><span>озеро 100+ га</span><span>5,7 км берега</span>
       </div>
     </div>
   </section>
@@ -262,44 +264,44 @@ footer a{color:var(--reed)}
     <div class="wrap">
       <div class="sec-head">
         <div><span class="eyebrow">Комплекс «Maldives»</span><h2 style="margin-top:14px">Выберите свой дом</h2></div>
-        <p class="lead">У каждого дома свой пирс. Нажмите на дом, укажите число ночей и дни недели, и сразу увидите стоимость.</p>
+        <p class="lead">У каждого дома свой пирс для рыбалки и летнее джакузи с подогревом. Нажмите на дом, укажите число ночей и дни недели, и сразу увидите стоимость.</p>
       </div>
       <div class="hgrid" role="group" aria-label="Дома">
         <button type="button" class="house" data-name="Дом 1 Shark" data-type="2" aria-pressed="true">
           <img loading="lazy" src="https://lake.kz/images/room/small/1.jpg" alt="Дом 1 Shark">
-          <div><b>1 · Shark</b><span>2 гостя · 1 спальня</span><em>от 80 000 ₸</em></div>
+          <div><b>1 · Shark</b><span>2 гостя · 1 спальня</span><em>от 55 000 ₸</em></div>
         </button>
         <button type="button" class="house" data-name="Дом 2 Turtle" data-type="4" aria-pressed="false">
-          <img loading="lazy" src="https://lake.kz/images/room/all.jpg" alt="Дома комплекса «Maldives»">
-          <div><b>2 · Turtle</b><span>4 гостя · 2 спальни</span><em>от 100 000 ₸</em></div>
+          <img loading="lazy" src="https://lake.kz/images/room/1.jpg" alt="Дома на воде «Maldives»">
+          <div><b>2 · Turtle</b><span>4 гостя · 2 спальни</span><em>от 70 000 ₸</em></div>
         </button>
         <button type="button" class="house" data-name="Дом 3 Manta" data-type="4" aria-pressed="false">
-          <img loading="lazy" src="https://lake.kz/images/all/11.jpg" alt="Озеро у домов">
-          <div><b>3 · Manta</b><span>4 гостя · 2 спальни</span><em>от 100 000 ₸</em></div>
+          <img loading="lazy" src="https://lake.kz/images/room/2.jpg" alt="Дома на воде «Maldives»">
+          <div><b>3 · Manta</b><span>4 гостя · 2 спальни</span><em>от 70 000 ₸</em></div>
         </button>
         <button type="button" class="house" data-name="Дом 4 Iguana" data-type="4" aria-pressed="false">
-          <img loading="lazy" src="https://lake.kz/images/all/12.jpg" alt="Вид на озеро">
-          <div><b>4 · Iguana</b><span>4 гостя · 2 спальни</span><em>от 100 000 ₸</em></div>
+          <img loading="lazy" src="https://lake.kz/images/room/all.jpg" alt="Дома на воде «Maldives»">
+          <div><b>4 · Iguana</b><span>4 гостя · 2 спальни</span><em>от 70 000 ₸</em></div>
         </button>
         <button type="button" class="house" data-name="Дом 5 Tuna" data-type="4" aria-pressed="false">
-          <img loading="lazy" src="https://lake.kz/images/all/7.jpg" alt="Берег озера">
-          <div><b>5 · Tuna</b><span>4 гостя · 2 спальни</span><em>от 100 000 ₸</em></div>
+          <img loading="lazy" src="https://lake.kz/images/maldives/maldives.jpg" alt="Дома на воде «Maldives»">
+          <div><b>5 · Tuna</b><span>4 гостя · 2 спальни</span><em>от 70 000 ₸</em></div>
         </button>
       </div>
       <div class="calc">
         <div class="calc-ctrl">
           <label>Ночей <output id="nOut">1</output><input type="range" id="nights" min="1" max="7" value="1" aria-label="Число ночей"></label>
-          <label>Дополнительных гостей <output id="xOut">0</output><input type="range" id="extra" min="0" max="2" value="0" aria-label="Дополнительные гости"></label>
+          <label>Дополнительных гостей <output id="xOut">0</output><input type="range" id="extra" min="0" max="1" value="0" aria-label="Дополнительные гости"></label>
           <label>Когда
             <span class="seg" role="group" aria-label="Дни недели">
-              <button type="button" data-day="wd" aria-pressed="true">будни</button>
+              <button type="button" data-day="wd" aria-pressed="true">пн–чт</button>
               <button type="button" data-day="we" aria-pressed="false">пт–вс и праздники</button>
             </span>
           </label>
         </div>
         <div class="calc-sum">
-          <div><p id="calcWhat">Дом 1 Shark · 1 ночь · будни</p><strong id="calcTotal">80 000 ₸</strong></div>
-          <p>Цены с lake.kz: в будни «от», в выходные по прайсу; доп. гость 25 000 ₸. Сколько доп. мест в доме, уточнит администратор.</p>
+          <div><p id="calcWhat">Дом 1 Shark · 1 ночь · пн–чт</p><strong id="calcTotal">55 000 ₸</strong></div>
+          <p>Цены из прайса lake.kz/price_maldives. Заезд в 14:00, выезд в 12:00. Можно ли добавить гостя в конкретный дом, уточнит администратор.</p>
           <a class="btn" href="#request">Забронировать этот дом</a>
         </div>
       </div>
@@ -316,7 +318,7 @@ footer a{color:var(--reed)}
       <div>
         <span class="eyebrow">Озеро и рыбалка</span>
         <h2 style="margin-top:14px">Рыбалка на 12 или 24 часа, снасти на месте</h2>
-        <p class="lead" style="margin-top:16px">Удочку, спиннинг и прикормку можно взять здесь же. Для женщин в будни отдельный тариф. Пока одни рыбачат, другие катаются на байдарке или велосипеде.</p>
+        <p class="lead" style="margin-top:16px">Удочку или спиннинг можно взять напрокат, прикорм с лодки сделают за вас. Детям до 13 лет рыбалка бесплатно, для женщин отдельный тариф. Пока одни рыбачат, другие катаются на байдарке или велосипеде.</p>
         <div class="nums">
           <div><b>100+</b><span>гектаров озера</span></div>
           <div><b>5,7 км</b><span>береговой линии</span></div>
@@ -335,7 +337,7 @@ footer a{color:var(--reed)}
       <div class="rgrid">
         <article class="rc"><img loading="lazy" src="https://lake.kz/images/sauna/sauna_1.jpg" alt="Баня комплекса «Maldives»"><div><h3>Баня «Maldives»</h3><p>Баня с подогреваемым «морским» бассейном рядом с домами на воде.</p></div></article>
         <article class="rc"><img loading="lazy" src="https://lake.kz/images/beerloga/beerloga.jpg" alt="Баня «Beerloga»"><div><h3>«Beerloga»</h3><p>Можжевеловая баня и приватный аквапарк.</p></div></article>
-        <article class="rc"><img loading="lazy" src="https://lake.kz/images/aquapark/gallery/1.jpg" alt="Аквапарк"><div><h3>Аквапарк</h3><p>Два бассейна для всей семьи. Байдарки и велосипеды берутся напрокат по часам.</p></div></article>
+        <article class="rc"><img loading="lazy" src="https://lake.kz/images/aquapark/gallery/1.jpg" alt="Аквапарк"><div><h3>Аквапарк</h3><p>Два бассейна для всей семьи. Рядом прокат байдарок и велосипедов.</p></div></article>
       </div>
     </div>
   </section>
@@ -344,7 +346,7 @@ footer a{color:var(--reed)}
     <div class="wrap">
       <div class="sec-head">
         <div><span class="eyebrow">Цены</span><h2 style="margin-top:14px">Все цены на одной странице</h2></div>
-        <p class="lead">Сейчас цены разнесены по семи страницам выпадающего меню. Здесь они собраны во вкладки и открываются на русском сразу.</p>
+        <p class="lead">Сейчас цены разнесены по семи страницам выпадающего меню. Здесь они собраны во вкладки на одной странице.</p>
       </div>
       <div class="tabs" role="tablist">
         <button type="button" role="tab" aria-selected="true" data-tab="t1">Дома на воде</button>
@@ -353,41 +355,42 @@ footer a{color:var(--reed)}
       </div>
       <div class="tab" id="t1">
         <table>
-          <thead><tr><th>Дом</th><th>Будни</th><th>Пт–вс и праздники</th></tr></thead>
+          <thead><tr><th>Дом</th><th>Пн–чт</th><th>Пт–вс</th></tr></thead>
           <tbody>
-            <tr><td>Дом 1 Shark, 2 гостя</td><td class="p">от 80 000 ₸</td><td class="p">90 000 ₸</td></tr>
-            <tr><td>Дома 2–5, 4 гостя</td><td class="p">от 100 000 ₸</td><td class="p">110 000 ₸</td></tr>
+            <tr><td>Shark, 2 гостя</td><td class="p">55 000 ₸</td><td class="p">90 000 ₸</td></tr>
+            <tr><td>Turtle, Manta, Iguana, Tuna, 4 гостя</td><td class="p">70 000 ₸</td><td class="p">110 000 ₸</td></tr>
             <tr><td>Дополнительный гость</td><td class="p" colspan="2">25 000 ₸</td></tr>
           </tbody>
         </table>
-        <p class="stamp">Цена за сутки, с lake.kz/maldives и lake.kz/price_maldives (27.10.2026).</p>
+        <p class="stamp">Цена за сутки, с lake.kz/price_maldives (27.10.2026). В доме мини-бар, лицензия на рыбалку с пирса включена.</p>
       </div>
       <div class="tab" id="t2" hidden>
         <table>
-          <thead><tr><th>Рыбалка</th><th>12 часов</th><th>24 часа</th></tr></thead>
+          <thead><tr><th>Рыбалка</th><th>12 ч</th><th>24 ч</th></tr></thead>
           <tbody>
-            <tr><td>Пт–вс и праздники</td><td class="p">8 000 ₸</td><td class="p">11 000 ₸</td></tr>
-            <tr><td>Для женщин, будни</td><td class="p">2 500 ₸</td><td class="p m">из вашего прайса</td></tr>
-            <tr><td>Будни</td><td class="p m">из вашего прайса</td><td class="p m">из вашего прайса</td></tr>
-            <tr><td>Дополнительная удочка</td><td class="p m">—</td><td class="p">3 000 ₸</td></tr>
+            <tr><td>Будни</td><td class="p">5 500 ₸</td><td class="p">8 500 ₸</td></tr>
+            <tr><td>Выходные и праздники</td><td class="p">8 000 ₸</td><td class="p">11 000 ₸</td></tr>
+            <tr><td>Женщины, будни</td><td class="p">2 500 ₸</td><td class="p">3 500 ₸</td></tr>
+            <tr><td>Женщины, выходные</td><td class="p">3 000 ₸</td><td class="p">4 000 ₸</td></tr>
+            <tr><td>Доп. удочка</td><td class="p">2 500 ₸</td><td class="p">3 000 ₸</td></tr>
           </tbody>
         </table>
-        <p class="stamp">В концепте показали часть тарифов с lake.kz/price_fishing. В рабочей версии таблица заполняется целиком из вашего прайса.</p>
+        <p class="stamp">Дети до 13 лет бесплатно, пенсионерам в будни скидка 30%. С lake.kz/price_fishing (27.10.2026).</p>
       </div>
       <div class="tab" id="t3" hidden>
         <table>
           <thead><tr><th>Услуга</th><th>Цена</th></tr></thead>
           <tbody>
-            <tr><td>Удочка или спиннинг, 24 часа</td><td class="p">8 000 ₸</td></tr>
+            <tr><td>Удочка или спиннинг</td><td class="p">5 000 ₸ / 12 ч<br>8 000 ₸ / 24 ч</td></tr>
             <tr><td>Байдарка, час</td><td class="p">2 000–3 000 ₸</td></tr>
-            <tr><td>Велосипед, 12 часов</td><td class="p">6 000 ₸</td></tr>
-            <tr><td>Прикормка</td><td class="p">10 000–20 000 ₸</td></tr>
+            <tr><td>Велосипед, 12 ч</td><td class="p">6 000 ₸</td></tr>
+            <tr><td>Прикорм с лодки, сеанс: ваш прикорм / клубный 8 л</td><td class="p">10 000 / 20 000 ₸</td></tr>
           </tbody>
         </table>
         <p class="stamp">С lake.kz/price_services (27.10.2026). Баня, бассейн и зимние тарифы добавляются такими же вкладками.</p>
       </div>
       <div class="how">
-        <div><b>Сразу на русском</b><p>Язык выбирается по браузеру гостя. Казахская версия остаётся в переключателе.</p></div>
+        <div><b>На языке гостя</b><p>Сайт открывается на казахском или русском по настройкам браузера, а переключатель всегда на виду.</p></div>
         <div><b>Цены из таблицы</b><p>Администратор меняет цифру в Google-таблице, и на сайте она обновляется сама.</p></div>
         <div><b>Заявка в WhatsApp</b><p>Даты, дом и число гостей приходят администратору одним сообщением.</p></div>
       </div>
@@ -449,7 +452,7 @@ footer a{color:var(--reed)}
       <div class="road">
         <div>
           <h3>Аксай, водохранилище К32</h3>
-          <p>Илийский район, Алматинская область. Около часа на машине от Алматы. Ежедневно 07:00–23:00.</p>
+          <p>Илийский район, Алматинская область. Около часа на машине от Алматы. Комплекс «Maldives» работает круглый год.</p>
         </div>
         <a class="btn" style="background:var(--deep);color:var(--white)" href="https://2gis.kz/almaty/firm/70000001036785977">Открыть в 2GIS</a>
       </div>
@@ -471,7 +474,7 @@ footer a{color:var(--reed)}
 
 <script>
 (function(){
-  var PRICE={2:{wd:80000,we:90000},4:{wd:100000,we:110000}}, EXTRA=25000;
+  var PRICE={2:{wd:55000,we:90000},4:{wd:70000,we:110000}}, EXTRA=25000;
   var houses=[].slice.call(document.querySelectorAll('.house')), cur=houses[0], day='wd';
   var n=document.getElementById('nights'), x=document.getElementById('extra');
   var fmt=function(v){return v.toLocaleString('ru-RU').replace(/ /g,' ')+' ₸'};
@@ -481,8 +484,8 @@ footer a{color:var(--reed)}
     document.getElementById('nOut').textContent=nn;
     document.getElementById('xOut').textContent=xx;
     var total=nn*(PRICE[t][day]+xx*EXTRA);
-    document.getElementById('calcTotal').textContent=(day==='wd'?'от ':'')+fmt(total);
-    document.getElementById('calcWhat').textContent=cur.dataset.name+' · '+nn+' '+(nn===1?'ночь':nn<5?'ночи':'ночей')+' · '+(day==='wd'?'будни':'пт–вс')+(xx?' · +'+xx+' гост.':'');
+    document.getElementById('calcTotal').textContent=fmt(total);
+    document.getElementById('calcWhat').textContent=cur.dataset.name+' · '+nn+' '+(nn===1?'ночь':nn<5?'ночи':'ночей')+' · '+(day==='wd'?'пн–чт':'пт–вс')+(xx?' · +'+xx+' гост.':'');
     sel.value=cur.dataset.name; fg.value=t+xx;
   }
   houses.forEach(function(h){h.addEventListener('click',function(){
@@ -505,6 +508,8 @@ footer a{color:var(--reed)}
   var d=function(s){return s?new Date(s+'T12:00:00').toLocaleDateString('ru-RU',{day:'numeric',month:'long',weekday:'short'}):'?'};
   f.addEventListener('submit',function(e){
     e.preventDefault();
+    if(f.to.value&&f.from.value&&f.to.value<=f.from.value){var m=f.to.parentNode.querySelector('.ferr')||document.createElement('small');m.className='ferr';m.style.cssText='display:block;color:#c0392b;font-weight:600;margin-top:4px;font-size:13px';m.textContent='Дата выезда должна быть позже заезда';f.to.parentNode.appendChild(m);f.to.focus();return;}
+    var old=f.to.parentNode.querySelector('.ferr');if(old)old.remove();
     var nights=Math.max(0,Math.round((new Date(f.to.value)-new Date(f.from.value))/864e5));
     var add=[].slice.call(f.querySelectorAll('[name=add]:checked')).map(function(i){return i.value});
     out.textContent='Новая заявка с сайта\n'+
