@@ -1,0 +1,450 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Первомайские пруды — свадьбы и корпоративы у воды, вейк-парк и отдых под Алматы</title>
+<meta name="description" content="Парк активного отдыха «Первомайские пруды»: банкетный шатёр у воды до 250 гостей, рестораны Club-House, LOOK и ZERNO, GAGARIN WAKE PARK, три бассейна и кемпинг. Цены и заявка на дату онлайн.">
+<!-- Концепт: не индексировать. На рабочем сайте строку убрать и добавить canonical. -->
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0f3340">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ru_KZ">
+<meta property="og:site_name" content="Первомайские пруды">
+<meta property="og:title" content="Свадьба у воды на Первомайских прудах">
+<meta property="og:description" content="Банкетный шатёр до 250 гостей с видом на пруды, три ресторана, вейк-парк. Заявка на дату онлайн.">
+<!-- Структурированные данные: только факты с prudi.kz (27.10.2026). -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {"@type": ["TouristAttraction","EventVenue"], "@id": "https://prudi.kz/#park", "name": "Первомайские пруды", "url": "https://prudi.kz/", "telephone": "+77081115017", "email": "r.b@prudy.kz", "maximumAttendeeCapacity": 250,
+     "address": {"@type": "PostalAddress", "addressRegion": "Алматинская область", "addressLocality": "с. Мухаметжан Туймебаев, Илийский район", "streetAddress": "Промзона, участок 11б", "addressCountry": "KZ"},
+     "sameAs": ["https://www.instagram.com/pervomayskie_prudy/"]},
+    {"@type": "Restaurant", "name": "CLUB-HOUSE", "telephone": "+77079198001", "containedInPlace": {"@id": "https://prudi.kz/#park"}},
+    {"@type": "BarOrPub", "name": "ZERNO Gastro PUB", "telephone": "+77081115062", "containedInPlace": {"@id": "https://prudi.kz/#park"}},
+    {"@type": "CafeOrCoffeeShop", "name": "Express-cafe LOOK", "telephone": "+77710302000", "containedInPlace": {"@id": "https://prudi.kz/#park"}}
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Prata&family=Onest:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --deep:#0f3340;      /* глубокая вода */
+  --deep-2:#174654;
+  --lake:#2f8ca0;
+  --reed:#8fb39a;
+  --sand:#f4ead9;
+  --foam:#f7fafa;
+  --sun:#f2a541;
+  --ink:#0e2228;
+  --muted:#58707a;
+  --line:#d3e0e2;
+  --white:#fff;
+  --r:20px;
+  --shadow:0 24px 54px -32px rgba(15,51,64,.6);
+  --serif:"Prata", Georgia, serif;
+  --sans:"Onest", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--foam);color:var(--ink);font:16px/1.6 var(--sans);-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:1200px;margin:0 auto;padding:0 20px}
+.eyebrow{display:inline-block;font:800 12px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--lake)}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.1;margin:0}
+h2{font-size:clamp(32px,4.2vw,52px)}
+h3{font-size:24px}
+.lead{font-size:18px;color:var(--muted);max-width:600px;margin:0}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;border-radius:999px;padding:15px 24px;font:700 15px/1 var(--sans);cursor:pointer;text-decoration:none;transition:transform .15s,background .2s}
+.btn:hover{transform:translateY(-1px)}
+.btn-sun{background:var(--sun);color:var(--deep)}
+.btn-sun:hover{background:#f6b55d}
+.btn-deep{background:var(--deep);color:var(--white)}
+.btn-line{background:transparent;color:var(--white);box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.65)}
+
+.concept{background:#08222b;color:#c7d8dc;font-size:13px;text-align:center;padding:8px 16px}
+.concept b{color:var(--sun)}
+
+header{position:sticky;top:0;z-index:20;background:rgba(15,51,64,.95);backdrop-filter:blur(10px);color:var(--white)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px;gap:20px}
+.logo{text-decoration:none;font:400 22px/1 var(--serif)}
+.logo span{color:var(--sun)}
+.menu{display:flex;gap:24px;font-size:14px;font-weight:600}
+.menu a{text-decoration:none;opacity:.82}
+.menu a:hover{opacity:1;color:var(--sun)}
+.nav-cta{display:flex;align-items:center;gap:16px}
+.nav-phone{font-weight:700;font-size:14px;text-decoration:none;white-space:nowrap}
+.nav .btn{padding:11px 18px;font-size:14px}
+
+.hero{position:relative;min-height:min(84vh,760px);display:flex;align-items:flex-end;color:var(--white);background:var(--deep);overflow:hidden}
+.hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,34,43,.1) 0%,rgba(8,34,43,.5) 45%,rgba(8,34,43,.94) 100%)}
+.hero .wrap{position:relative;z-index:1;padding-top:140px;padding-bottom:60px;width:100%}
+.hero h1{font-size:clamp(42px,6.4vw,84px);max-width:860px}
+.hero h1 em{font-style:normal;color:var(--sun)}
+.hero p{font-size:19px;max-width:600px;color:#dbe8ea;margin:20px 0 30px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px}
+.stats{display:grid;grid-template-columns:repeat(4,auto);justify-content:start;gap:40px;margin-top:48px}
+.stats b{display:block;font:400 40px/1 var(--serif);color:var(--sun)}
+.stats span{font-size:13px;color:#c7d8dc;font-weight:600}
+
+section{padding:92px 0}
+.sec-head{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:end;margin-bottom:42px}
+.sec-head>*{min-width:0}
+.sec-head .eyebrow{margin-bottom:14px}
+
+/* шатёр */
+.tent{display:grid;grid-template-columns:1.15fr .85fr;gap:24px}
+.tent>*{min-width:0}
+.tent-img{position:relative;border-radius:var(--r);overflow:hidden;min-height:440px;background:var(--deep-2)}
+.tent-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.tent-img .cap{position:absolute;left:20px;bottom:20px;background:var(--sun);color:var(--deep);font-weight:800;padding:10px 16px;border-radius:999px}
+.tent-side{display:grid;gap:16px}
+.card{background:var(--white);border:1px solid var(--line);border-radius:var(--r);padding:24px}
+.card p{margin:8px 0 0;color:var(--muted);font-size:15px}
+.formats{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.formats span{background:var(--sand);border-radius:999px;padding:6px 12px;font-size:14px;font-weight:700}
+.menu-slot{border:1.5px dashed var(--lake);background:#eef6f7}
+.menu-slot b{color:var(--deep)}
+
+/* рестораны */
+.food{background:var(--sand)}
+.rgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.rest{background:var(--white);border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column}
+.rest img{aspect-ratio:4/3;width:100%;object-fit:cover;background:var(--line)}
+.rest div{padding:20px 22px 22px;display:flex;flex-direction:column;gap:8px;flex:1}
+.rest p{margin:0;color:var(--muted);font-size:15px}
+.rest a.tel{margin-top:auto;padding-top:10px;border-top:1px solid var(--line);font-weight:700;text-decoration:none;color:var(--lake)}
+
+/* цены */
+.prices .ptabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
+.ptabs button{font:700 14px var(--sans);padding:10px 16px;border-radius:999px;border:1px solid var(--line);background:var(--white);color:var(--ink);cursor:pointer}
+.ptabs button[aria-selected=true]{background:var(--deep);border-color:var(--deep);color:var(--white)}
+.pgrid{display:grid;grid-template-columns:1.2fr .8fr;gap:24px;align-items:start}
+.pgrid>*{min-width:0}
+table{width:100%;border-collapse:collapse;background:var(--white);border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow);font-size:15px}
+td{padding:14px 18px;border-bottom:1px solid var(--line)}
+td:last-child{text-align:right;font-weight:800;white-space:nowrap}
+td.ask{color:var(--muted);font-weight:700}
+.was{background:var(--deep);color:var(--white);border-radius:var(--r);padding:26px}
+.was .eyebrow{color:var(--sun)}
+.was p{margin:10px 0 0;color:#c7d8dc}
+.was b{color:var(--white)}
+
+/* активности */
+.acts{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.act{position:relative;border-radius:var(--r);overflow:hidden;min-height:260px;color:var(--white);background:var(--deep-2)}
+.act img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.act::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 35%,rgba(8,34,43,.92))}
+.act div{position:absolute;left:0;right:0;bottom:0;padding:18px;z-index:1}
+.act p{margin:4px 0 0;font-size:14px;color:#dbe8ea}
+
+/* заявка */
+.request{background:var(--deep);color:var(--white)}
+.request-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:start}
+.request-grid>*{min-width:0}
+.request .lead{color:#c7d8dc;margin-top:16px}
+form{background:var(--foam);color:var(--ink);border-radius:var(--r);padding:28px;box-shadow:var(--shadow)}
+.opts{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 16px}
+.opts label{display:flex;align-items:center;gap:6px;background:var(--white);border:1px solid var(--line);border-radius:999px;padding:8px 14px;font-weight:600;cursor:pointer;font-size:14px}
+.opts input{width:auto;margin:0}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+label.f{display:block;font-size:13px;font-weight:700;color:var(--muted);margin:0 0 14px}
+input,select,textarea{display:block;width:100%;margin-top:6px;font:600 16px/1.3 var(--sans);color:var(--ink);background:var(--white);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+input:focus,select:focus{outline:2px solid var(--lake);border-color:transparent}
+form .btn{width:100%}
+.fine{font-size:12px;color:var(--muted);margin:12px 0 0;text-align:center}
+.wa{display:none;margin-top:18px;background:#0b141a;color:#e9edef;border-radius:16px;padding:16px 18px;font-size:14px}
+.wa.show{display:block}
+.wa-head{display:flex;align-items:center;gap:10px;margin-bottom:10px;font-weight:800}
+.wa-head span{width:30px;height:30px;border-radius:50%;background:#25d366;display:grid;place-items:center;color:#0b141a}
+.wa pre{white-space:pre-wrap;margin:0;font:inherit;background:#005c4b;border-radius:12px 12px 4px 12px;padding:12px 14px}
+.wa small{display:block;color:#8696a0;margin-top:10px}
+
+/* контакты */
+.who{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:8px}
+.who a{display:flex;flex-direction:column;gap:4px;padding:16px 18px;background:var(--white);border:1px solid var(--line);border-radius:14px;text-decoration:none}
+.who span{font-size:13px;color:var(--muted);font-weight:600}
+.who b{font-size:16px}
+.addr{margin-top:22px;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;background:var(--sand);border-radius:var(--r);padding:22px 24px}
+.addr p{margin:0;max-width:640px}
+
+footer{background:#08222b;color:#8fa8ae;font-size:13px;padding:36px 0 96px}
+footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
+footer a{color:var(--sun)}
+
+.mbar{display:none;position:fixed;left:0;right:0;bottom:0;z-index:30;background:var(--deep);padding:10px 12px calc(10px + env(safe-area-inset-bottom));gap:10px}
+.mbar a{flex:1;padding:14px 10px;font-size:14px}
+
+@media (max-width:1020px){
+  .nav{flex-wrap:wrap;height:auto;padding-top:12px;row-gap:8px}
+  .menu{order:3;width:100%;overflow-x:auto;gap:20px;padding:4px 28px 12px 0;white-space:nowrap;scrollbar-width:none;-webkit-mask-image:linear-gradient(90deg,#000 85%,transparent);mask-image:linear-gradient(90deg,#000 85%,transparent)}
+  .menu::-webkit-scrollbar{display:none}
+  .menu a{flex:none}
+  .sec-head,.tent,.pgrid,.request-grid{grid-template-columns:1fr}
+  .rgrid{grid-template-columns:1fr 1fr}
+  .acts{grid-template-columns:1fr 1fr}
+  .stats{grid-template-columns:repeat(2,auto)}
+  .who{grid-template-columns:1fr 1fr}
+}
+@media (max-width:620px){
+  .concept{font-size:12px;padding:6px 12px}
+  .concept .long{display:none}
+  section{padding:64px 0}
+  .nav-phone,.nav .btn{display:none}
+  .hero{min-height:640px}
+  .hero .wrap{padding-bottom:44px}
+  .stats{gap:22px}
+  .stats b{font-size:32px}
+  .tent-img{min-height:300px}
+  .rgrid,.acts,.row,.who{grid-template-columns:1fr}
+  td{padding:12px 12px}
+  form{padding:20px}
+  .mbar{display:flex}
+}
+</style>
+</head>
+<body>
+
+<div class="concept">
+  <b>Независимый концепт Aurorine Studio.</b><span class="long"> Не официальный сайт и не заказ «Первомайских прудов». Факты и фото с prudi.kz, 27.10.2026.</span>
+</div>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#top">Первомайские <span>пруды</span></a>
+    <nav class="menu" aria-label="Разделы">
+      <a href="#events">Свадьбы и банкеты</a>
+      <a href="#food">Рестораны</a>
+      <a href="#prices">Цены</a>
+      <a href="#active">Отдых</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="nav-phone" href="tel:+77081115024">+7 708 111 50 24</a>
+      <a class="btn btn-sun" href="#request">Запросить дату</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero" style="padding:0">
+    <!-- Фото: prudi.kz/storage/app/media/restaurants/4.jpg — по тексту рядом это банкетный шатёр. Сверить на Маке. -->
+    <img src="https://prudi.kz/storage/app/media/restaurants/4.jpg" alt="Банкетный шатёр на Первомайских прудах" fetchpriority="high">
+    <div class="wrap">
+      <span class="eyebrow" style="color:var(--sun)">Илийский район · Алматинская область</span>
+      <h1 style="margin-top:16px">Свадьба <em>у воды</em> на 250 гостей</h1>
+      <p>Банкетный шатёр с видом на пруды, три ресторана, вейк-парк и бассейны для гостей. Свадьбы, тои, юбилеи, корпоративы и тимбилдинги в одном месте.</p>
+      <div class="hero-actions">
+        <a class="btn btn-sun" href="#request">Запросить дату</a>
+        <a class="btn btn-line" href="#prices">Посмотреть цены</a>
+      </div>
+      <div class="stats">
+        <div><b>250</b><span>гостей в шатре</span></div>
+        <div><b>3</b><span>ресторана и паб</span></div>
+        <div><b>3</b><span>открытых бассейна</span></div>
+        <div><b>4,9</b><span>в 2GIS</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="events">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><span class="eyebrow">Свадьбы и банкеты</span><h2 style="margin-top:14px">Шатёр с видом на воду, а не зал без окон</h2></div>
+        <p class="lead">Гости приезжают днём, катаются на вейке и SUP, а вечером садятся за стол с видом на закат над прудами.</p>
+      </div>
+      <div class="tent">
+        <div class="tent-img">
+          <img loading="lazy" src="https://prudi.kz/storage/app/media/main/about/about.jpg" alt="Территория Первомайских прудов">
+          <span class="cap">до 250 гостей одновременно</span>
+        </div>
+        <div class="tent-side">
+          <div class="card">
+            <h3>Банкетный шатёр</h3>
+            <p>«На фоне красивейшего пейзажа с видом на водную гладь Первомайских прудов, готов принять до 250 человек одновременно».</p>
+            <div class="formats"><span>Свадьбы и тои</span><span>Дни рождения</span><span>Корпоративы</span><span>Конференции</span><span>Тимбилдинги</span></div>
+          </div>
+          <!-- Меню и цен шатра на prudi.kz нет. В рабочей версии — из документа клиента. -->
+          <div class="card menu-slot">
+            <h3>Меню и цена за гостя</h3>
+            <p>Здесь будут банкетные меню и цена за гостя. <b>Сейчас на сайте их нет</b>, и гостю приходится звонить, чтобы узнать бюджет. Пара с бюджетом на руках решает быстрее.</p>
+          </div>
+          <a class="btn btn-deep" href="#request">Проверить свободную дату</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="food" id="food">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><span class="eyebrow">Рестораны</span><h2 style="margin-top:14px">Где поужинать после воды</h2></div>
+        <p class="lead">У каждого ресторана свой телефон. На карточке он нажимается сразу, без поиска по странице контактов.</p>
+      </div>
+      <div class="rgrid">
+        <article class="rest"><img loading="lazy" src="https://prudi.kz/storage/app/media/restaurants/2.jpg" alt="Ресторан CLUB-HOUSE"><div><h3>CLUB-HOUSE</h3><p>Ресторан в стиле старинных купеческих домов: традиции пышных застолий и домашний уют.</p><a class="tel" href="tel:+77079198001">+7 707 919 80 01</a></div></article>
+        <article class="rest"><img loading="lazy" src="https://prudi.kz/storage/app/media/restaurants/1.jpg" alt="Express-cafe LOOK"><div><h3>Express-cafe LOOK</h3><p>Кофе и терраса с видом на озеро и закаты.</p><a class="tel" href="tel:+77710302000">+7 771 030 20 00</a></div></article>
+        <article class="rest"><img loading="lazy" src="https://prudi.kz/storage/app/media/restaurants/3.jpg" alt="ZERNO Gastro PUB"><div><h3>ZERNO Gastro PUB</h3><p>Душевный гастрономический паб на территории парка.</p><a class="tel" href="tel:+77081115062">+7 708 111 50 62</a></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="prices" id="prices">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><span class="eyebrow">Цены</span><h2 style="margin-top:14px">Цены, которые можно найти</h2></div>
+        <p class="lead">Цены на вейк-парк уже есть на его странице. Мы собрали их в одном разделе и оставили места для шатра, кемпинга и бассейнов.</p>
+      </div>
+      <div class="ptabs" role="tablist" aria-label="Категории цен">
+        <button type="button" role="tab" aria-selected="true" data-t="wake">Вейк-парк</button>
+        <button type="button" role="tab" aria-selected="false" data-t="sup">SUP</button>
+        <button type="button" role="tab" aria-selected="false" data-t="rest">Шатёр и кемпинг</button>
+      </div>
+      <div class="pgrid">
+        <div>
+          <!-- Цены вейк-парка и SUP — со страницы prudi.kz/facility/gagarin-wake-park (27.10.2026). -->
+          <table data-p="wake"><tbody>
+            <tr><td>Кольцевая лебёдка, будни, весь день</td><td>10 000 ₸</td></tr>
+            <tr><td>Кольцевая лебёдка, выходные, весь день</td><td>15 000 ₸</td></tr>
+            <tr><td>Будни утром 10:00–13:00 или вечером 16:00–19:00</td><td>6 400 ₸</td></tr>
+            <tr><td>Реверсивная лебёдка, сет 10 минут</td><td>5 000 ₸</td></tr>
+            <tr><td>Реверсивная лебёдка, 15 минут с тренером</td><td>9 100 ₸</td></tr>
+          </tbody></table>
+          <table data-p="sup" hidden><tbody>
+            <tr><td>SUP-прогулка, 30 минут</td><td>4 000 ₸</td></tr>
+            <tr><td>Со своей доской</td><td>5 000 ₸</td></tr>
+            <tr><td>Прокат доски</td><td>4 000 ₸</td></tr>
+            <tr><td>Прокат гидрокостюма</td><td>3 000 ₸</td></tr>
+            <tr><td>Сезонный абонемент SUP</td><td>380 000 ₸</td></tr>
+          </tbody></table>
+          <table data-p="rest" hidden><tbody>
+            <tr><td>Банкет в шатре, за гостя</td><td class="ask">ваша цена</td></tr>
+            <tr><td>Бунгало, сутки</td><td class="ask">ваша цена</td></tr>
+            <tr><td>Glamping-лагерь</td><td class="ask">ваша цена</td></tr>
+            <tr><td>Беседка</td><td class="ask">ваша цена</td></tr>
+            <tr><td>Бассейн, вход</td><td class="ask">ваша цена</td></tr>
+          </tbody></table>
+        </div>
+        <div class="was">
+          <span class="eyebrow">Сейчас на prudi.kz</span>
+          <p><b>Пункт меню «Цены» ведёт на страницу магазина «Хлеб и вино»</b>, где цен нет. Цены вейк-парка спрятаны на его странице, а у шатра, кемпинга и бассейнов их нет совсем.</p>
+          <p>В рабочей версии таблицы заполняются из Google-таблицы, и менять цены сможет администратор без программиста.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="active" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><span class="eyebrow">Отдых для гостей</span><h2 style="margin-top:14px">Чем занять гостей до банкета</h2></div>
+        <p class="lead">Всё на одной территории: пока готовят шатёр, гости катаются, купаются и гуляют у воды.</p>
+      </div>
+      <div class="acts">
+        <article class="act"><img loading="lazy" src="https://prudi.kz/storage/app/media/facilities/gagarin/gallery/gallery1.jpg" alt="GAGARIN WAKE PARK"><div><h3>GAGARIN WAKE PARK</h3><p>Кольцевая и реверсивная лебёдки, школа.</p></div></article>
+        <article class="act"><img loading="lazy" src="https://prudi.kz/storage/app/media/active/supboarding/2.jpeg" alt="SUP на прудах"><div><h3>SUP</h3><p>Прогулки по прудам и прокат досок.</p></div></article>
+        <article class="act"><img loading="lazy" src="https://prudi.kz/storage/app/media/main/camping/5.jpg" alt="Бунгало"><div><h3>Кемпинг</h3><p>Glamping, бунгало, бани и беседки.</p></div></article>
+        <article class="act"><img loading="lazy" src="https://prudi.kz/storage/app/media/main/camping/2.jpg" alt="Каток зимой"><div><h3>Бассейны и каток</h3><p>Три открытых бассейна летом, каток зимой.</p></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="request" id="request">
+    <div class="wrap request-grid">
+      <div>
+        <span class="eyebrow" style="color:var(--sun)">Заявка на дату</span>
+        <h2 style="margin-top:14px;color:var(--white)">Отдел бронирования получает заявку в WhatsApp</h2>
+        <p class="lead">Дата, формат, число гостей и нужен ли ночлег. Менеджер отвечает уже с предложением, а не с вопросами.</p>
+      </div>
+      <form id="evForm" novalidate>
+        <div class="opts" role="group" aria-label="Формат">
+          <label><input type="radio" name="type" value="Свадьба или той" checked>Свадьба или той</label>
+          <label><input type="radio" name="type" value="День рождения">День рождения</label>
+          <label><input type="radio" name="type" value="Корпоратив">Корпоратив</label>
+          <label><input type="radio" name="type" value="Тимбилдинг">Тимбилдинг</label>
+        </div>
+        <div class="row">
+          <label class="f">Дата<input type="date" name="date"></label>
+          <label class="f">Гостей<input type="number" name="guests" min="10" max="250" value="120" inputmode="numeric"></label>
+        </div>
+        <label class="f">Для гостей<select name="extra"><option>Только банкет</option><option>Банкет и вейк-парк</option><option>Банкет и ночлег в кемпинге</option><option>Пока не знаю</option></select></label>
+        <div class="row">
+          <label class="f">Имя<input name="name" autocomplete="name" placeholder="Асель"></label>
+          <label class="f">Телефон<input name="phone" type="tel" autocomplete="tel" placeholder="+7 7__ ___ __ __"></label>
+        </div>
+        <button class="btn btn-sun" type="submit">Запросить дату</button>
+        <p class="fine">В концепте заявка никуда не отправляется: ниже показано, как её увидит менеджер.</p>
+        <div class="wa" id="wa" aria-live="polite">
+          <div class="wa-head"><span>✆</span>Первомайские пруды · Бронирование</div>
+          <pre id="waText"></pre>
+          <small>Сообщение приходит в WhatsApp отдела бронирования.</small>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <section id="contacts">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><span class="eyebrow">Контакты</span><h2 style="margin-top:14px">Кому звонить</h2></div>
+        <p class="lead">Шесть номеров разложены по задачам, чтобы гость сразу попал куда нужно.</p>
+      </div>
+      <div class="who">
+        <a href="tel:+77081115024"><span>Бронирование и банкеты</span><b>+7 708 111 50 24</b></a>
+        <a href="tel:+77081115017"><span>Ресепшен, WhatsApp</span><b>+7 708 111 50 17</b></a>
+        <a href="tel:+77079198001"><span>CLUB-HOUSE</span><b>+7 707 919 80 01</b></a>
+        <a href="tel:+77710302000"><span>LOOK</span><b>+7 771 030 20 00</b></a>
+        <a href="tel:+77081115062"><span>ZERNO</span><b>+7 708 111 50 62</b></a>
+        <a href="tel:+77715581050"><span>«Хлеб и вино»</span><b>+7 771 558 10 50</b></a>
+      </div>
+      <div class="addr">
+        <p>Алматинская обл., Илийский район, Ашибулакский сельский округ, село Мухаметжан Туймебаев, Промзона, участок 11б · <a href="mailto:r.b@prudy.kz">r.b@prudy.kz</a></p>
+        <a class="btn btn-deep" href="https://2gis.kz/almaty/search/%D0%9F%D0%B5%D1%80%D0%B2%D0%BE%D0%BC%D0%B0%D0%B9%D1%81%D0%BA%D0%B8%D0%B5%20%D0%BF%D1%80%D1%83%D0%B4%D1%8B" target="_blank" rel="noopener">Маршрут в 2GIS</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Первомайские пруды · парк активного отдыха</span>
+    <span>Концепт подготовлен <a href="https://mykolaanastiuk.github.io/aurorine.github.io/ru/">Aurorine Studio</a> по открытым данным. Не официальный сайт.</span>
+  </div>
+</footer>
+
+<div class="mbar">
+  <a class="btn btn-line" href="tel:+77081115024">Позвонить</a>
+  <a class="btn btn-sun" href="#request">Запросить дату</a>
+</div>
+
+<script>
+(function(){
+  var tabs=document.querySelectorAll('.ptabs button');
+  tabs.forEach(function(b){b.addEventListener('click',function(){
+    tabs.forEach(function(x){x.setAttribute('aria-selected',x===b)});
+    document.querySelectorAll('table[data-p]').forEach(function(t){t.hidden=t.dataset.p!==b.dataset.t});
+  })});
+
+  var f=document.getElementById('evForm'), wa=document.getElementById('wa'), out=document.getElementById('waText');
+  var d=new Date();d.setDate(d.getDate()+60);f.date.value=d.toISOString().slice(0,10);
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    var type=(f.querySelector('[name=type]:checked')||{}).value;
+    var dt=f.date.value?new Date(f.date.value+'T12:00:00').toLocaleDateString('ru-RU',{day:'numeric',month:'long',year:'numeric',weekday:'short'}):'не указана';
+    out.textContent='Новая заявка на мероприятие\n'+
+      'Формат: '+type+'\n'+
+      'Дата: '+dt+'\n'+
+      'Гостей: '+(f.guests.value||'?')+(+f.guests.value>250?' (больше вместимости шатра!)':'')+'\n'+
+      'Для гостей: '+f.extra.value+'\n'+
+      'Контакт: '+(f.name.value.trim()||'имя не указано')+', '+(f.phone.value.trim()||'телефон не указан');
+    wa.classList.add('show');wa.scrollIntoView({behavior:'smooth',block:'nearest'});
+  });
+})();
+</script>
+</body>
+</html>
